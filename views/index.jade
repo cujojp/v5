@@ -1,0 +1,7 @@
+extends layout
+
+block content
+  -work = data.work || []
+
+  for item in work
+    +partial('shared/modules/home/work-item-hero.jade', item)

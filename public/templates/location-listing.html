@@ -1,0 +1,68 @@
+<script type="text/html" id='locationListing'>
+<div class="container">
+  <div class="location-list-container">
+    <div class="row clearfix">
+      <div class="label-wrap two columns alpha offset-by-one alpha">
+        <div class="label">
+          <p class="t5 text-light">Favorites</p>
+        </div>
+      </div>
+      <div class="offset-by-four four columns alpha omega text-right">
+        <a href="#" class="p4 add-location secondary">
+          <span class="icon add"></span>
+          Add Favorite
+        </a>
+      </div>
+    </div>
+
+    <ul class="location-list">
+      <% _.each(locations, function(location) { %>
+        <li class="location-item fade-element fade-in location-<%= location._id %>"  
+            data-location-id="<%= location._id %>"
+            data-map-cords='{"lat":<%= location.lat %>, "lng" : <%= location.lng %>}'>
+          <div class="row clearfix">
+            <div class="location-container">
+              <div class="six columns col-left offset-by-one alpha">
+                <div class="map-container">
+                </div>
+              </div>
+              <div class="four columns col-right omega">
+                <div class="address-container">
+                  <h2 class="location-title name t3 t3-marginless">
+                    <%= location.name %>
+                  </h2>
+                  <div class="address-container">
+                    <span class="address p4">
+                      <%= location.address %>
+                    </span>
+                    <span class="city p4">
+                      <%= location.city %>
+                    </span>
+                    <span class="state p4">
+                      <%= location.state %>
+                    </span>
+                  </div>
+                </div>       
+                <div class="location-summary-container">
+                
+                </div>
+                <ul class="location-options inline">
+                  <li>
+                    <a href="#" class="p4 edit-location" >edit location</a>
+                  </li>
+                  <li>
+                    <a href="#" class="p4 remove-location" >remove location</a>
+                  </li>
+                  <li>
+                    <a href="#/location/<%= location._id %>" class="p4">view details</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+      <% }); %>  
+    </ul>
+  </div>
+</div>
+</script>

@@ -1,0 +1,113 @@
+$legacy_support_for_ie: false !default; // Used also in Compass
+
+// Set the default font family here so you don't have to override it later
+$normalized_font_family: sans-serif !default;
+
+$sans_serif_light: 'Avenir Next W02 Light', Arial, sans-serif;
+$sans_serif_regular: 'Avenir Next LT W01 SC', Arial, sans-serif;
+$sans_serif_demi: 'Avenir Next LT W01 Demi', Arial, sans-serif;
+$sans_serif_italic: 'AvenirNextLTW01-Italic', Arial, sans-serif;
+
+/*font-family:'AvenirNextLTW01-UltraLt 727634';*/
+/*font-family:'AvenirNextLTW01-Italic';*/
+/*font-family:'AvenirNextLTW01-ItalicS';*/
+/*font-family:'AvenirNextLTW01-MediumS';*/
+/*font-family:'AvenirNextLTW01-MediumI 721278';*/
+
+$normalize_headings: true !default;
+
+$base_font_family: $sans_serif_light;
+$base_font_family_title: $sans_serif_regular;
+$base_font_family_italic: $sans_serif_italic;
+$base_font_family_medium: $sans_serif_demi;
+$base_font_size: 1em !default;
+$base_line_height: 1.65 !default;
+
+// Grid
+// -------------------------------------------------- //
+
+$grid_column_width: 52px;
+$grid_gutter_width: 36px;
+$grid_total_columns: 12;
+$grid_baseline_height: 20px;
+
+$grid_offset: ($grid_column_width + $grid_gutter_width);
+$grid_width: ($grid_offset * $grid_total_columns);
+
+
+// Grid Utility
+// -------------------------------------------------- //
+
+$grid_background_column_width   : $grid_column_width;
+$grid_background_gutter_width   : $grid_gutter_width;
+$grid_background_total_columns  : $grid_total_columns;
+$grid_background_baseline_height: $grid_baseline_height;
+
+$grid_background_baseline_color : rgba(0,0,0,0.15);
+$grid_background_column_color   : rgba(100, 100, 100, 0.05);
+
+$h1_font_size: 2em !default;
+$h2_font_size: 1.5em !default;
+$h3_font_size: 1.17em !default;
+$h4_font_size: 1em !default;
+$h5_font_size: 0.83em !default;
+$h6_font_size: 0.75em !default;
+
+$h1_margin: 0.67em 0 !default;
+$h2_margin: 0.83em 0 !default;
+$h3_margin: 1em 0 !default;
+$h4_margin: 1.33em 0 !default;
+$h5_margin: 1.67em 0 !default;
+$h6_margin: 2.33em 0 !default;
+
+$background: #fff !default;
+$color: #000 !default;
+$gray: #999;
+$light_gray: #C2C2C2;
+$dark_gray: #444;
+
+$blue: rgb(31, 186, 214);
+$light_blue: #4dd0e1;
+
+$black: rgb(0, 0, 0);
+$gray10: rgb(26, 26, 26);
+$gray20: rgb(51, 51, 51);
+$gray30: rgb(77, 77, 77);
+$gray40: rgb(102, 102, 102);
+$gray50: rgb(128, 128, 128);
+$gray60: rgb(153, 153, 153);
+$gray70: rgb(179, 179, 179);
+$gray80: rgb(204, 204, 204);
+$gray90: rgb(230, 230, 230);
+$gray100: rgb(242, 242, 242);
+$gray110: rgb(250, 250, 250);
+$white: rgb(255, 255, 255);
+$modal_opacity: 0.7;
+$modal_background_color: rgba(0,0,0,$modal_opacity);
+
+// Standard Text Colors
+$text_dark: $gray30;
+$text_med_dark: $gray40;
+$text_med_light: $gray50;
+$text_light: $white;
+$defaultTextColor: $text_dark;
+
+$linkColor: rgb(31, 186, 214); 
+$linkColorHover: rgb(66,149,164);
+
+// FORMS
+$inputBackground: $white !default;
+$inputBackgroundAlt: rgb(248,248,248) !default;
+$inputBackgroundBtnAlt: $light_gray !default;
+$inputText: $light_gray !default;
+$inputTextFocus: $gray !default;
+
+
+// BUTTONS
+$btn_text: $white;
+$btn_background: $blue;
+$btn_background_hover: rgb(35, 206, 237);
+
+$btn_secondary_text: $white;
+$btn_secondary_background: $gray30;
+$btn_secondary_background_hover: $gray20;

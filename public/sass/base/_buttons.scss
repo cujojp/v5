@@ -1,0 +1,31 @@
+// Core
+.btn {
+  display: inline-block;
+  padding: 9px 11px 10px;
+  margin-bottom: 0; // For input.btn
+  font-size: px-em(12px);
+  line-height: inherit;
+  *line-height: inherit;
+  text-align: center;
+  text-transform: uppercase;
+  vertical-align: middle;
+  color: $btn_text;
+  cursor: pointer;
+  background: $btn_background;
+  border: none;
+
+  &:hover {
+    background: $btn_background_hover;
+    color: $btn_text;
+  }   
+}
+
+
+.btn-secondary {
+  background: $btn_secondary_background;
+
+  &:hover {
+    color: $btn_text;
+    background: $btn_secondary_background_hover;
+  }
+}

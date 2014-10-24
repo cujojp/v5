@@ -1,0 +1,48 @@
+<script type="text/html" id='locationDetails'>
+<div class="container">
+  <div class="location-details">
+    <div class="row">
+      <div class="location-details-content four columns offset-by-one">
+        <div class="details-summary clearfix">
+          <h1 class="t2 t2-marginless">
+            <%= location.name %>
+          </h1>      
+          <p class="p3">
+            <%= location.address %>,<br/>
+            <%= location.city %>
+            <%= location.state %>,
+            <%= location.postal %>
+          </p>
+        </div>
+        <div class="details-desc-content clearfix">
+          <strong class="p4">Description</strong>
+          <p class="p4">
+            Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.
+          </p>
+          <p class="p4">
+            Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.
+          </p>
+          <ul class="unstyled details-list">
+            <li>
+              <p class="p4 p4-bold p4-marginless">Last visit:</p>
+              <a href="#" class="p4 p4-marginless-top">December, 14th 2013 at 03:49pm PST</a>
+            </li>
+            <li>
+              <p class="p4 p4-bold p4-marginless">Number of visist:</p>
+              <p class="p4 p4-marginless-top">13</p>
+            </li>
+          </ul>
+        </div>
+
+
+        
+      </div>
+      <div class="location-details-content six columns">
+        <div class="map-container"  data-map-cords='{"lat":<%= location.lat %>, "lng" : <%= location.lng %>}'>
+        
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</script>

@@ -1,0 +1,166 @@
+{
+  "title": "cujojp | portfolio of Kaleb White",
+  "work": [
+    {
+      "client": "Client Name",
+      "anchor": {
+        "title": "Visit Website",
+        "href": "http://www.google.com"
+      },
+      "info": {
+        "role": {
+          "location": "San Francisco, CA",
+          "title": "Senior Front End Engineer"
+        },
+        "client": {
+          "location": "San Francisco, CA",
+          "name": "Client Name"
+        },
+        "employer": {
+          "name": "Employer Name",
+          "location": "San Francisco, CA"
+        }
+      },
+      "masthead": {
+        "media": {
+          "img_3x": "null",
+          "img_tablet_3x": "null",
+          "img_mobile_3x": "null",
+          "img_2x": "null",
+          "img_tablet_2x": "null",
+          "img_mobile_2x": "null",
+          "img": "null",
+          "img_tablet": "null",
+          "img_mobile": "null",
+          "video": {
+            "webm": "video.webm",
+            "ogg": "video.ogg",
+            "mp4": "video.mp4"
+          }
+        },
+        "title": "Work object title",
+        "body": "Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc.",
+        "summary": "Some summary"
+      },
+      "callout": {
+        "copy": "Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc.",
+        "name": "Some Name",
+        "subtitle": "Preisdent UC Berkley Davis"
+      },
+      "blocks": [
+        {
+          "title": "Some Copy Block Hero",
+          "media": {
+            "img_3x": "null",
+            "img_tablet_3x": "null",
+            "img_mobile_3x": "null",
+            "img_2x": "null",
+            "img_tablet_2x": "null",
+            "img_mobile_2x": "null",
+            "img": "null",
+            "img_tablet": "null",
+            "img_mobile": "null",
+            "video": {
+              "webm": "video.webm",
+              "ogg": "video.ogg",
+              "mp4": "video.mp4"
+            }
+          },
+          "body": "Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.\nIn enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.\nAenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum.\nAenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum."
+        },
+        {
+          "title": "Some Copy For A Hero",
+          "media": {
+            "img_3x": "null",
+            "img_tablet_3x": "null",
+            "img_mobile_3x": "null",
+            "img_2x": "null",
+            "img_tablet_2x": "null",
+            "img_mobile_2x": "null",
+            "img": "null",
+            "img_tablet": "null",
+            "img_mobile": "null",
+            "video": {}
+          },
+          "body": "Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.\nIn enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus."
+        },
+        {
+          "title": "Some Copy For A Hero",
+          "media": {
+            "img_3x": "null",
+            "img_tablet_3x": "null",
+            "img_mobile_3x": "null",
+            "img_2x": "null",
+            "img_tablet_2x": "null",
+            "img_mobile_2x": "null",
+            "img": "null",
+            "img_tablet": "null",
+            "img_mobile": "null",
+            "video": {}
+          },
+          "body": "Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.\nIn enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus."
+        }
+      ],
+      "slug": {
+        "absolute": "http://www.someurl.com",
+        "relative": "/some/url"
+      }
+    }
+  ],
+  "about": {
+    "media": {
+      "img_3x": "null",
+      "img_tablet_3x": "null",
+      "img_mobile_3x": "null",
+      "img_2x": "null",
+      "img_tablet_2x": "null",
+      "img_mobile_2x": "null",
+      "img": "null",
+      "img_tablet": "null",
+      "img_mobile": "null",
+      "video": {
+        "webm": "video.webm",
+        "ogg": "video.ogg",
+        "mp4": "video.mp4"
+      }
+    },
+    "blocks": [
+      {
+        "title": "Some Copy Block Hero",
+        "body": "Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.\nIn enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.\nAenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum.\nAenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum."
+      },
+      {
+        "title": "Some Copy For A Hero",
+        "body": "Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.\nIn enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus."
+      }
+    ]
+  },
+  "contact": {
+    "media": {
+      "img_3x": "null",
+      "img_tablet_3x": "null",
+      "img_mobile_3x": "null",
+      "img_2x": "null",
+      "img_tablet_2x": "null",
+      "img_mobile_2x": "null",
+      "img": "null",
+      "img_tablet": "null",
+      "img_mobile": "null",
+      "video": {
+        "webm": "video.webm",
+        "ogg": "video.ogg",
+        "mp4": "video.mp4"
+      }
+    },
+    "blocks": [
+      {
+        "title": "Some Copy Block Hero",
+        "body": "Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.\nIn enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.\nAenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum.\nAenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum."
+      },
+      {
+        "title": "Some Copy For A Hero",
+        "body": "Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.\nIn enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus."
+      }
+    ]
+  }
+}

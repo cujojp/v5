@@ -1,0 +1,38 @@
+.rule {
+  height: 1px;
+  width: 100%;
+  position: relative;
+  margin: 25px 0;
+
+  &.dark {
+    background: $gray70;
+  }
+
+  &.light {
+    background: $gray60;
+  }
+
+  &.no-margin {
+    margin: 0;
+  }
+}
+
+.text-right { text-align: right; }
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+
+.icon {
+  display: inline-block;
+  vertical-align: text-top;
+  padding: 0 5px;
+
+  &.add {
+    height: 13px;
+    width: 13px;
+    background: {
+      position: 50% 50%;
+      repeat: no-repeat;
+      image: url('/images/icon-add@1x.png');
+    }
+  }
+}
