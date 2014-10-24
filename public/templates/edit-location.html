@@ -1,0 +1,47 @@
+<script type="text/html" id='editLocation'>
+  <div class="edit-location-container columns ten offset-by-one alpha omega clearfix">
+    <div class="carot-indicator"></div>
+    <div class="edit-location-inner clearfix">
+      <strong class="edit-title t3 t3-light">edit location - <%= location.name %></strong>
+      <div class="rule light no-margin"></div>
+      <form class="edit-location-form" method="post">
+        <fieldset class="nine columns alpha clearfix">
+          <label for="name" class="required">Name</label>
+          <input type="text" class="edit-field edit-location-name" name="name" value="<%= location.name %>" />
+        </fieldset>
+
+        <fieldset class="two columns alpha clearfix">
+          <label for="address" class="required">Address</label>
+          <input type="text" class="edit-field edit-location-address" name="address" value="<%= location.address %>" />
+        </fieldset>
+
+        <fieldset class="two columns">
+          <label for="city" class="required">City</label>
+          <input type="text" class="edit-field edit-location-city" name="city" value="<%= location.city %>" />
+        </fieldset>
+
+        <fieldset class="two columns">        
+          <label for="state" class="required">State</label>
+          <select name="state" class="edit-field edit-location-state">
+            <% _.each(states, function(state) { %>
+              <option value="<%= state.abbreviation %>" <%= location.state === state.abbreviation ? 'selected' : void 0 %> ><%= state.name %></option>
+            <% }); %>  
+          </select>
+        </fieldset>
+
+        <fieldset class="one column omega">        
+          <label for="postal" class="required">Postal</label>
+          <input type="text" class="edit-field edit-location-postal" name="postal" value="<%= location.postal %>" />
+        </fieldset>
+
+        <div class="nine columns clearfix cta-wrapper text-right">
+          <a href="#" class="edit-location-cancel btn btn-secondary">Cancel</a>
+          <button type="submit" name="submit" class="edit-location-submit btn">
+            Submit
+          </button>
+          
+        </div>
+      </form>
+    </div>
+  </div>
+</script>

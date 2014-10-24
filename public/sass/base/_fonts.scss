@@ -1,0 +1,196 @@
+.app {
+  color:$defaultTextColor;
+}
+
+.t1, .t2, .t3, .t4, .t3-bold, .t4-bold, h1, h2, h5 {
+  @include fontTitle;
+}
+
+.t1 {
+  @include px-em--font-size--line-height(48,54);
+  text-transform: uppercase;
+  letter-spacing: 0px;
+  margin-bottom: 40px;
+  color: $gray30;
+}
+
+.t2 {
+  @include px-em--font-size--line-height(26,38);
+  text-transform: uppercase;
+  letter-spacing: 0px;
+  margin-bottom: 40px;
+  color: $gray30;   
+}
+
+.t3 {
+  @include px-em--font-size--line-height(18,24);
+  text-transform: uppercase;
+  letter-spacing: 0px;
+  margin-bottom: 40px;
+  color: $gray30;  
+}
+
+.t4 {
+  @include px-em--font-size--line-height(17,20);
+  text-transform: uppercase;
+  letter-spacing: 0px;
+  margin-bottom: 40px;
+  color: $gray30;  
+}
+
+.t5 {
+  @include px-em--font-size--line-height(12,20);
+  text-transform: uppercase;
+  letter-spacing: 0px;
+  margin-bottom: 40px;
+  color: $gray30;  
+}
+
+.p1, .lt1, .p1-bold { // also affects .p1.lt
+  @include px-em--font-size--line-height(48,54);
+}
+.p2, .lt2, .p2-bold, p, input.p2, input.p2-bold { // also affects .p2.lt
+  @include px-em--font-size--line-height(18,24);
+}
+.p3, .lt3, .lt3-alt, .p3-bold { // also affects .p3.lt
+  @include px-em--font-size--line-height(17,20);
+}
+.p4, .lt4, input.p4, .p4-bold, input.p4-bold { // also affects .p4.lt
+  @include px-em--font-size--line-height(12,18);
+}
+.p5, .lt5 .p5-bold { // also affects .p5.lt
+  @include px-em--font-size--line-height(10,13);
+}
+
+.p1-bold, .p2-bold, .p3-bold, .p4-bold, .p5-bold {
+  @include fontMedium;
+}
+
+.t1-blue,
+.t2-blue,
+.t3-blue,
+.t4-blue {
+  color: $blue;
+}
+
+
+.t1-light,
+.t2-light,
+.t3-light,
+.t4-light {
+  color: $white;
+}   
+
+.t1-marginless-top,
+.t2-marginless-top,
+.t3-marginless-top,
+.t4-marginless-top {
+  margin-top: 0;
+}    
+
+.p1-marginless-top,
+.p2-marginless-top,
+.p3-marginless-top,
+.p4-marginless-top,
+.p5-marginless-top {
+  margin-top: 0;
+}  
+
+.t1-marginless,
+.t2-marginless,
+.t3-marginless,
+.t4-marginless {
+  margin-top: 0;
+  margin-bottom: 0;
+}  
+
+.p1-marginless,
+.p2-marginless,
+.p3-marginless,
+.p4-marginless,
+.p5-marginless {
+  margin-top: 0;
+  margin-bottom: 0;
+}  
+
+.t1-marginless-bot,
+.t2-marginless-bot,
+.t3-marginless-bot,
+.t4-marginless-bot {
+  margin-bottom: 0;
+}  
+
+.p1-marginless-bot,
+.p2-marginless-bot,
+.p3-marginless-bot,
+.p4-marginless-bot,
+.p5-marginless-bot {
+  margin-bottom: 0;
+}    
+
+
+// Links
+// -------------------------
+
+a {
+  color: $linkColor;
+  text-decoration: none;
+}
+a:hover,
+a:active,
+a:focus {
+  color: $linkColorHover;
+  text-decoration: none;
+}
+
+a.secondary {
+  color: $gray40;
+  text-decoration: none;
+}
+a.secondary:hover,
+a.secondary:active,
+a.secondary:focus {
+  color: $gray50;
+  text-decoration: none;
+}
+
+
+
+// Unordered and Ordered lists
+// -------------------------
+ul, ol {
+  padding: 0;
+}
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+  margin-bottom: 0;
+}
+
+// Remove default list styles
+ul.unstyled,
+ol.unstyled {
+  margin-left: 0;
+  list-style: none;
+}
+
+// Single-line list items
+ul.inline,
+ol.inline {
+  margin-left: 0;
+  list-style: none;
+  & > li {
+    display: inline-block;
+    padding-left: 5px;
+    padding-right: 5px;
+
+    &:first-child {
+      padding-left: 0;
+    }
+  }
+}
+
+label {
+  @include fontItalic;
+}

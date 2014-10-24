@@ -1,0 +1,105 @@
+fieldset {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+// Groups of fields with labels on top (legends)
+legend {
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin-bottom: (1em*$base_line_height);
+  font-size: $base_font_size;
+  line-height: $base_line_height;
+  color: $dark_gray;
+  border: 0;
+  border-bottom: 1px solid #e5e5e5;
+
+  // Small
+  small {
+    font-size: (0.75em*$base_line_height);
+    color: $light_gray;
+  }
+}
+
+// Set font for forms
+label,
+input,
+button,
+select,
+textarea {
+  @include px-em--font-size--line-height(12,12);
+  font-weight: normal;
+}
+
+// Shared size and type resets
+select,
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"] {
+  display: inline-block;
+  height: 12px;
+  padding: 6px 6px 6px 8px;
+  margin-bottom: 9px;
+  background: $white;
+  color: $inputText;
+  border: none;
+
+  &.light {
+    color: $gray40;
+    background: $gray100;
+  }
+
+  &.error {
+    border: 1px solid red !important;
+  }     
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  text-transform: lowercase;
+}
+
+
+// uniform styles
+.selector {
+  height: 24px;
+  padding: 0px 6px;
+  position: relative;
+  overflow: hidden;
+
+  span {
+    position: relative;
+    top: 3px;
+    @include px-em--font-size--line-height(12,22);
+    color: $inputText;
+  }
+
+  select {
+    position: absolute;
+    border: none;
+    background: none;
+    text-transform: capitalize;
+    height: 24px;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -moz-opacity: 0;
+  }  
+}

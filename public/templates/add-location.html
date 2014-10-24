@@ -1,0 +1,48 @@
+<script type="text/html" id='AddLocation'>
+<div class="modal-view">
+  <div class="add-location-modal modal fade">
+    <div class="modal-inner">
+      <div class="label-wrap">
+        <div class="label">
+          <p class="t4 text-light">Add Favorite</p>
+        </div>
+      </div>   
+      <p class="p3">You can add a location to your uber favorites list. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet</p>
+      <div class="rule dark"></div>
+      <form class="add-location-form" name="add-location" method="post">
+        <fieldset class="row">
+          <label for="name" class="required">Name of Location</label>
+          <input type="text" class="add-field add-location-name light" name="name" value="" />
+        </fieldset>
+        <fieldset class="row">
+          <label for="address" class="required">Address</label>
+          <input type="text" class="add-field add-location-address light" name="address" value="" />
+        </fieldset>
+        <fieldset class="row">
+          <label for="city" class="required">City</label>
+          <input type="text" class="add-field add-location-city light" name="city" value="" />
+        </fieldset>
+        <fieldset class="row">
+          <label for="state" class="required">State</label>
+          <select name="state" class="add-field add-location-state">
+            <% _.each(states, function(state) { %>
+              <option value="<%= state.abbreviation %>" <%= location.state === state.abbreviation ? 'selected' : void 0 %> ><%= state.name %></option>
+            <% }); %>  
+          </select>
+        </fieldset>
+        <fieldset class="row">
+          <label for="postal" class="required">Postal</label>
+          <input type="text" class="add-field add-location-postal light" name="postal" value="" />
+        </fieldset>
+        <div class="row text-right">
+          <a href="#" class="btn btn-secondary add-location-cancel">cancel</a>
+          <button type="submit" name="submit" class="add-location-submit btn">
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="modal-overlay fade"></div>
+</div>
+</script>

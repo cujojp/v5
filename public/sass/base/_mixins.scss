@@ -1,0 +1,101 @@
+@mixin alpha {
+  margin-left: 0;
+}
+
+// strip units from any number. "50px" returns 50.
+@function strip-units($number) {
+  @return $number / ($number * 0 + 1);
+}
+
+@mixin omega {
+  margin-right: 0;
+}
+
+@mixin grid ($count:1, $pos:"") {
+  $gutter : $grid_gutter_width;
+  $base   : $grid_column_width * $count;
+
+  width: $base + (($count - 1) * $gutter);
+  float: left; 
+  display: inline; 
+  margin: 0 ($gutter / 2) $grid_baseline_height ($gutter / 2);
+
+  @if ($pos == "alpha") {
+    @include alpha();
+  }
+
+  @if ($pos == "omega") {
+    @include omega();
+  }
+}
+
+@mixin offset ($cols:1) {
+  padding-left: ($cols * $grid_offset) + 0px;
+} 
+
+@mixin font($font_family:$base_font_family, $font_weight: normal, $font_style: normal){
+  font-family: $font_family;
+  font-weight: $font_weight;
+  font-style: $font_style;
+}
+
+// Box shadows
+// Jackmoved from compass
+@mixin box-shadow($shadow1, $shadow2:null, $shadow3:null) {
+  @if ($shadow3!=null) {
+    -webkit-box-shadow: $shadow1, $shadow2, $shadow3;
+    box-shadow: $shadow1, $shadow2, $shadow3;
+  } @else if ($shadow2!=null){
+    -webkit-box-shadow: $shadow1, $shadow2;
+    box-shadow: $shadow1, $shadow2;
+  } @else {
+    -webkit-box-shadow: $shadow1;
+    box-shadow: $shadow1;
+  }
+}
+
+
+// Opacity
+// Jackmoved from compass
+@mixin opacity($opacity) {
+
+  opacity: $opacity / 100;
+
+  .no-opacity & {
+    @if ( $opacity == 0 ){
+      visibility: hidden;
+    } @else {
+      visibility: visible;
+    }
+  }
+}
+
+@mixin fontTitle(){ // SST W01 Roman
+  @include font($base_font_family_title);
+}
+
+@mixin fontRegular(){ // SST W01 Roman
+  @include font($base_font_family);
+}
+
+@mixin fontItalic(){ // SST W01 Italic
+  @include font($base_font_family_italic);
+}
+
+@mixin fontMedium(){ // SST W01 Medium
+  @include font($base_font_family_medium);
+}
+
+// convert px to em, with regard to its context. Most context will be 16px.
+@function px-em($pxFont, $context:16){
+  @return (strip-units($pxFont) / strip-units($context)) + 0em;
+}
+
+@function px-line-height($pxLH, $pxFont){
+  @return strip-units($pxLH) / strip-units($pxFont);
+}
+
+@mixin px-em--font-size--line-height($pxFont, $pxLH, $context:16) {
+  font-size: px-em($pxFont, $context);
+  line-height: px-line-height($pxLH, $pxFont);
+}

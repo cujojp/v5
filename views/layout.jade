@@ -1,0 +1,20 @@
+include ./shared/global/jade-helpers.jade
+
+doctype html
+-dataObj = data
+
+html
+  head
+    title= 'cool'
+    link(rel='stylesheet', href='http://fast.fonts.net/cssapi/5bbf6f06-d191-4299-a581-6497ea2105ca.css')
+    link(rel='stylesheet', href='/stylesheets/main.css')
+  body.app
+    .container
+      header.mast-head.twelve.columns
+        
+    .main 
+      block content
+
+    script(src='https://maps.googleapis.com/maps/api/js?sensor=false')
+    script(src='/javascripts/all.min.js')
+      
