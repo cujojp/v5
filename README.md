@@ -57,18 +57,59 @@ Within the console on the project root. Run that command, this will install all 
 
 ## Setting up [Dokku](https://github.com/progrium/dokku)
 - - - - -
+### Setting up Dokku with host.
+
+Make sure to install the dokku server via digialocean or whichever host you have. If you’re using a DNS registry you will need to update the A Name and IP which the DNS will point to. This should be pointing to the digital ocean IP.
+
+In our case, this  is just an example the IP is: `198.199.98.242`.
+
+### Pushing Worker’s to dokku
+Pushing to dokku is simple! You will however need to run a couple steps to deploy to the VPS and Dokku. 
+ 
+
+1. Add a git remote 
+cd into the project root directory.
+$ cd v5
+
+Add a git remote to our VPS with the Application name
+$ git remote add dokku dokku@*atarashi.cujo.jp:atarashi*
+
+2. Deploy the application! -- easy as one two three! (four)
+$ git push dokku master
+
+
 
 ### Setting up your SSH Keys
 
-TODO: Setup Dokku
+sh cat ~/.ssh/id_rsa.pub | ssh root@atarashi.cujo.jp "sudo sshcommand acl-add dokku atarashi” 
+
+User: root@atarashi.cujo.jp
+Password: ricer1215
 
 ### Sync your git account with your Dokku VPS for easy deployments 
 
-TODO: Setup Dokku
+```
+sh git remote add dokku root@atarashi.cujo.jp:v5
+```
 
 ### Deploy to Dokku
 
-TODO: Add me :)
+```
+sh git push dokku master
+```
+
+*Oh no I get the following error!*
+```
+fatal: 'atarashi' does not appear to be a git repository
+fatal: Could not read from remote repository.
+```
+
+ssh into the server. 
+
+	1.	Login to server as root. cd ~ (Go to home dir of root)
+	2.	cd v5
+	3.	git init --bare (It should give you message that it initialized a git repo)
+
 
 
 ## SSH Into the VPS
