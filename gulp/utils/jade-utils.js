@@ -38,7 +38,6 @@ var jadeUtilities = {
   }
 }
 
-
 module.exports = {
   getData: function(path) {
     return jadeUtilities.getData(path);

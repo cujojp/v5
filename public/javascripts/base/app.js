@@ -16,10 +16,8 @@
    * Our LocationsApp Constructor
    * @constructor
    */
-  var Portfolio = function() {
+  var BaseComponent = function() {
     
-    console.log(app);
-
     /**
      * Window object
      * @type {jQuery|object}
@@ -51,7 +49,7 @@
    *
    * Runs a lot of jquery selections and initializes our base class.
    */
-  Portfolio.prototype._init = function() {
+  BaseComponent.prototype._init = function() {
     /**
      * Initialize main Header component
      * @override
@@ -60,7 +58,7 @@
 
   };
 
-  app._Base = new Portfolio();
+  app._BaseComponent = new BaseComponent();
 
 })(jQuery, Cujo);
 

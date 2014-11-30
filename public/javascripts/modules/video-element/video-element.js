@@ -59,7 +59,6 @@
    */
   VideoElement.prototype._init = function() {
 
-    console.log('hey cool were running');
 
   };
 
