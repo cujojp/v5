@@ -69,6 +69,54 @@
 /* #Tablet (Portrait)
 ================================================== */
 
+/* Note: Design for a width of 1024px */
+
+@media only screen and (min-width: 960px) and (max-width: $grid_width) {
+  $tablet_grid_width: 960px;
+  $tablet_gutter_width: 10px;
+  $col_width: ($tablet_grid_width / 12) - ($tablet_gutter_width * 2);
+  $tablet_gutters: ($tablet_gutter_width * 2);
+
+  .container                                  { width: $tablet_grid_width; }
+  .container .column,
+  .container .columns                         { margin-left: $tablet_grid_width; margin-right: $tablet_grid_width;  }
+  .column.alpha, .columns.alpha               { margin-left: 0; margin-right: $tablet_grid_width; }
+  .column.omega, .columns.omega               { margin-right: 0; margin-left: $tablet_grid_width; }
+  .alpha.omega                                { margin-left: 0; margin-right: 0; }
+
+  .container .one.column                      { width: $col_width; }
+  .container .two.columns                     { width: ($col_width * 2) + ($tablet_gutters * 2) }
+  .container .three.columns                   { width: ($col_width * 3) + ($tablet_gutters * 3); }
+  .container .four.columns                    { width: ($col_width * 4) + ($tablet_gutters * 4); }
+  .container .five.columns                    { width: ($col_width * 5) + ($tablet_gutters * 5); }
+  .container .six.columns                     { width: ($col_width * 6) + ($tablet_gutters * 6); }
+  .container .seven.columns                   { width: ($col_width * 7) + ($tablet_gutters * 7); }
+  .container .eight.columns                   { width: ($col_width * 8) + ($tablet_gutters * 8); }
+  .container .nine.columns                    { width: ($col_width * 9) + ($tablet_gutters * 9); }
+  .container .ten.columns                     { width: ($col_width * 10) + ($tablet_gutters * 10); }
+  .container .eleven.columns                  { width: ($col_width * 11) + ($tablet_gutters * 11); }
+  .container .twelve.columns                  { width: ($col_width * 12) + ($tablet_gutters * 12); }
+
+  .container .one-third.column                { width: 236px; }
+  .container .two-thirds.column               { width: 492px; }
+
+  /* Offsets */
+  .container .offset-by-one                   { padding-left: $col_width; }
+  .container .offset-by-two                   { padding-left: ($col_width * 2) + $tablet_gutters; }
+  .container .offset-by-three                 { padding-left: ($col_width * 3) + $tablet_gutters; }
+  .container .offset-by-four                  { padding-left: ($col_width * 4) + $tablet_gutters; }
+  .container .offset-by-five                  { padding-left: ($col_width * 5) + $tablet_gutters; }
+  .container .offset-by-six                   { padding-left: ($col_width * 6) + $tablet_gutters; }
+  .container .offset-by-seven                 { padding-left: ($col_width * 7) + $tablet_gutters; }
+  .container .offset-by-eight                 { padding-left: ($col_width * 8) + $tablet_gutters; }
+  .container .offset-by-nine                  { padding-left: ($col_width * 9) + $tablet_gutters; }
+  .container .offset-by-ten                   { padding-left: ($col_width * 10) + $tablet_gutters; }
+  .container .offset-by-eleven                { padding-left: ($col_width * 11) + $tablet_gutters; }
+}
+
+/* #Tablet (Portrait)
+================================================== */
+
 /* Note: Design for a width of 768px */
 
 @media only screen and (min-width: 768px) and (max-width: 959px) {
