@@ -17,6 +17,21 @@
   }
 }
 
+.table-center-wrap {
+  display: table;
+  table-layout: fixed;
+
+  &.full {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.table-center {
+  display: table-cell;
+  vertical-align: middle;
+}
+
 .text-right { text-align: right; }
 .text-center { text-align: center; }
 .text-left { text-align: left; }

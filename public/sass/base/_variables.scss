@@ -3,8 +3,10 @@ $legacy_support_for_ie: false !default; // Used also in Compass
 // Set the default font family here so you don't have to override it later
 $normalized_font_family: sans-serif !default;
 
-$sans_serif_light: 'Avenir Next W02 Light', Arial, sans-serif;
-$sans_serif_regular: 'Avenir Next LT W01 SC', Arial, sans-serif;
+$sans_serif_light: 'AvenirNextW01-ThinItali', Arial, sans-serif;
+$sans_serif_regular: 'AvenirNextLTW01-MediumS', Arial, sans-serif;
+$sans_serif_light_italic: 'AvenirNextW01-ThinItali', Arial, sans-serif;
+$sans_serif_regular_italic: 'AvenirLTW01-35LightObli', Arial, sans-serif;
 $sans_serif_demi: 'Avenir Next LT W01 Demi', Arial, sans-serif;
 $sans_serif_italic: 'AvenirNextLTW01-Italic', Arial, sans-serif;
 
@@ -17,17 +19,18 @@ $sans_serif_italic: 'AvenirNextLTW01-Italic', Arial, sans-serif;
 $normalize_headings: true !default;
 
 $base_font_family: $sans_serif_light;
-$base_font_family_title: $sans_serif_regular;
+$base_font_family_title: $sans_serif_light_italic;
+$base_font_family_title_medium: $sans_serif_regular;
+$base_font_family_medium: $sans_serif_regular;
 $base_font_family_italic: $sans_serif_italic;
-$base_font_family_medium: $sans_serif_demi;
 $base_font_size: 1em !default;
 $base_line_height: 1.65 !default;
 
 // Grid
 // -------------------------------------------------- //
 
-$grid_column_width: 52px;
-$grid_gutter_width: 36px;
+$grid_column_width: 88px;
+$grid_gutter_width: 15px;
 $grid_total_columns: 12;
 $grid_baseline_height: 20px;
 
@@ -66,8 +69,8 @@ $gray: #999;
 $light_gray: #C2C2C2;
 $dark_gray: #444;
 
-$blue: rgb(31, 186, 214);
-$light_blue: #4dd0e1;
+$pink: rgb(226, 71, 120);
+$light_pink: rgb(226, 130, 160);
 
 $black: rgb(0, 0, 0);
 $gray10: rgb(26, 26, 26);
@@ -92,8 +95,8 @@ $text_med_light: $gray50;
 $text_light: $white;
 $defaultTextColor: $text_dark;
 
-$linkColor: rgb(31, 186, 214); 
-$linkColorHover: rgb(66,149,164);
+$linkColor: $pink; 
+$linkColorHover: $light_pink;
 
 // FORMS
 $inputBackground: $white !default;
@@ -103,9 +106,25 @@ $inputText: $light_gray !default;
 $inputTextFocus: $gray !default;
 
 
+// Z-INDEX LIST
+$zindexMediaElement: 100 !default;
+$zindexMediaBackground: 150 !default;
+$zindexMediaContent: 200 !default;
+$zindexPaddles: 900  !default;
+$zindexGlobalNav: 999  !default;
+$zindexDropdown: 1000 !default;
+$zindexPopover: 1010 !default;
+$zindexTooltip: 1030 !default;
+$zindexFixedNavbar: 1030 !default;
+$zindexScrollToTop: 1030 !default;
+$zindexStickyNav: 1035 !default;
+$zindexModalBackdrop: 1040 !default;
+$zindexModal: 1050 !default;
+$zindexUniversalNav: 1100 !default;
+
 // BUTTONS
 $btn_text: $white;
-$btn_background: $blue;
+$btn_background: $pink;
 $btn_background_hover: rgb(35, 206, 237);
 
 $btn_secondary_text: $white;
