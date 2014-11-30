@@ -26,6 +26,8 @@ build/Release
 
 # Compiled files
 public/stylesheets/main.css
+public/javascripts/all.js
+public/javascripts/all.min.js
 
 # Dependency directory
 # Commenting this out is preferred by some people, see
