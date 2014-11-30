@@ -60,7 +60,7 @@
 
   };
 
-  app.Portfolio = new Portfolio();
+  app._Base = new Portfolio();
 
 })(jQuery, Cujo);
 
