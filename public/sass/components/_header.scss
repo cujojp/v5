@@ -1,0 +1,19 @@
+.mast-head {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100px;
+  z-index: $zindexGlobalNav;
+}
+
+
+.background-fade {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  background: $white;
+  filter: blur(10px) contrast(0.4) brightness(1.4);
+  opacity: 0.85;
+}  
