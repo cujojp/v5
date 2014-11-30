@@ -19,7 +19,7 @@ gulp.task('startexpress', function() {
 
   // so much pizza
   app.use(function(req, res, next){
-    res.locals.options = jadeUtils;
+    res.locals = jadeUtils;
     next();
   });
 
