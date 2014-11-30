@@ -1,7 +1,7 @@
-mixin partial(module, data)
-  - config = locals._locals.options;
-  if ( module && data && module != true && data != true )
-    - data = config.getData(data);
+mixin partial(m, d)
+  if ( m && d && m != true && d != true )
+    - data = locals.getData(d)
     - partialObject = { 'data': data }
-    - e = config.extendObj({}, locals._locals, partialObject);
-    != config.partial('./views/' + module, partialObject)
+    - e = locals.extendObj({}, locals, partialObject);
+    //-- e = {"locals": locals, "js":options.globals.js, "data":data}
+    != locals.partial('./views/' + m, e)

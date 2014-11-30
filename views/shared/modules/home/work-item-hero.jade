@@ -1,6 +1,3 @@
-h1= data.client
-
-for block in data.blocks
-  h3.t3= block.title
-  p.p4= block.body
-  
+.work-hero-wrap
+  h1= data.client
+  a.item-button(href=data.slug.relative)= data.slug.title

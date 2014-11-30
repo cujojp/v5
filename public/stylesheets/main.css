@@ -201,7 +201,7 @@ table {
 
 .container {
   position: relative;
-  width: 1056px;
+  width: 1236px;
   margin: 0 auto;
   padding: 0; }
 
@@ -212,119 +212,119 @@ table {
   /* Nested Column Classes */ }
   .container .one.column, .container .one-third.column, .container .two-thirds.column,
   .container .one.columns {
-    width: 52px;
+    width: 88px;
     float: left;
     display: inline;
-    margin: 0 18px 20px 18px; }
+    margin: 0 7.5px 20px 7.5px; }
   .container .two.columns {
-    width: 140px;
+    width: 191px;
     float: left;
     display: inline;
-    margin: 0 18px 20px 18px; }
+    margin: 0 7.5px 20px 7.5px; }
   .container .three.columns {
-    width: 228px;
+    width: 294px;
     float: left;
     display: inline;
-    margin: 0 18px 20px 18px; }
+    margin: 0 7.5px 20px 7.5px; }
   .container .four.columns {
-    width: 316px;
+    width: 397px;
     float: left;
     display: inline;
-    margin: 0 18px 20px 18px; }
+    margin: 0 7.5px 20px 7.5px; }
   .container .five.columns {
-    width: 404px;
+    width: 500px;
     float: left;
     display: inline;
-    margin: 0 18px 20px 18px; }
+    margin: 0 7.5px 20px 7.5px; }
   .container .six.columns {
-    width: 492px;
+    width: 603px;
     float: left;
     display: inline;
-    margin: 0 18px 20px 18px; }
+    margin: 0 7.5px 20px 7.5px; }
   .container .seven.columns {
-    width: 580px;
+    width: 706px;
     float: left;
     display: inline;
-    margin: 0 18px 20px 18px; }
+    margin: 0 7.5px 20px 7.5px; }
   .container .eight.columns {
-    width: 668px;
+    width: 809px;
     float: left;
     display: inline;
-    margin: 0 18px 20px 18px; }
+    margin: 0 7.5px 20px 7.5px; }
   .container .nine.columns {
-    width: 756px;
+    width: 912px;
     float: left;
     display: inline;
-    margin: 0 18px 20px 18px; }
+    margin: 0 7.5px 20px 7.5px; }
   .container .ten.columns {
-    width: 844px;
+    width: 1015px;
     float: left;
     display: inline;
-    margin: 0 18px 20px 18px; }
+    margin: 0 7.5px 20px 7.5px; }
   .container .eleven.columns {
-    width: 932px;
+    width: 1118px;
     float: left;
     display: inline;
-    margin: 0 18px 20px 18px; }
+    margin: 0 7.5px 20px 7.5px; }
   .container .twelve.columns {
-    width: 1020px;
+    width: 1221px;
     float: left;
     display: inline;
-    margin: 0 18px 20px 18px; }
+    margin: 0 7.5px 20px 7.5px; }
   .container .thirteen.columns {
-    width: 1108px;
+    width: 1324px;
     float: left;
     display: inline;
-    margin: 0 18px 20px 18px; }
+    margin: 0 7.5px 20px 7.5px; }
   .container .fourteen.columns {
-    width: 1196px;
+    width: 1427px;
     float: left;
     display: inline;
-    margin: 0 18px 20px 18px; }
+    margin: 0 7.5px 20px 7.5px; }
   .container .fifteen.columns {
-    width: 1284px;
+    width: 1530px;
     float: left;
     display: inline;
-    margin: 0 18px 20px 18px; }
+    margin: 0 7.5px 20px 7.5px; }
   .container .sixteen.columns {
-    width: 1372px;
+    width: 1633px;
     float: left;
     display: inline;
-    margin: 0 18px 20px 18px; }
+    margin: 0 7.5px 20px 7.5px; }
   .container .one-third.column {
-    width: 322.66667px; }
+    width: 377.66667px; }
   .container .two-thirds.column {
-    width: 645.33333px; }
+    width: 755.33333px; }
   .container .offset-by-one {
-    padding-left: 88px; }
+    padding-left: 103px; }
   .container .offset-by-two {
-    padding-left: 176px; }
+    padding-left: 206px; }
   .container .offset-by-three {
-    padding-left: 264px; }
+    padding-left: 309px; }
   .container .offset-by-four {
-    padding-left: 352px; }
+    padding-left: 412px; }
   .container .offset-by-five {
-    padding-left: 440px; }
+    padding-left: 515px; }
   .container .offset-by-six {
-    padding-left: 528px; }
+    padding-left: 618px; }
   .container .offset-by-seven {
-    padding-left: 616px; }
+    padding-left: 721px; }
   .container .offset-by-eight {
-    padding-left: 704px; }
+    padding-left: 824px; }
   .container .offset-by-nine {
-    padding-left: 792px; }
+    padding-left: 927px; }
   .container .offset-by-ten {
-    padding-left: 880px; }
+    padding-left: 1030px; }
   .container .offset-by-eleven {
-    padding-left: 968px; }
+    padding-left: 1133px; }
   .container .offset-by-twelve {
-    padding-left: 1056px; }
+    padding-left: 1236px; }
   .container .offset-by-thirteen {
-    padding-left: 1144px; }
+    padding-left: 1339px; }
   .container .offset-by-fourteen {
-    padding-left: 1232px; }
+    padding-left: 1442px; }
   .container .offset-by-fifteen {
-    padding-left: 1320px; }
+    padding-left: 1545px; }
   .container .column.alpha, .container .columns.alpha {
     margin-left: 0; }
   .container .column.omega, .container .columns.omega {
@@ -565,6 +565,17 @@ or wrap each row of columns in a <div class="row"> */
   .rule.no-margin {
     margin: 0; }
 
+.table-center-wrap {
+  display: table;
+  table-layout: fixed; }
+  .table-center-wrap.full {
+    width: 100%;
+    height: 100%; }
+
+.table-center {
+  display: table-cell;
+  vertical-align: middle; }
+
 .text-right {
   text-align: right; }
 
@@ -589,49 +600,44 @@ or wrap each row of columns in a <div class="row"> */
   color: #4d4d4d; }
 
 .t1, .t2, .t3, .t4, .t3-bold, .t4-bold, h1, h2, h5 {
-  font-family: "Avenir Next LT W01 SC", Arial, sans-serif;
+  font-family: "AvenirNextW01-ThinItali", Arial, sans-serif;
   font-weight: normal;
   font-style: normal; }
 
 .t1 {
-  font-size: 3em;
-  line-height: 1.125;
-  text-transform: uppercase;
+  font-size: 4.5em;
+  line-height: 1;
   letter-spacing: 0px;
   margin-bottom: 40px;
-  color: #4d4d4d; }
+  color: #e24778; }
 
 .t2 {
   font-size: 1.625em;
   line-height: 1.46154;
-  text-transform: uppercase;
   letter-spacing: 0px;
   margin-bottom: 40px;
-  color: #4d4d4d; }
+  color: #e24778; }
 
 .t3 {
   font-size: 1.125em;
   line-height: 1.33333;
-  text-transform: uppercase;
   letter-spacing: 0px;
   margin-bottom: 40px;
-  color: #4d4d4d; }
+  color: #e24778; }
 
 .t4 {
-  font-size: 1.0625em;
-  line-height: 1.17647;
-  text-transform: uppercase;
+  font-size: 1.5em;
+  line-height: 1.25;
   letter-spacing: 0px;
-  margin-bottom: 40px;
-  color: #4d4d4d; }
+  margin-bottom: 30px;
+  color: #e24778; }
 
 .t5 {
   font-size: 0.75em;
   line-height: 1.66667;
-  text-transform: uppercase;
   letter-spacing: 0px;
   margin-bottom: 40px;
-  color: #4d4d4d; }
+  color: #e24778; }
 
 .p1, .lt1, .p1-bold {
   font-size: 3em;
@@ -654,15 +660,25 @@ or wrap each row of columns in a <div class="row"> */
   line-height: 1.3; }
 
 .p1-bold, .p2-bold, .p3-bold, .p4-bold, .p5-bold {
-  font-family: "Avenir Next LT W01 Demi", Arial, sans-serif;
+  font-family: "AvenirNextLTW01-MediumS", Arial, sans-serif;
   font-weight: normal;
   font-style: normal; }
 
-.t1-blue,
-.t2-blue,
-.t3-blue,
-.t4-blue {
-  color: #1fbad6; }
+.t6, .t7, .t1-bold, .t4-bold, .t5-bold, h6 {
+  font-family: "AvenirLTW01-35LightObli", Arial, sans-serif;
+  font-weight: normal;
+  font-style: normal; }
+
+.t6-bold, .t7-bold {
+  font-family: "AvenirNextLTW01-MediumS", Arial, sans-serif;
+  font-weight: normal;
+  font-style: normal; }
+
+.t1-grey,
+.t2-grey,
+.t3-grey,
+.t4-grey {
+  color: #e24778; }
 
 .t1-light,
 .t2-light,
@@ -712,13 +728,13 @@ or wrap each row of columns in a <div class="row"> */
   margin-bottom: 0; }
 
 a {
-  color: #1fbad6;
+  color: #e24778;
   text-decoration: none; }
 
 a:hover,
 a:active,
 a:focus {
-  color: #4295a4;
+  color: #e282a0;
   text-decoration: none; }
 
 a.secondary {
@@ -891,7 +907,7 @@ label {
   vertical-align: middle;
   color: white;
   cursor: pointer;
-  background: #1fbad6;
+  background: #e24778;
   border: none; }
   .btn:hover {
     background: #23ceed;
@@ -948,5 +964,30 @@ label {
   .icon.add {
     background-image: url("/images/icon-add@2x.png");
     background-size: contain; } }
+.media-container {
+  position: relative;
+  height: 525px; }
+  .media-container.default .media-background {
+    background-color: #e24778;
+    background-image: url("/svg/gradient-default.svg"); }
+  .media-container .media-element-inner {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 200; }
+  .media-container .media-background {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .85;
+    z-index: 150;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat; }
+
 .container {
   margin: 0 auto; }
