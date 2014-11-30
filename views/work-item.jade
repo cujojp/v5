@@ -1,0 +1,7 @@
+extends layout
+- dataObj = data;
+
+article.work-item-container
+  block content
+    +partial('shared/modules/work-detail/mast-head.jade', dataObj.masthead)
+    +partial('shared/modules/work-detail/detail-meta.jade', dataObj.info)

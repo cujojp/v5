@@ -1,0 +1,23 @@
+include ../../../../views/shared/global/jade-helpers.jade
+- dataObj = data;
+
+section.meta-wrap
+  ul.meta-list
+    - index = 0;
+    - length = locals.getObjectLength(dataObj);
+
+    each item in dataObj
+      if (index === 0)
+        li.first
+          span.t2= item.title
+          p.p3= item.description
+      else if (index === length - 1)
+        li.last
+          span.t2= item.title
+          p.p3= item.description
+      else 
+        li
+          span.t2= item.title
+          p.p3= item.description
+
+      - index++
