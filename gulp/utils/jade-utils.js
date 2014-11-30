@@ -3,7 +3,7 @@
 // = = = = = = = = = = =
 var config = require('./config');
 var fs = require('fs');
-var _ = require('underscore');
+var _ = require('lodash');
 var jade = require('jade');
 
 // = = = = = = = = = = = = = =
@@ -49,5 +49,8 @@ module.exports = {
   },
   extendObj: function(obj, locals, newObj) {
     return _.extend({}, locals, newObj);
-  }
+  },
+  getObjectLength: function(obj) {
+    return _.size(obj);
+  },
 };
