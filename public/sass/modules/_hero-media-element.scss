@@ -1,6 +1,7 @@
 .media-container {
   position: relative;
   height: 525px;
+  overflow: hidden;
 
   &.default {
     .media-background {
@@ -12,7 +13,19 @@
   }
 
   .media-element {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
 
+    .video-player {
+      position: relative;
+      height: 100%;
+    } 
+
+    .background-video {
+      position: relative;
+      width: 100%;
+    }
   }
 
   .media-element-inner {

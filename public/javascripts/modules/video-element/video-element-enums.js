@@ -5,7 +5,9 @@
 
     /** @enum {string} */
     ClassName: {
-      BASE: 'video-player'
+      BASE: 'media-element',
+      VIDEO: 'background-video',
+      VIDEO_CONTAINER: 'video-player'
     }
 
   };
