@@ -28,37 +28,53 @@
      * Base html jQuery object
      * @type {jQuery|object}
      */
-    this.html = null;
+    this.html = $('html');
 
     /**
      * Base body jQuery object
      * @type {jQuery|object}
      */
-    this.body = null;
-
-    /* override */
-    this._Header = null;
-
-    // initialize our application base.
-    this._init();
+    this.body = $('body');
   };
   
 
   /**
-   * init
+   * Shortcut for jquery.closest();
+   * @param {jQuert|Element} el Id of the element.
+   * @param {string} string Id of the element.
    *
-   * Runs a lot of jquery selections and initializes our base class.
+   * @return {?Element} The element, or null if not found.
    */
-  BaseComponent.prototype._init = function() {
-    /**
-     * Initialize main Header component
-     * @override
-     */
-    app._Header = new app._Modules.Header();
-
+  BaseComponent.prototype.getClosest = function( el, string ) {
+    return el.closest( '.' + string );
   };
 
-  app._BaseComponent = new BaseComponent();
+
+  /**
+   * Finds the cloesest element within this class' main element.
+   * @param {string} element 
+   * @param {jQuery|Element} [context] Optionally provide the context (scope)
+   *     for the query. Default is the main element of the class.
+   *
+   * @return {?jQuery|Element} 
+   */
+  BaseComponent.prototype.findByElementName = function( className, context ) {
+    return $(className, context || this.$el );
+  };
+
+
+  /**
+   * Finds an element within this class' main element.
+   * @param {string} className Class name to search for.
+   * @param {jQuery|Element} [context] Optionally provide the context (scope)
+   *     for the query. Default is the main element of the class.
+   * @return {jQuery} A jQuery object which may or may not contain the element
+   *     which was searched for.
+   */
+  BaseComponent.prototype.findByClass = function( className, context ) {
+    return $( '.' + className, context || this.$el );
+  };
+
+  app._BaseComponent = BaseComponent;
 
 })(jQuery, Cujo);
-
