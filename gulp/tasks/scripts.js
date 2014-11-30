@@ -13,6 +13,8 @@ gulp.task('scripts', function() {
       .pipe(gulp.dest('./public/javascripts'))
       .pipe(include())
       .pipe(concat('all.min.js'))
-      .pipe(uglify())
+      .pipe(uglify({
+        mangle: true
+      }))
       .pipe(gulp.dest('./public/javascripts'));
 });
