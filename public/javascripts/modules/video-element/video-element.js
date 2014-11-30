@@ -20,36 +20,25 @@
     }
   };
 
-
   /**
    * Header Constructor
    * @constructor
    */
-  var VideoElement = function(options) {
+  var VideoElement = function(element) {
+    VideoElement.base(this, 'constructor', element);
 
     /**
-     * Defaults Object
-     * TODO (kaleb): should be public header enum.
-     * @type {object}
+     * Base element for the module 
+     *
+     * @type {jQuery|element}
      * @private
      */
-    this._defaults = {};
-
-    /**
-     * Base options object.
-     * @type {object}
-     * @private
-     */
-    this._options = {};
-
-    // Map optional configs if they exist
-    options = this._options = options ?
-          $.extend({}, this._defaults, options) :
-          this._defaults;
+    this._elment = element;
 
 
     this._init();
   };
+  app._Utilities.inherits(VideoElement, app._BaseComponent);
 
   /**
    * _init
