@@ -1,0 +1,42 @@
+.media-container {
+  position: relative;
+  height: 525px;
+
+  &.default {
+    .media-background {
+      background: {
+        color: $pink;
+        image: url('/svg/gradient-default.svg');
+      }
+    }
+  }
+
+  .media-element {
+
+  }
+
+  .media-element-inner {
+    position: absolute;
+    top: 0;
+    bottom :0;
+    width: 100%;
+    height: 100%;
+    z-index: $zindexMediaContent;
+  }
+
+  .media-background {
+    position: absolute;
+    top: 0;
+    bottom :0;
+    width: 100%;
+    height: 100%;
+    opacity: .85;
+    z-index: $zindexMediaBackground;
+    background: {
+      position: center center;
+      size: cover;
+      repeat: no-repeat;
+    }
+  }
+    
+}
