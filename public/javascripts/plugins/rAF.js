@@ -5,11 +5,6 @@
  *
  * Copyright (c) 2012 Corey Frang
  * Licensed under the MIT license.
- *
- * Modified 02/05/2014 by Glen Cheney
- * * use strict added
- * * Double quotes to single quotes
- * * Modernizr.raf added to determine if it's native rAF or not.
  */
 
 (function( jQuery, Modernizr ) {

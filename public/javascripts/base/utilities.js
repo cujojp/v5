@@ -17,8 +17,6 @@
       child.prototype.constructor = child;
 
       /**
-       * Taken from Closure :)
-       *
        * Calls superclass constructor/method.
        *
        * This function is only available if you use goog.inherits to
