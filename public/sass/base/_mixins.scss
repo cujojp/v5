@@ -70,19 +70,27 @@
   }
 }
 
-@mixin fontTitle(){ // SST W01 Roman
+@mixin fontTitle(){ // AvenirNextW01-ThinItali
   @include font($base_font_family_title);
 }
 
-@mixin fontRegular(){ // SST W01 Roman
+@mixin fontTitleBold(){ // AvenirNextW01-ThinItali
+  @include font($sans_serif_regular_italic);
+}
+
+@mixin fontRegular(){ // Avenir Next W02 Light
   @include font($base_font_family);
 }
 
-@mixin fontItalic(){ // SST W01 Italic
+@mixin fontItalic(){ // AvenirNextLTW01-Italic
   @include font($base_font_family_italic);
 }
 
-@mixin fontMedium(){ // SST W01 Medium
+@mixin fontBold() { // Avenir Next LT W01 Demi
+  @include font($base_font_family_medium);
+}
+
+@mixin fontMedium(){ // Avenir Next W02 Light
   @include font($base_font_family_medium);
 }
 
@@ -99,3 +107,4 @@
   font-size: px-em($pxFont, $context);
   line-height: px-line-height($pxLH, $pxFont);
 }
+

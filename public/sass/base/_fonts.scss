@@ -7,43 +7,38 @@
 }
 
 .t1 {
-  @include px-em--font-size--line-height(48,54);
-  text-transform: uppercase;
+  @include px-em--font-size--line-height(72,72);
   letter-spacing: 0px;
   margin-bottom: 40px;
-  color: $gray30;
+  color: $pink;
 }
 
 .t2 {
   @include px-em--font-size--line-height(26,38);
-  text-transform: uppercase;
   letter-spacing: 0px;
   margin-bottom: 40px;
-  color: $gray30;   
+  color: $pink;   
 }
 
 .t3 {
   @include px-em--font-size--line-height(18,24);
-  text-transform: uppercase;
   letter-spacing: 0px;
   margin-bottom: 40px;
-  color: $gray30;  
+  color: $pink;  
 }
 
 .t4 {
-  @include px-em--font-size--line-height(17,20);
-  text-transform: uppercase;
+  @include px-em--font-size--line-height(24,30);
   letter-spacing: 0px;
-  margin-bottom: 40px;
-  color: $gray30;  
+  margin-bottom: 30px;
+  color: $pink;  
 }
 
 .t5 {
   @include px-em--font-size--line-height(12,20);
-  text-transform: uppercase;
   letter-spacing: 0px;
   margin-bottom: 40px;
-  color: $gray30;  
+  color: $pink;  
 }
 
 .p1, .lt1, .p1-bold { // also affects .p1.lt
@@ -66,11 +61,18 @@
   @include fontMedium;
 }
 
-.t1-blue,
-.t2-blue,
-.t3-blue,
-.t4-blue {
-  color: $blue;
+.t6, .t7, .t1-bold, .t4-bold, .t5-bold, h6{
+  @include fontTitleBold;
+}
+.t6-bold, .t7-bold{
+  @include fontBold;
+}
+
+.t1-grey,
+.t2-grey,
+.t3-grey,
+.t4-grey {
+  color: $pink;
 }
 
 
