@@ -19,7 +19,6 @@ var jadeUtilities = {
 
     if (templatePath.match(/.jade/g)) {
       var markup = jade.compile(file, {
-        globals: {},
         filename: templatePath,
         basedir: __dirname,
         pretty: true
