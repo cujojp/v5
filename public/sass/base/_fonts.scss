@@ -2,7 +2,7 @@
   color:$defaultTextColor;
 }
 
-.t1, .t2, .t3, .t4, .t3-bold, .t4-bold, h1, h2, h5 {
+.t1, .t2, .t3, .t4, .t3-bold, .t4-bold, .t5, h1, h2, h5 {
   @include fontTitle;
 }
 
@@ -71,10 +71,18 @@
 .t1-grey,
 .t2-grey,
 .t3-grey,
-.t4-grey {
-  color: $pink;
+.t4-grey,
+.t5-grey {
+  color: $gray70;
 }
 
+.t1-grey-dark,
+.t2-grey-dark,
+.t3-grey-dark,
+.t4-grey-dark,
+.t5-grey-dark {
+  color: $gray30;
+}
 
 .t1-light,
 .t2-light,
@@ -101,7 +109,8 @@
 .t1-marginless,
 .t2-marginless,
 .t3-marginless,
-.t4-marginless {
+.t4-marginless,
+.t5-marginless {
   margin-top: 0;
   margin-bottom: 0;
 }  

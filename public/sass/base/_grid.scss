@@ -17,6 +17,8 @@
 
 .container                           { position: relative; width: $grid_width; margin: 0 auto; padding: 0; }
 .row                                 { margin-bottom: 20px; }
+.row.marginless                      { margin-bottom: 0px; }
+.columns.marginless                  { margin-bottom: 0px !important; } 
 
 // Base Grid
 .container {
@@ -66,7 +68,7 @@
 }
 
 
-/* #Tablet (Portrait)
+/* #Tablet (Landscape)
 ================================================== */
 
 /* Note: Design for a width of 1024px */

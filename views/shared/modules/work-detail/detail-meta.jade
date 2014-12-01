@@ -2,22 +2,27 @@ include ../../../../views/shared/global/jade-helpers.jade
 - dataObj = data;
 
 section.meta-wrap
-  ul.meta-list
-    - index = 0;
-    - length = locals.getObjectLength(dataObj);
+  .container
+    .row.marginless
+      ul.meta-list.columns.ten.offset-by-one
+        - index = 0;
+        - length = locals.getObjectLength(dataObj);
 
-    each item in dataObj
-      if (index === 0)
-        li.first
-          span.t2= item.title
-          p.p3= item.description
-      else if (index === length - 1)
-        li.last
-          span.t2= item.title
-          p.p3= item.description
-      else 
-        li
-          span.t2= item.title
-          p.p3= item.description
+        each item in dataObj
+          if (index === 0)
+            li.first.columns.three.alpha
+              span.t5.t5-grey.t5-marginless= item.title
+              p.p3.p3-marginless.desc= item.description
+          else if (index === length - 1)
+            li.columns.three.omega
+              span.t5.t5-grey.t5-marginless= item.title
+              p.p3.p3-marginless.desc= item.description
+          else 
+            li.columns.four
+              span.t5.t5-grey.t5-marginless= item.title
+              p.p3.p3-marginless.desc= item.description
 
-      - index++
+          - index++
+    .row.marginless
+      .columns.ten.offset-by-one
+        .rule.light
