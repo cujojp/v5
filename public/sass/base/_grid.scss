@@ -87,17 +87,17 @@
   .alpha.omega                                { margin-left: 0; margin-right: 0; }
 
   .container .one.column                      { width: $col_width; }
-  .container .two.columns                     { width: ($col_width * 2) + ($tablet_gutters * 2) }
-  .container .three.columns                   { width: ($col_width * 3) + ($tablet_gutters * 3); }
-  .container .four.columns                    { width: ($col_width * 4) + ($tablet_gutters * 4); }
-  .container .five.columns                    { width: ($col_width * 5) + ($tablet_gutters * 5); }
-  .container .six.columns                     { width: ($col_width * 6) + ($tablet_gutters * 6); }
-  .container .seven.columns                   { width: ($col_width * 7) + ($tablet_gutters * 7); }
-  .container .eight.columns                   { width: ($col_width * 8) + ($tablet_gutters * 8); }
-  .container .nine.columns                    { width: ($col_width * 9) + ($tablet_gutters * 9); }
-  .container .ten.columns                     { width: ($col_width * 10) + ($tablet_gutters * 10); }
-  .container .eleven.columns                  { width: ($col_width * 11) + ($tablet_gutters * 11); }
-  .container .twelve.columns                  { width: ($col_width * 12) + ($tablet_gutters * 12); }
+  .container .two.columns                     { width: ($col_width * 2) + ($tablet_gutters * 1) }
+  .container .three.columns                   { width: ($col_width * 3) + ($tablet_gutters * 2); }
+  .container .four.columns                    { width: ($col_width * 4) + ($tablet_gutters * 3); }
+  .container .five.columns                    { width: ($col_width * 5) + ($tablet_gutters * 3); }
+  .container .six.columns                     { width: ($col_width * 6) + ($tablet_gutters * 4); }
+  .container .seven.columns                   { width: ($col_width * 7) + ($tablet_gutters * 5); }
+  .container .eight.columns                   { width: ($col_width * 8) + ($tablet_gutters * 6); }
+  .container .nine.columns                    { width: ($col_width * 9) + ($tablet_gutters * 7); }
+  .container .ten.columns                     { width: ($col_width * 10) + ($tablet_gutters * 9); }
+  .container .eleven.columns                  { width: ($col_width * 11) + ($tablet_gutters * 10); }
+  .container .twelve.columns                  { width: ($col_width * 12) + ($tablet_gutters * 11); }
 
   .container .one-third.column                { width: 236px; }
   .container .two-thirds.column               { width: 492px; }
