@@ -1,0 +1,32 @@
+.container {
+  .meta-list {
+    overflow: hidden;
+    margin: {
+      bottom: 0;
+    }
+
+    li {
+      position: relative;
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 1px;
+        background: $gray90;
+      }
+
+      &.omega {
+        &:after {
+          display: none;
+        }
+      }
+    }
+
+    .desc {
+      color: $gray50;
+    }
+  }
+}

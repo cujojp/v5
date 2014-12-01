@@ -10,12 +10,11 @@ html
     link(rel='stylesheet', href='/stylesheets/main.css')
     meta(name="viewport" content="initial-scale=1.0, user-scalable=no")
   body.app
-    header.mast-head
-      .container
-        .row
-          .twelve.columns
 
-    block content
+    +partial('shared/components/header.jade', dataObj)
+
+    .main-container-wrap
+      block content
 
     script(src='https://maps.googleapis.com/maps/api/js?sensor=false')
     script(src='/javascripts/all.js')
