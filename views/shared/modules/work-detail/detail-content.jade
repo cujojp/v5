@@ -1,0 +1,26 @@
+include ../../../../views/shared/global/jade-helpers.jade
+- dataObj = data;
+
+section.detail-content
+  .container
+    if dataObj.blocks
+      - contentBlock = dataObj.blocks[0]
+
+      .row.marginless
+        .columns.seven
+          h3.t2= contentBlock.title
+
+      .row
+        .columns.five.offset-by-one
+          p.p3!= contentBlock.body
+
+        .columns.four.offset-by-one
+          - isCarousel = locals.isArray(contentBlock.media);
+
+          if isCarousel
+            .inline-carousel
+              for slide in contentBlock.media
+                .carousel-slide
+                  img(src="http://placekitten.com/g/490/300")
+
+          else 
