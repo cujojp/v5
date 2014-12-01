@@ -51,4 +51,7 @@ module.exports = {
   getObjectLength: function(obj) {
     return _.size(obj);
   },
+  isArray: function(obj) {
+    return _.isArray(obj);
+  },
 };

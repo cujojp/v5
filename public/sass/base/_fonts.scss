@@ -14,7 +14,7 @@
 }
 
 .t2 {
-  @include px-em--font-size--line-height(26,38);
+  @include px-em--font-size--line-height(52,52);
   letter-spacing: 0px;
   margin-bottom: 40px;
   color: $pink;   
@@ -42,13 +42,13 @@
 }
 
 .p1, .lt1, .p1-bold { // also affects .p1.lt
-  @include px-em--font-size--line-height(48,54);
+  @include px-em--font-size--line-height(22,54);
 }
 .p2, .lt2, .p2-bold, p, input.p2, input.p2-bold { // also affects .p2.lt
   @include px-em--font-size--line-height(18,24);
 }
 .p3, .lt3, .lt3-alt, .p3-bold { // also affects .p3.lt
-  @include px-em--font-size--line-height(17,20);
+  @include px-em--font-size--line-height(16,20);
 }
 .p4, .lt4, input.p4, .p4-bold, input.p4-bold { // also affects .p4.lt
   @include px-em--font-size--line-height(12,18);
