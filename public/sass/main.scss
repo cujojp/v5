@@ -7,9 +7,12 @@
 @import "base/_fonts";
 @import "base/_forms";
 @import "base/_buttons";
-@import "components/_slick";
-@import "components/_header";
 @import "base/_responsive";
+
+// Components
+@import "components/_slick";
+@import "components/_inline-carousel";
+@import "components/_header";
 
 // Modules
 @import "modules/_hero-media-element";
