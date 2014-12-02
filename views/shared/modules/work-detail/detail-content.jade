@@ -1,7 +1,7 @@
 include ../../../../views/shared/global/jade-helpers.jade
 - dataObj = data;
 
-section.detail-content
+section.detail-article-content
   .container
     if dataObj.blocks
       - contentBlock = dataObj.blocks[0]
@@ -12,15 +12,18 @@ section.detail-content
 
       .row
         .columns.five.offset-by-one
-          p.p3!= contentBlock.body
+          p.p3.p3-marginless-top!= contentBlock.body
 
         .columns.five.offset-by-one
           - isCarousel = locals.isArray(contentBlock.media);
 
           if isCarousel
-            .inline-carousel
-              for slide in contentBlock.media
-                .carousel-slide
-                  img(src="http://placekitten.com/g/490/300")
-
+            .inline-carousel-wrap
+              .inline-carousel
+                for slide in contentBlock.media
+                  .carousel-slide
+                    img(src="http://placekitten.com/g/490/300")
+              .caption-container
+                for item in contentBlock.media
+                  span.caption.t5.t5-grey.t5-marginless.fade.invisible!= item.caption
           else 

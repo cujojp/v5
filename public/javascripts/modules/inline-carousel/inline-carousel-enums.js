@@ -5,7 +5,11 @@
 
     /** @enum {string} */
     ClassName: {
-      BASE: 'inline-carousel'
+      BASE: 'inline-carousel-wrap',
+      CAORUSEL: 'inline-carousel',
+      DOTS: 'paging-container',
+      CAPTION_WRAP: 'caption-container',
+      CAPTION: 'caption'
     }
 
   };
