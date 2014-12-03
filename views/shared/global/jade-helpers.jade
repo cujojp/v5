@@ -5,3 +5,7 @@ mixin partial(m, d)
     - e = locals.extendObj({}, locals, partialObject);
     //-- e = {"locals": locals, "js":options.globals.js, "data":data}
     != locals.partial('./views/' + m, e)
+
+mixin svgIcon(icon, classes)
+  svg.icon(class=classes)
+    use(xlink:href="#"+icon)
