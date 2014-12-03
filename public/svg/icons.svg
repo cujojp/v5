@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="0" height="0" style="position:absolute">
+
+<symbol id="menu" viewBox="0 0 14.4 9.6">
+        <path d="M0 8h14.4v1.6H0zM0 0h14.4v1.6H0zM0 4h14.4v1.6H0z"/>
+</symbol>
+
+<symbol id="menu_menu" viewBox="0 0 14.4 9.6">
+        <path d="M0 8h14.4v1.6H0zM0 0h14.4v1.6H0zM0 4h14.4v1.6H0z"/>
+</symbol>
+</svg>
