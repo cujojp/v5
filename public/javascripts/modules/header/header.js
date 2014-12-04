@@ -37,6 +37,48 @@
      */
     this._element = $(element);
 
+    /**
+     * Base body element.
+     *
+     * @type {jQuery|element}
+     * @private
+     */
+    this._body = $(this.body);
+
+    /**
+     * Main page application, or content.
+     *
+     * @type {jQuery|element}
+     * @private
+     */
+    this._app = null;
+
+    /**
+     * Header menu icon.
+     *
+     * @type {jQuery|element}
+     * @private
+     */
+    this._menuIcon = null;
+
+    /**
+     * Cached jquery element for the app overlay.
+     * Will fade in when the nav is enabled.
+     *
+     * @type {jQuery|element}
+     * @private
+     */
+    this._appOverlay = null;
+
+    /**
+     * Boolean to determine if the nav is enabled and 
+     * open versus closed.
+     *
+     * @type {boolean}
+     * @private
+     */
+    this._isOpen = false;
+
 
     this._init();
   };
@@ -50,10 +92,24 @@
    */
   Header.prototype._init = function() {
 
+    this._initializeBindings();
   };
 
 
+  /**
+   * _initializeBindings
+   * Initializes all binings and event listeners for the
+   * header module.
+   *
+   * @private
+   */
+  Header.prototype._initializeBindings = function() {
+
+
+
+  };
+
   app._Modules.Header = module;
 
-})(jQuery, Cujo);
+})(jQuery, cujojp);
 

@@ -5,9 +5,10 @@
 
     /** @enum {string} */
     ClassName: {
-      BASE: 'test-module'
+      BASE: 'mast-head',
+      TOGGLE: 'menu-icon-toggle'
     }
 
   };
-})(jQuery, Cujo);
+})(jQuery, cujojp);
 

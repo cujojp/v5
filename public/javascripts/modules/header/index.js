@@ -22,4 +22,4 @@
     app._Modules.Header.init();
   }
 
-})(jQuery, Cujo);
+})(jQuery, cujojp);

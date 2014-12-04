@@ -1,7 +1,12 @@
 include ../../../views/shared/global/jade-helpers.jade
 
 header.mast-head
-  .container
+  .container.mast-head-container
     .row
-      .twelve.columns
-        +svgIcon('cujojp', 'logo')
+      .two.columns
+        a(href="/")
+          +svgIcon('cujojp', 'logo')
+      .two.columns.offset-by-eight
+        a.menu-icon-toggle(href="#TOGGLE_MENU")
+          +svgIcon('menu', 'menu-icon size-20')
+            
