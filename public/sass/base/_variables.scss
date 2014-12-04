@@ -26,9 +26,14 @@ $base_font_family_italic: $sans_serif_italic;
 $base_font_size: 1em !default;
 $base_line_height: 1.65 !default;
 
+// UI Elements
+// -------------------------------------------------- //
+$header_height: 95px !default;
+$nav_width: 355px !default;
+
+
 // Grid
 // -------------------------------------------------- //
-
 $grid_column_width: 88px;
 $grid_gutter_width: 15px;
 $grid_total_columns: 12;
@@ -110,6 +115,7 @@ $inputTextFocus: $gray !default;
 $zindexMediaElement: 100 !default;
 $zindexMediaBackground: 150 !default;
 $zindexMediaContent: 200 !default;
+$zindexAppContent: 300 !default;
 $zindexPaddles: 900  !default;
 $zindexGlobalNav: 999  !default;
 $zindexDropdown: 1000 !default;

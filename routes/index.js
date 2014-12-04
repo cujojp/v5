@@ -22,7 +22,10 @@ router.get('/work/:name', function(req, res) {
 
     _.each(req.db.work, function(workItem) {
       if (params == workItem.slug.id) {
-        res.render('work-item', {data: workItem});
+        res.render('work-item', {
+          db: req.db,
+          data: workItem
+        });
       } else {
         res.render('error.jade', {title: '404: File Not Found'});
       }
