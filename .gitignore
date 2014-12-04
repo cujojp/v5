@@ -28,6 +28,7 @@ build/Release
 public/stylesheets/main.css
 public/javascripts/all.js
 public/javascripts/all.min.js
+public/svg/icons.svg
 
 # Dependency directory
 # Commenting this out is preferred by some people, see
