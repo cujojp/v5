@@ -51,5 +51,5 @@
 
   app._Modules.TestModule = module;
 
-})(jQuery, Cujo);
+})(jQuery, cujojp);
 

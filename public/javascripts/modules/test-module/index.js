@@ -19,4 +19,4 @@
     app._Modules.TestModule.init();
   }
 
-})(jQuery, Cujo);
+})(jQuery, cujojp);

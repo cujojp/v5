@@ -9,5 +9,5 @@
     }
 
   };
-})(jQuery, Cujo);
+})(jQuery, cujojp);
 

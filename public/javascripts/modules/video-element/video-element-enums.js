@@ -11,5 +11,5 @@
     }
 
   };
-})(jQuery, Cujo);
+})(jQuery, cujojp);
 

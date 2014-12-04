@@ -154,5 +154,5 @@
 
   app._Modules.InlineCarousel = module;
 
-})(jQuery, Cujo);
+})(jQuery, cujojp);
 

@@ -173,12 +173,10 @@
   VideoElement.prototype._resizeVideoAsset = function(videoStyles) {
 
     this._videoElement.css(videoStyles);
-
-
   };
 
 
   app._Modules.VideoElement = module;
 
-})(jQuery, Cujo);
+})(jQuery, cujojp);
 

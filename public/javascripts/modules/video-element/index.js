@@ -20,4 +20,4 @@
     app._Modules.VideoElement.init();
   }
 
-})(jQuery, Cujo);
+})(jQuery, cujojp);
