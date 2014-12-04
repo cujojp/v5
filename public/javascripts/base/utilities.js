@@ -16,29 +16,86 @@
       child.prototype = Object.create(parent.prototype);
       child.prototype.constructor = child;
 
-      /**
-       * Calls superclass constructor/method.
-       *
-       * This function is only available if you use goog.inherits to
-       * express inheritance relationships between classes.
-       *
-       * NOTE: This is a replacement for goog.base and for superClass_
-       * property defined in child.
-       *
-       * @param {!Object} me Should always be "this".
-       * @param {string} methodName The method name to call. Calling
-       *     superclass constructor can be done with the special string
-       *     'constructor'.
-       *     method/constructor.
-       * @return {*} The return value of the superclass method/constructor.
-       */
-      child.base = function(me, methodName) {
+      child.base = function(self, methodName) {
         var args = Array.prototype.slice.call(arguments, 2);
-        return parent.prototype[methodName].apply(me, args);
+        return parent.prototype[methodName].apply(self, args);
       };
     },
 
-  
+    /**
+     * Returns a normalized transition end event name.
+     * @return {string}
+     */
+    getTransitionEndEvent: function() {
+      var transition;
+      var el = document.createElement('fakeelement');
+      var transitions = {
+        'transition':'transitionend',
+        'OTransition':'oTransitionEnd',
+        'MozTransition':'transitionend',
+        'WebkitTransition':'webkitTransitionEnd'
+      };
+      for(transition in transitions){
+        if( el.style[transition] !== undefined ){
+          return transitions[transition];
+        }
+      }
+    },
+
+
+    /**
+     * Test for if an item is undefined or null.
+     *
+     * @param {*} obj The input to test.
+     * @param {*} defaultVal The fallback if the input is undefined.
+     * @param {boolean} opt_test If defined, `test` will be used to determine which
+     * @return {*} either default or an object.
+     *
+     */
+    defaults: function(obj, defaultVal, opt_test) {
+      var test = opt_test === undefined ?
+        (obj === undefined || obj === null) : 
+        !opt_test;
+
+      // returns the clean object or value.
+      return test ? defaultVal : obj;
+    },
+    
+
+    /**
+     * makeFakeEvent
+     *
+     * @param element
+     */
+    makeFakeEvent: function(element) {
+
+    },
+
+    /**
+     * onTransitionEnd
+     *
+     * @param element
+     */
+    onTransitionEnd: function(element, fn, context) {
+      
+      var callback = $.proxy(fn, Utilities.defaults(context, window));
+
+      var transitionComplete = function(event) {
+        callback(event);        
+      };
+
+      if (Utilities.HAS_TRANSITIONS) {
+        $(element).on(Utilities.getTransitionEndEvent(), transitionComplete);
+      } else {
+        // Push to the end of the queue with a fake event which will pass the checks
+        // inside the callback function.
+        setTimeout(function() {
+          transitionComplete(Utilities._makeFakeEvent(elem));
+        }, 0);
+      }
+
+    },
+
     /**
      * Fade in an element and optionally add a class which sets visibility
      * to hidden.
@@ -154,7 +211,39 @@
     HIDDEN: 'hidden',
     FADE: 'fade',
     IN: 'in',
-    INVISIBLE: 'invisible'
+    INVISIBLE: 'invisible',
+
+    // Base elements
+    APP: 'app',
+    APP_WRAP: 'app-container-wrap',
+  };
+
+  /**
+   * Transition Support
+   * @type {boolean}
+   */
+  Utilities.HAS_TRANSITIONS = Modernizr.csstransitions;
+
+  /**
+   * Animation Support
+   * @type {boolean}
+   */
+  Utilities.HAS_CSS_ANIMATIONS = Modernizr.cssanimations;
+
+  /**
+   * Transform Support
+   * @type {boolean}
+   */
+  Utilities.HAS_TRANSFORMS = Modernizr.csstransforms;
+
+  /** @enum {string} */
+  Utilities.Events = {
+    // Mouse
+    CLICK: 'click',
+
+    // Misc
+    RESIZE: 'resize',
+    SCROLL: 'scroll'
   };
 
   app._Utilities = Utilities;

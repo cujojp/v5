@@ -9,6 +9,7 @@
     overflow: hidden;
 
     .app-container-wrap {
+      overflow: hidden;
       transform: translateX(-$nav_width);
     }
   }
