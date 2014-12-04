@@ -13,5 +13,5 @@
     }
 
   };
-})(jQuery, Cujo);
+})(jQuery, cujojp);
 

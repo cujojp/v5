@@ -159,4 +159,4 @@
 
   app._Utilities = Utilities;
 
-})(jQuery, Cujo);
+})(jQuery, cujojp);

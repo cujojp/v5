@@ -1,4 +1,4 @@
-window.Cujo = {
+window.cujojp = {
   _Modules: {},
   _Data: {}
 };

@@ -77,4 +77,4 @@
 
   app._BaseComponent = BaseComponent;
 
-})(jQuery, Cujo);
+})(jQuery, cujojp);

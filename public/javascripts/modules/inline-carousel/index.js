@@ -20,4 +20,4 @@
     app._Modules.InlineCarousel.init();
   }
 
-})(jQuery, Cujo);
+})(jQuery, cujojp);
