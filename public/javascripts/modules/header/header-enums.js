@@ -5,8 +5,15 @@
 
     /** @enum {string} */
     ClassName: {
+      // Selectors
       BASE: 'mast-head',
-      TOGGLE: 'menu-icon-toggle'
+      TOGGLE: 'menu-icon-toggle',
+
+      // Event classes
+      NAV_OPEN: 'nav-open',
+      NAV_OPENING: 'opening',
+      NAV_CLOSED: 'nav-closed',
+      NAV_CLOSING: 'nav-closing'
     }
 
   };
