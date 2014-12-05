@@ -176,14 +176,11 @@
    * @private
    */
   Header.prototype._toggleScrollLock = function(open) {
-    // reset the scroll position
-    window.scrollTo(0, 0);
-
     if (open) {
+      window.scrollTo(0, 0);
       this._startNavOpenSequence();
     } else {
-      this._body.removeAttr('styles');
-      this._appWrap.removeAttr('styles');
+      this._startNavCloseSequence();
     }
   };
 
@@ -201,6 +198,9 @@
       height: windowHeight
     };
      
+    this._body.removeClass(
+        app._Modules.Header.Enums.ClassName.NAV_CLOSED);
+    
     this._body.addClass([
         app._Modules.Header.Enums.ClassName.NAV_OPEN,
         app._Modules.Header.Enums.ClassName.NAV_OPENING,
@@ -226,6 +226,51 @@
     this._body.removeClass(
       app._Modules.Header.Enums.ClassName.NAV_OPENING);
   };
+
+
+  /**
+   * _startNavCloseSequence
+   * Will begin the close transition for the main navigation and
+   * header.
+   *
+   * @private
+   */
+  Header.prototype._startNavCloseSequence = function() {
+    this._body.removeClass(
+        app._Modules.Header.Enums.ClassName.NAV_OPENING);
+    
+    this._body.addClass([
+        app._Modules.Header.Enums.ClassName.NAV_CLOSING,
+      ].join(' '));
+
+    app._Utilities.onTransitionEnd(
+      this._body,
+      this._handleCloseFinished,
+      this);
+  };
+    
+
+  /**
+   * _handleCloseFinished
+   * Handle when the navigation header is finished this 
+   * close transition.
+   *
+   * @private
+   */
+  Header.prototype._handleCloseFinished = function() {
+    this._body.removeClass([
+        app._Modules.Header.Enums.ClassName.NAV_CLOSING,
+        app._Modules.Header.Enums.ClassName.NAV_OPEN,
+    ].join(' '));
+
+    this._body.addClass(
+      app._Modules.Header.Enums.ClassName.NAV_CLOSED);
+
+    this._body.removeAttr('style');
+    this._appWrap.removeAttr('style');
+  };   
+
+
 
   app._Modules.Header = module;
 

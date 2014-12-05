@@ -13,6 +13,12 @@
       transform: translateX(-$nav_width);
     }
   }
+
+  &.nav-closing {
+    .app-container-wrap {
+      transform: translateX(0);
+    }
+  }
 }
 
 .app-container-wrap {
