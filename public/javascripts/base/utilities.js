@@ -42,6 +42,14 @@
       }
     },
 
+    /**
+     * Test for if an item is undefined or null.
+     *
+     * @param {*} value defined value to test against.
+     */
+    checkDefined: function(value) {
+      return value !== undefined && value !== null;
+    },
 
     /**
      * Test for if an item is undefined or null.
@@ -60,7 +68,36 @@
       // returns the clean object or value.
       return test ? defaultVal : obj;
     },
-    
+
+
+    /**
+     * isOwnEvent
+     *
+     * Checks if the event target is the same event from itself
+     * this often happens with transiton end and animation end
+     * fns which are called on the same element.
+     *
+     * @param {object} event event handler.
+     */
+    isOwnEvent: function(event) {
+      return event.target === event.currentTarget;
+    },
+
+
+    /**
+     * isSameTransition
+     *
+     * Handler for when events maybe the same transition property.
+     * Events may bubble on the same element causing duplicate 
+     * transition end events.
+     *
+     * @param {object} event event handler.
+     * @param {string} prop transition event property.
+     */
+    isSameTransition: function(event, prop) {
+      return event.fake || !Utilities.checkDefined(prop) || event.originalEvent.propertyName === prop;
+    },
+
 
     /**
      * makeFakeEvent
@@ -77,14 +114,20 @@
      * @param element
      */
     onTransitionEnd: function(element, fn, context) {
-      
       var callback = $.proxy(fn, Utilities.defaults(context, window));
 
       var transitionComplete = function(event) {
-        callback(event);        
+        if (Utilities.HAS_TRANSITIONS) {
+          $(event.currentTarget).off(
+              Utilities.getTransitionEndEvent(), 
+              transitionComplete);
+        }
+
+        callback(event);
       };
 
       if (Utilities.HAS_TRANSITIONS) {
+
         $(element).on(Utilities.getTransitionEndEvent(), transitionComplete);
       } else {
         // Push to the end of the queue with a fake event which will pass the checks
@@ -93,8 +136,8 @@
           transitionComplete(Utilities._makeFakeEvent(elem));
         }, 0);
       }
-
     },
+
 
     /**
      * Fade in an element and optionally add a class which sets visibility
