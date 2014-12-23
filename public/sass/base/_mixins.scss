@@ -32,6 +32,39 @@
   }
 }
 
+// Maintain ratio mixin. Great for responsive grids, or videos.
+// https://gist.github.com/brianmcallister/2932463
+// 
+// $ratio - Ratio the element needs to maintain.
+// 
+// Examples
+// 
+//   // A 16:9 ratio would look like this:
+//   .element {
+//     @include maintain-ratio(16 9);
+//   }
+@mixin maintain-ratio($ratio: 1 1) {
+  @if length($ratio) < 2 or length($ratio) > 2 {
+    @warn "$ratio must be a list with two values.";
+  }
+
+  $width: 100%;
+  $height: percentage(nth($ratio, 2) / nth($ratio, 1));
+  
+  position: relative;
+  width: $width;
+  height: 0;
+  padding-bottom: $height;
+}
+
+@mixin aspect-box() {
+  @each $name, $list in $aspect_grids {
+    .aspect-#{$name} {
+      @include maintain-ratio($list);
+    }
+  }
+}
+
 @mixin offset ($cols:1) {
   padding-left: ($cols * $grid_offset) + 0px;
 } 
@@ -57,6 +90,14 @@
   }
 }
 
+// Fill the parent using absolute positioning
+@mixin fill-parent() {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
 
 // Opacity
 // Jackmoved from compass

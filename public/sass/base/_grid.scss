@@ -280,3 +280,16 @@ zoom: 1; }
   width: 0;
   height: 0;
 }
+
+// .aspect
+.aspect {
+  position: relative;
+  padding-bottom: 100%;
+}
+
+.aspect-inner {
+  @include fill-parent();
+}
+
+@include aspect-box();
+

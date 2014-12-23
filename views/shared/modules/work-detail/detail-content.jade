@@ -33,4 +33,11 @@ section.detail-article-content
           .columns.five.offset-by-one
             +carouselWrap(contentBlock)
 
-      if contentType === 'media'
+      if contentType === 'media-tout'
+        .row.marginless
+          for mediatout in contentBlock.media
+            .columns.four.image-tout
+              .aspect-7x5
+                .aspect-inner
+                  +responsiveImg(mediatout)
+
