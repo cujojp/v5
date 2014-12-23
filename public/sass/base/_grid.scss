@@ -104,16 +104,16 @@
 
   /* Offsets */
   .container .offset-by-one                   { padding-left: $col_width; }
-  .container .offset-by-two                   { padding-left: ($col_width * 2) + $tablet_gutters; }
-  .container .offset-by-three                 { padding-left: ($col_width * 3) + $tablet_gutters; }
-  .container .offset-by-four                  { padding-left: ($col_width * 4) + $tablet_gutters; }
-  .container .offset-by-five                  { padding-left: ($col_width * 5) + $tablet_gutters; }
-  .container .offset-by-six                   { padding-left: ($col_width * 6) + $tablet_gutters; }
-  .container .offset-by-seven                 { padding-left: ($col_width * 7) + $tablet_gutters; }
-  .container .offset-by-eight                 { padding-left: ($col_width * 8) + $tablet_gutters; }
-  .container .offset-by-nine                  { padding-left: ($col_width * 9) + $tablet_gutters; }
-  .container .offset-by-ten                   { padding-left: ($col_width * 10) + $tablet_gutters; }
-  .container .offset-by-eleven                { padding-left: ($col_width * 11) + $tablet_gutters; }
+  .container .offset-by-two                   { padding-left: ($col_width * 4) + $tablet_gutters; }
+  .container .offset-by-three                 { padding-left: ($col_width * 5) + $tablet_gutters; }
+  .container .offset-by-four                  { padding-left: ($col_width * 6) + $tablet_gutters; }
+  .container .offset-by-five                  { padding-left: ($col_width * 7) + $tablet_gutters; }
+  .container .offset-by-six                   { padding-left: ($col_width * 8) + $tablet_gutters; }
+  .container .offset-by-seven                 { padding-left: ($col_width * 9) + $tablet_gutters; }
+  .container .offset-by-eight                 { padding-left: ($col_width * 10) + $tablet_gutters; }
+  .container .offset-by-nine                  { padding-left: ($col_width * 11) + $tablet_gutters; }
+  .container .offset-by-ten                   { padding-left: ($col_width * 12) + $tablet_gutters; }
+  .container .offset-by-eleven                { padding-left: ($col_width * 13) + $tablet_gutters; }
 }
 
 /* #Tablet (Portrait)
