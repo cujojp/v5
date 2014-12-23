@@ -93,7 +93,7 @@
         'InlineCarousel:initialized', 
         $.proxy(this._handleCarouselCallback, this, inlineCarousels));
     } else {
-      this._initializeImageSwap();
+      this._initializeImageSwap(images);
     }
   };
 
@@ -110,9 +110,12 @@
    */
   Main.prototype._handleCarouselCallback = function(els) {
     this._carouselInstantiations++;
+    var images = this.findByClass(
+        app._Utilities.ClassName.IMAGE,
+        this._app);
 
     if (els.length >= this._carouselInstantiations) {
-      this._initializeImageSwap();
+      this._initializeImageSwap(images);
     }
   };
 
@@ -122,8 +125,11 @@
    * Will look for any instances of image swap elements 
    * on the application and initialize them. 
    *
+   * @param {Array|jQuery} images
+   * @private
    */
-  Main.prototype._initializeImageSwap = function() {
+  Main.prototype._initializeImageSwap = function(images) {
+
     new this.imageSwap(this._app, {
       imageContainer: '.'+app._Utilities.ClassName.IMAGE, 
       breakpoints: [320,768,1024]
