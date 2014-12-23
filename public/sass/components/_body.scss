@@ -21,6 +21,23 @@
   }
 }
 
+.section-wrap {
+  &.themed {
+    &.cujojp {
+      background: radial-gradient(at top,rgba(#e14476, 1),rgba(#d42059, 1));
+      background: -webkit-radial-gradient(top,rgba(#e14476, 1),rgba(#da3066, 1),rgba(#d42059, 1));
+    }
+
+    &.gray {
+
+    }
+
+    &.cujojp-blue {
+
+    }
+  }
+}
+
 .app-container-wrap {
   transition: transform .15s ease-in-out;
   transform: translateX(0);
