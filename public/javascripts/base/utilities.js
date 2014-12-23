@@ -259,6 +259,7 @@
     // Base elements
     APP: 'app',
     APP_WRAP: 'app-container-wrap',
+    IMAGE: 'img-swap',
   };
 
   /**

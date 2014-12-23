@@ -1,37 +1,36 @@
 include ../../../../views/shared/global/jade-helpers.jade
 - dataObj = data;
 
+mixin carouselWrap(contentBlock)
+  - isCarousel = locals.isArray(contentBlock.media);
+
+  if isCarousel
+    .inline-carousel-wrap
+      .inline-carousel
+        for slide in contentBlock.media
+          .carousel-slide
+            +responsiveImg(slide)
+      .caption-container
+        for item in contentBlock.media
+          span.caption.t5.t5-grey.t5-marginless.fade.invisible!= item.caption
+  else 
+    .inline-image-wrap
+
+
 section.detail-article-content
   .container
-    if dataObj.blocks
-      - contentBlock = dataObj.blocks[0]
+    for contentBlock, i in dataObj.blocks
       - contentBlockMedia = contentBlock.media
+      - contentType = contentBlock.type
 
-      .row.marginless
-        .columns.seven
-          h3.t2= contentBlock.title
-
-      .row
-        .columns.five.offset-by-one
-          p.p3.p3-marginless-top!= contentBlock.body
-
-        .columns.five.offset-by-one
-          - isCarousel = locals.isArray(contentBlock.media);
-
-          if isCarousel
-            .inline-carousel-wrap
-              .inline-carousel
-                for slide in contentBlock.media
-                  .carousel-slide
-                    img(src="http://placekitten.com/g/490/300")
-              .caption-container
-                for item in contentBlock.media
-                  span.caption.t5.t5-grey.t5-marginless.fade.invisible!= item.caption
-          else 
-            .inline-image-wrap
-
-      if contentBlockMedia
+      if contentType === 'content'
+        .row.marginless
+          .columns.seven
+            h3.t2= contentBlock.title
         .row
           .columns.five.offset-by-one
-            h1= "cool"
-            
+            p.p3.p3-marginless-top!= contentBlock.body
+          .columns.five.offset-by-one
+            +carouselWrap(contentBlock)
+
+      if contentType === 'media'
