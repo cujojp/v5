@@ -82,7 +82,6 @@
    * @private 
    */
   InlineCarousel.prototype._initializeBindings = function() {
-
   };
 
 
@@ -116,7 +115,8 @@
     this._carousel.slick({
       onAfterChange: $.proxy(this._handleSlideComplete, this),
       dots: true,
-      dotsClass: 'paging-container'
+      dotsClass: 'paging-container',
+      onInit: $.proxy(this._handleCarouselInitialized, this)
     });
 
     // start event listeners for the carousel.
@@ -150,6 +150,24 @@
         null,
         null,
         true);
+  };
+
+
+  /**
+   * _handleCarouselInitialized
+   * A Callback for when an inline carousel is initialized.
+   * Will trigger events for other modules to listen to and
+   * delegate tasks.
+   *
+   * @param {object} event
+   *
+   * @private
+   */
+  InlineCarousel.prototype._handleCarouselInitialized = function(event) {
+    this.app.trigger('InlineCarousel:initialized', {
+      carousel: this,
+      el: this._carousel
+    });
   };
 
   app._Modules.InlineCarousel = module;

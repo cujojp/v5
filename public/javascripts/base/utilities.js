@@ -260,6 +260,7 @@
     APP: 'app',
     APP_WRAP: 'app-container-wrap',
     IMAGE: 'img-swap',
+    CAROUSEL: 'inline-carousel',
   };
 
   /**

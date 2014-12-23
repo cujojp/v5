@@ -35,6 +35,14 @@
      * @type {jQuery|object}
      */
     this.body = $('body');
+
+    /**
+     * Main page application, or content.
+     *
+     * @type {jQuery|element}
+     * @private
+     */
+    this.app = this.body;
   };
   
 
