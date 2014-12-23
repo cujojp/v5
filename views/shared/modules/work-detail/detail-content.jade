@@ -5,6 +5,7 @@ section.detail-article-content
   .container
     if dataObj.blocks
       - contentBlock = dataObj.blocks[0]
+      - contentBlockMedia = contentBlock.media
 
       .row.marginless
         .columns.seven
@@ -27,3 +28,10 @@ section.detail-article-content
                 for item in contentBlock.media
                   span.caption.t5.t5-grey.t5-marginless.fade.invisible!= item.caption
           else 
+            .inline-image-wrap
+
+      if contentBlockMedia
+        .row
+          .columns.five.offset-by-one
+            h1= "cool"
+            
