@@ -4,19 +4,23 @@
  *
  * Application Notes:
  * - - - - - -
- * We will be attaching many module classes to the
- * window.Cujo namespace.
- * All modules will exist adjacent to the Core module
- * that exists on all site pages.
+ * Main Class which fires all the global componentsand
+ * global modules for the app.
  */
 
 (function( $, app ) {
+  var module = {
+    init: function() {
+      new Main(this);
+    }
+  };
 
   /**
    * Our LocationsApp Constructor
    * @constructor
    */
-  var BaseComponent = function() {
+  var Main = function() {
+    Main.base(this, 'constructor');
     
     /**
      * Window object
@@ -35,46 +39,59 @@
      * @type {jQuery|object}
      */
     this.body = $('body');
+
+    /**
+     * Main page application, or content.
+     *
+     * @type {jQuery|element}
+     * @private
+     */
+    this._app = this._body;
+
+    /**
+     * Base imageswap CJS function.
+     *
+     * @type {function}
+     */
+    this.imageSwap = app._Modules.ImageSwap;
+
+
+    // initialize the main application
+    this._init();
   };
-  
+  app._Utilities.inherits(Main, app._BaseComponent);
+
 
   /**
-   * Shortcut for jquery.closest();
-   * @param {jQuert|Element} el Id of the element.
-   * @param {string} string Id of the element.
+   * _init
+   * Initializes the app.
    *
-   * @return {?Element} The element, or null if not found.
    */
-  BaseComponent.prototype.getClosest = function( el, string ) {
-    return el.closest( '.' + string );
+  Main.prototype._init = function() {
+
+    // init the rsponsive images library
+    this._initializeImageSwap();
   };
 
 
   /**
-   * Finds the cloesest element within this class' main element.
-   * @param {string} element 
-   * @param {jQuery|Element} [context] Optionally provide the context (scope)
-   *     for the query. Default is the main element of the class.
+   * _initializeImageSwap
+   * Will look for any instances of image swap elements 
+   * on the application and initialize them. 
    *
-   * @return {?jQuery|Element} 
    */
-  BaseComponent.prototype.findByElementName = function( className, context ) {
-    return $(className, context || this.$el );
+  Main.prototype._initializeImageSwap = function() {
+    var images = this.findByClass(
+        app._Utilities.ClassName.IMAGE,
+        this._app);
+
+    new this.imageSwap(this._app, {
+      imageContainer: '.'+app._Utilities.ClassName.IMAGE, 
+      breakpoints: [320,768,1024]
+    });
   };
 
 
-  /**
-   * Finds an element within this class' main element.
-   * @param {string} className Class name to search for.
-   * @param {jQuery|Element} [context] Optionally provide the context (scope)
-   *     for the query. Default is the main element of the class.
-   * @return {jQuery} A jQuery object which may or may not contain the element
-   *     which was searched for.
-   */
-  BaseComponent.prototype.findByClass = function( className, context ) {
-    return $( '.' + className, context || this.$el );
-  };
-
-  app._BaseComponent = BaseComponent;
+  app._Main = module.init();
 
 })(jQuery, cujojp);
