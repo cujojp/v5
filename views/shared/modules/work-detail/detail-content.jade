@@ -18,12 +18,11 @@ mixin carouselWrap(contentBlock)
 
 
 section.detail-article-content
-  .container
-    for contentBlock, i in dataObj.blocks
-      - contentBlockMedia = contentBlock.media
-      - contentType = contentBlock.type
-
-      if contentType === 'content'
+  for contentBlock, i in dataObj.blocks
+    - contentBlockMedia = contentBlock.media
+    - contentType = contentBlock.type
+    if contentType === 'content'
+      .container
         .row.marginless
           .columns.seven
             h3.t2= contentBlock.title
@@ -32,12 +31,52 @@ section.detail-article-content
             p.p3.p3-marginless-top!= contentBlock.body
           .columns.five.offset-by-one
             +carouselWrap(contentBlock)
-
-      if contentType === 'media-tout'
-        .row.marginless
+    if contentType === 'media-tout'
+      .container
+        .row.padded-lrg.padded-xl-top
           for mediatout in contentBlock.media
             .columns.four.image-tout
-              .aspect-7x5
+              .aspect-5x4
                 .aspect-inner
                   +responsiveImg(mediatout)
+    if contentType === 'themed'
+      -paddingClass = (!!contentBlock.title) ? 'padded-top' : 'padded-lrg-top'
 
+      .section-wrap.themed.cujojp
+        .container
+          .image-group
+            if contentBlock.title
+              .row.marginless
+                .header-section.text-center
+                  .eight.columns.offset-by-two
+                    h3.t2.t2-marginless-bot.t2-light= contentBlock.title
+            if contentBlock.body
+              .row.padded-top
+                .header-section.text-center
+                  .six.columns.offset-by-three
+                    p.p3.p3-light= contentBlock.body
+            if contentBlock.media
+              div(class="row " + paddingClass)
+                .header-section.text-center
+                  .ten.columns.offset-by-one
+                    .image-tout
+                      +responsiveImg(contentBlock.media)
+
+    if contentType === 'cta-block'
+      .container
+        if contentBlock.title
+          .row.padded-top
+            .header-section.text-center
+              .eight.columns.offset-by-two
+                h3.t2.t2-marginless-bot= contentBlock.title
+        if contentBlock.body
+          .row
+            .header-section.text-center
+              .six.columns.offset-by-three
+                p.p3= contentBlock.body
+        if dataObj.anchor
+          .row
+            .header-section.text-center
+              .four.columns.offset-by-four
+                a(href=dataObj.anchor.href).btn= dataObj.anchor.title
+                  span.icon
