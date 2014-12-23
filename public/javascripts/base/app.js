@@ -55,6 +55,14 @@
      */
     this.imageSwap = app._Modules.ImageSwap;
 
+    /**
+     * Number of carousels which have instantiated within the
+     * app.
+     *
+     * @type {number}
+     */
+    this._carouselInstantiations = 0;
+    
 
     // initialize the main application
     this._init();
@@ -68,9 +76,44 @@
    *
    */
   Main.prototype._init = function() {
+    var images = this.findByClass(
+        app._Utilities.ClassName.IMAGE,
+        this._app);
+    var inlineCarousels = this.findByClass(
+        app._Utilities.ClassName.CAROUSEL,
+        this._app);
 
-    // init the rsponsive images library
-    this._initializeImageSwap();
+    // if we have carousels we must wait until the carousels have cloned
+    // the slides before we attach image swap. Also should check the number 
+    // of inline carousels before running this and checking if
+    // its the last instance of carosuels triggering their on
+    // init callback.
+    if (inlineCarousels.length) {
+      this.app.on(
+        'InlineCarousel:initialized', 
+        $.proxy(this._handleCarouselCallback, this, inlineCarousels));
+    } else {
+      this._initializeImageSwap();
+    }
+  };
+
+
+  /**
+   * _handleCarouselCallback
+   * Will handle the callback when a carousel instiates. This
+   * is to fix issues of image-swap needing to run after 
+   * carousels have initialized due to the cloned
+   * slide technique.
+   *
+   * @param {Array|jQuery} els
+   * @private
+   */
+  Main.prototype._handleCarouselCallback = function(els) {
+    this._carouselInstantiations++;
+
+    if (els.length >= this._carouselInstantiations) {
+      this._initializeImageSwap();
+    }
   };
 
 
@@ -81,10 +124,6 @@
    *
    */
   Main.prototype._initializeImageSwap = function() {
-    var images = this.findByClass(
-        app._Utilities.ClassName.IMAGE,
-        this._app);
-
     new this.imageSwap(this._app, {
       imageContainer: '.'+app._Utilities.ClassName.IMAGE, 
       breakpoints: [320,768,1024]
