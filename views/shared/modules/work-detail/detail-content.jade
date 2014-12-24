@@ -40,7 +40,7 @@ section.detail-article-content
                 .aspect-inner
                   +responsiveImg(mediatout)
     if contentType === 'themed'
-      -paddingClass = (!!contentBlock.title) ? 'padded-top' : 'padded-lrg-top'
+      -paddingClass = (!!contentBlock.title) ? 'padded-top padded-lrg' : 'padded-lrg-top padded-xl'
 
       .section-wrap.themed.cujojp
         .container
@@ -59,7 +59,7 @@ section.detail-article-content
               div(class="row " + paddingClass)
                 .header-section.text-center
                   .ten.columns.offset-by-one
-                    .image-tout
+                    .image-tout.shadow-tout
                       +responsiveImg(contentBlock.media)
 
     if contentType === 'cta-block'
@@ -75,8 +75,10 @@ section.detail-article-content
               .six.columns.offset-by-three
                 p.p3= contentBlock.body
         if dataObj.anchor
-          .row
+          .row.padded-xl
             .header-section.text-center
               .four.columns.offset-by-four
-                a(href=dataObj.anchor.href).btn= dataObj.anchor.title
-                  span.icon
+                a(href=dataObj.anchor.href).btn.btn-gradient= dataObj.anchor.title
+                  span.icon-wrap
+                    +svgIcon('arrow-right', 'white size-16')
+                  span.cover
