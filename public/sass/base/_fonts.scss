@@ -28,7 +28,7 @@
 }
 
 .t4 {
-  @include px-em--font-size--line-height(24,30);
+  @include px-em--font-size--line-height(32,30);
   letter-spacing: 0px;
   margin-bottom: 30px;
   color: $pink;  
