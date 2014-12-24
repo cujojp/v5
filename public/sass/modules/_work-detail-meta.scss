@@ -67,12 +67,41 @@
     height: px-em(90);
     position: relative;
 
-    &.blue {
+    &.left {
       background: $blue;
+
+      .icon,
+      .label {
+        float: left;
+      }
+
+      .label {
+        margin: {
+          top: px-em(15);
+          left: px-em(10);
+        }
+      }
     }
 
-    &.pink {
+    &.right {
       background: $pink;
+
+      .icon,
+      .label {
+        float: right;
+      }
+
+      .label {
+        margin: {
+          top: px-em(15);
+          right: px-em(10);
+        }
+      }
+    }
+
+    .work-nav-btn-wrap {
+      position: relative;
+      height: 100%;
     }
 
     .work-nav-btn {
@@ -80,8 +109,16 @@
       position: absolute;
       @include fill-parent();
 
-      .label {
+      .label-wrap {
+        display: block;
+      }
 
+      .label {
+      }
+
+      .icon {
+        display: inline-block;
+        margin: px-em(39) 0 0;
       }
     }
   }
