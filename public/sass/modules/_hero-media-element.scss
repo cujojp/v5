@@ -51,4 +51,8 @@
       repeat: no-repeat;
     }
   }
+
+  .t1 {
+    text-shadow: 0 0 px-em(20) $gray40;
+  }
 }
