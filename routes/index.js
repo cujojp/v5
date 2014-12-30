@@ -10,6 +10,7 @@ var firebase = new Firebase('https://cujojp.firebaseio.com');
 router.get('/', function(req, res) {
   firebase.once('value', function(snap) {
     req.db = snap.val();
+    req.db.headerFixed = true;
 
     res.render('index', { data: req.db });
   });
@@ -22,6 +23,8 @@ router.get('/work/:name', function(req, res) {
 
     _.each(req.db.work, function(workItem) {
       if (params == workItem.slug.id) {
+        req.db.headerFixed = false;
+
         res.render('work-item', {
           db: req.db,
           data: workItem
