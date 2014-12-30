@@ -121,6 +121,25 @@
      */
     this._overlay = null;
 
+    /**
+     * Main scroll monitor component.
+     *
+     * @type {boolean}
+     * @private
+     */
+    this._scrollMonitor = app._Components.ScrollMonitor;
+
+    /**
+     * Base elements within the app view which
+     * are going to trigger a header change.
+     *
+     * @type {jQuery|element}
+     * @private
+     */
+    this._themedElements = null;
+
+
+
     this._init();
   };
   app._Utilities.inherits(Header, app._BaseComponent);
@@ -164,7 +183,21 @@
     // NOTE: header with a media element in the background
     // should NEVER be fixed. This breaks our style guidelines.
     if (this._isFixed) {
+      this._themedElements = this.findByClass(
+        app._Utilities.ClassName.THEMED,
+        this._appWrap)
+        .filter('.'+app._Utilities.ClassName.THEME_CUJOJP);
+      
+      this._scrollMonitor.init(this._themedElements, this);
 
+      this._appWrap.on(
+        app._Utilities.Events.VIEWPORT_ENTER,
+        $.proxy(this._handleViewportChange, this));
+
+      this._appWrap.on(
+        app._Utilities.Events.VIEWPORT_EXIT, function() {
+        console.log('hmmm');
+      });
     }
 
     this._appWrap.on(
@@ -308,6 +341,20 @@
       app._Utilities.Events.NAV_CLOSED);
   };   
 
+
+  /**
+   * _handleViewportChange
+   * Will handle events being fired from the navigation if 
+   * the header is fixed and must change themes.
+   *
+   * @param {object} event
+   * @private
+   */
+  Header.prototype._handleViewportChange = function(event) {
+
+    console.log('cool', event);
+
+  };
 
 
   app._Modules.Header = module;
