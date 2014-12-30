@@ -39,6 +39,7 @@
 }
 
 .app-container-wrap {
+  position: relative;
   transition: transform .15s ease-in-out;
   transform: translateX(0);
 }
