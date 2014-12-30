@@ -104,6 +104,14 @@
      */
     this._isAnimating = false;
 
+    /**
+     * Boolean to determine if the header is 
+     * going to be fixed or not.
+     *
+     * @type {boolean}
+     * @private
+     */
+    this._isFixed = false;
 
     /**
      * Base Overlay module which the header instantiates
@@ -134,6 +142,8 @@
         app._Modules.Header.Enums.ClassName.TOGGLE,
         this._element);  
     
+    this._isFixed = this._element.hasClass('fixed');
+
     this._initializeBindings();
   };
 
@@ -147,6 +157,16 @@
    * @private
    */
   Header.prototype._initializeBindings = function() {
+    // if were fixed we have to attach bindings for
+    // scrolling and find our elements for the
+    // viewport monitors.
+    //
+    // NOTE: header with a media element in the background
+    // should NEVER be fixed. This breaks our style guidelines.
+    if (this._isFixed) {
+
+    }
+
     this._appWrap.on(
         app._Utilities.Events.NAV_CLOSING,
         $.proxy(this._handleMenuClick, this));
