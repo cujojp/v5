@@ -261,6 +261,10 @@
     APP_WRAP: 'app-container-wrap',
     IMAGE: 'img-swap',
     CAROUSEL: 'inline-carousel',
+
+    // Section Wrap elements
+    THEMED: 'themed',
+    THEME_CUJOJP: 'cujojp'
   };
 
   /**
@@ -292,9 +296,14 @@
     NAV_OPEN: 'nav-open',
     NAV_CLOSED: 'nav-closed',
 
+    // Viewport handlers
+    VIEWPORT_ENTER: 'element-entered',
+    VIEWPOER_EXIT: 'element-exited',
+
     // Misc
     RESIZE: 'resize',
-    SCROLL: 'scroll'
+    SCROLL: 'scroll',
+
   };
 
   app._Utilities = Utilities;
