@@ -104,6 +104,15 @@
      */
     this._isAnimating = false;
 
+
+    /**
+     * Base Overlay module which the header instantiates
+     *
+     * @type {boolean}
+     * @private
+     */
+    this._overlay = null;
+
     this._init();
   };
   app._Utilities.inherits(Header, app._BaseComponent);
@@ -138,6 +147,9 @@
    * @private
    */
   Header.prototype._initializeBindings = function() {
+    this._appWrap.on(
+        app._Utilities.Events.NAV_CLOSING,
+        $.proxy(this._handleMenuClick, this));
 
     this._menuToggle.on(
         app._Utilities.Events.CLICK,
@@ -225,6 +237,9 @@
   Header.prototype._handleOpenFinished = function() {
     this._body.removeClass(
       app._Modules.Header.Enums.ClassName.NAV_OPENING);
+
+    this._appWrap.trigger(
+      app._Utilities.Events.NAV_OPEN);
   };
 
 
@@ -268,6 +283,9 @@
 
     this._body.removeAttr('style');
     this._appWrap.removeAttr('style');
+
+    this._appWrap.trigger(
+      app._Utilities.Events.NAV_CLOSED);
   };   
 
 

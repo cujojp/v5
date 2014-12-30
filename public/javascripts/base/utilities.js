@@ -286,6 +286,12 @@
     // Mouse
     CLICK: 'click',
 
+    // Base Application base events.
+    NAV_OPENING: 'nav-opening',
+    NAV_CLOSING: 'nav-closing',
+    NAV_OPEN: 'nav-open',
+    NAV_CLOSED: 'nav-closed',
+
     // Misc
     RESIZE: 'resize',
     SCROLL: 'scroll'
