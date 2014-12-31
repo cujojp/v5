@@ -259,6 +259,8 @@
     // Base elements
     APP: 'app',
     APP_WRAP: 'app-container-wrap',
+    APP_CONTAINER: 'app-container',
+    APP_CONTENT: 'content-block',
     IMAGE: 'img-swap',
     CAROUSEL: 'inline-carousel',
 
@@ -298,7 +300,7 @@
 
     // Viewport handlers
     VIEWPORT_ENTER: 'element-entered',
-    VIEWPOER_EXIT: 'element-exited',
+    VIEWPORT_EXIT: 'element-exited',
 
     // Misc
     RESIZE: 'resize',

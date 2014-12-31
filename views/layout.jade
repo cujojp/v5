@@ -12,8 +12,9 @@ html
     include ../public/svg/icons.svg
     .app-container-wrap
       +partial('shared/components/header.jade', dataObj)
-      .app-container
-        block content
+      .app-container.slide-app
+        .content-block
+          block content
     .app-header
 
     script(src='https://maps.googleapis.com/maps/api/js?sensor=false')

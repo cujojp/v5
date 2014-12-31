@@ -1,6 +1,6 @@
 .app-container {
   position: relative;
-  margin: -$header_height 0 0;
+  margin: 0;
   z-index: $zindexAppContent;
 }
 
@@ -8,14 +8,19 @@
   &.nav-open {
     overflow: hidden;
 
-    .app-container-wrap {
+    .slide-app {
       overflow: hidden;
       transform: translateX(-$nav_width);
+    }
+    
+    .app-container {
+      border: 1px solid red;
+      overflow: hidden;
     }
   }
 
   &.nav-closing {
-    .app-container-wrap {
+    .slide-app {
       transform: translateX(0);
     }
   }
@@ -40,6 +45,9 @@
 
 .app-container-wrap {
   position: relative;
+}
+
+.slide-app {
   transition: transform .15s ease-in-out;
   transform: translateX(0);
 }

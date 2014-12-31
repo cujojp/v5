@@ -198,7 +198,7 @@
    * @private
    */
   Overlay.prototype._startOverlayOpenSequence = function() {
-    var windowHeight = this._window.height();
+    var windowHeight = this._appWrap.height();
     var styles = {
       height: windowHeight
     };
@@ -240,6 +240,7 @@
    * @private
    */
   Overlay.prototype._handleOpenFinished = function() {
+    console.log('fade in');
   };
     
 

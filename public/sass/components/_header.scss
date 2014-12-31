@@ -19,6 +19,11 @@
     float: right;
     width: 30px;
   }
+
+  &.fixed {
+   transform: translateZ(0);
+   position: fixed;
+  }
 }
 
 .mast-head-container {
