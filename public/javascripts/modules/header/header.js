@@ -314,7 +314,6 @@
     this._appWrap.css(slideStyles);
     this._appContainer.css(slideStyles);
     this._appBlock.css(wrapStyles);
-    console.log(this._lastPositionY);
 
     app._Utilities.onTransitionEnd(
       this._body,

@@ -1,12 +1,13 @@
 include ../../../views/shared/global/jade-helpers.jade
 
 header.mast-head.slide-app(class=!!data.headerFixed?'fixed':'')
-  .container.mast-head-container
-    .row
-      .two.columns
-        a(href="/")
-          +svgIcon('cujojp', 'logo')
-      .two.columns.offset-by-eight
-        a.menu-icon-toggle(href="#TOGGLE_MENU")
-          +svgIcon('menu', 'menu-icon size-20')
-            
+  .mast-head-inner
+    .container.mast-head-container
+      .row
+        .two.columns
+          a(href="/")
+            +svgIcon('cujojp', 'logo icon-animate')
+        .two.columns.offset-by-eight
+          a.menu-icon-toggle(href="#TOGGLE_MENU")
+            +svgIcon('menu', 'menu-icon icon-animate size-20')
+              

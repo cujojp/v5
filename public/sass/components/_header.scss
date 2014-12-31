@@ -2,14 +2,26 @@
   position: relative;
   top: 0;
   width: 100%;
-  height: $header_height;
   z-index: $zindexGlobalNav;
-  background: rgba($white, .5);
-  border-bottom: 1px solid $gray70;
+
+  .mast-head-inner {
+    height: $header_height;
+    background: rgba($white, .5);
+    border-bottom: 1px solid $gray70;
+    transition: all .15s ease-in-out;
+  }
+
+  .icon-animate {
+    transition: all .15s ease-in-out;
+  }
 
   .logo {
     width: 100px;
     height: 40px;
+    fill: $gray30;
+  }
+
+  .menu-icon {
     fill: $gray30;
   }
 
@@ -23,6 +35,18 @@
   &.fixed {
    transform: translateZ(0);
    position: fixed;
+  }
+
+  &.themed {
+    .menu-icon,
+    .logo {
+      fill: $white;
+    }
+
+    .mast-head-inner {
+      border-bottom: 1px solid rgba($white, 0);
+      background: rgba($white, 0);
+    }
   }
 }
 
