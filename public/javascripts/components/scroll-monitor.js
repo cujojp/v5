@@ -107,11 +107,15 @@
    * @return
    */
   ScrollMonitor.prototype._init = function() {
-    this._scrollWatcher = scrollMonitor.create(this._element);
+    var $el = $(this._element);
+
+    this._scrollWatcher = scrollMonitor.create(
+      this._element,
+      {top: -this._appContext.window.height()});
 
     this._appWrap = this.findByClass(
-        app._Utilities.ClassName.APP_WRAP,
-        this._app);  
+      app._Utilities.ClassName.APP_WRAP,
+      this._app);  
 
     this._initializeBindings();
   };
@@ -143,8 +147,6 @@
     if (!this._inView) { 
       return;
     }
-
-    console.log('a', this._inView);
 
     this._appWrap.trigger(
       app._Utilities.Events.VIEWPORT_EXIT,

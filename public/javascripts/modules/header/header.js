@@ -70,6 +70,22 @@
     this._appWrap = null;
 
     /**
+     * App Wrap inner container.
+     *
+     * @type {jQuery|element}
+     * @private
+     */
+    this._appContainer = null;
+
+    /**
+     * Application content block container.
+     *
+     * @type {jQuery|element}
+     * @private
+     */
+    this._appBlock = null;
+
+    /**
      * Header menu icon.
      *
      * @type {jQuery|element}
@@ -138,6 +154,14 @@
      */
     this._themedElements = null;
 
+    /**
+     * The last Y position after the header was
+     * enabled.
+     *
+     * @type {Number}
+     * @private
+     */
+    this._lastPositionY = 0;
 
 
     this._init();
@@ -156,6 +180,14 @@
     this._appWrap = this.findByClass(
         app._Utilities.ClassName.APP_WRAP,
         this._app);  
+
+    this._appContainer = this.findByClass(
+        app._Utilities.ClassName.APP_CONTAINER,
+        this._app);  
+
+    this._appBlock = this.findByClass(
+        app._Utilities.ClassName.APP_CONTENT,
+        this._app);
 
     this._menuToggle = this.findByClass(
         app._Modules.Header.Enums.ClassName.TOGGLE,
@@ -195,9 +227,8 @@
         $.proxy(this._handleViewportChange, this));
 
       this._appWrap.on(
-        app._Utilities.Events.VIEWPORT_EXIT, function() {
-        console.log('hmmm');
-      });
+        app._Utilities.Events.VIEWPORT_EXIT,
+        $.proxy(this._handleViewportChange, this));
     }
 
     this._appWrap.on(
@@ -242,7 +273,7 @@
    */
   Header.prototype._toggleScrollLock = function(open) {
     if (open) {
-      window.scrollTo(0, 0);
+      //window.scrollTo(0, 0);
       this._startNavOpenSequence();
     } else {
       this._startNavCloseSequence();
@@ -258,11 +289,19 @@
    * @private
    */
   Header.prototype._startNavOpenSequence = function() {
+    this._lastPositionY = window.pageYOffset;
+
     var windowHeight = this._window.height();
-    var styles = {
-      height: windowHeight
+    var slideStyles = {
+      'height': windowHeight
     };
-     
+    var yPosition = (this._lastPositionY) * -1;
+    var wrapStyles = {
+      '-webkit-transform': 'translateY('+ yPosition + 'px )',
+      '-ms-transform': 'translateY('+ yPosition + 'px )',
+      'transform': 'translateY('+ yPosition + 'px )'
+    };
+
     this._body.removeClass(
         app._Modules.Header.Enums.ClassName.NAV_CLOSED);
     
@@ -270,9 +309,12 @@
         app._Modules.Header.Enums.ClassName.NAV_OPEN,
         app._Modules.Header.Enums.ClassName.NAV_OPENING,
       ].join(' '));
-                      
-    this._body.css(styles);
-    this._appWrap.css(styles);
+
+    this._body.css(slideStyles);
+    this._appWrap.css(slideStyles);
+    this._appContainer.css(slideStyles);
+    this._appBlock.css(wrapStyles);
+    console.log(this._lastPositionY);
 
     app._Utilities.onTransitionEnd(
       this._body,
@@ -336,9 +378,13 @@
 
     this._body.removeAttr('style');
     this._appWrap.removeAttr('style');
-
+    this._appContainer.removeAttr('style');
+    this._appBlock.removeAttr('style');
+    
     this._appWrap.trigger(
       app._Utilities.Events.NAV_CLOSED);
+
+    window.scrollTo(0, this._lastPositionY);
   };   
 
 
@@ -348,11 +394,17 @@
    * the header is fixed and must change themes.
    *
    * @param {object} event
+   * @param {object} opt_scrollEvent
    * @private
    */
-  Header.prototype._handleViewportChange = function(event) {
+  Header.prototype._handleViewportChange = function(event, opt_scrollEvent) {
+    if (!opt_scrollEvent) {
+      return;
+    }
 
-    console.log('cool', event);
+    this._element.toggleClass(
+      'themed',
+      opt_scrollEvent.isInViewport);
 
   };
 
