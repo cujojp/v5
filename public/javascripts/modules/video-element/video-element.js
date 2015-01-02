@@ -115,32 +115,63 @@
    * @private
    */
   VideoElement.prototype._updateAssetDimensions = function() {
-    var windowDimensions = {};
-    var videoDimensions = {};
-    var videoParentDimensions = {};
-    var videoStyles = {};
+    var videoStyles;
 
-    videoDimensions.height = this._videoElement.height();
-    videoDimensions.width = this._videoElement.width();
-    videoDimensions.aspect = (videoDimensions.width /
-                              videoDimensions.height);
+    var videoDimensions = {
+      'height': this._videoElement.height(),
+      'width':  this._videoElement.width(),
+      'aspect': this._calculateAspect(
+        videoDimensions.width,
+        videoDimensions.height)
+    };
 
-    videoParentDimensions.height = this._element.height();
-    videoParentDimensions.width = this._element.width();
-    videoParentDimensions.aspect = (videoParentDimensions.width /
-                                    videoParentDimensions.height);
+    var videoParentDimensions = {
+      'height': this._element.height(),
+      'width': this._element.width(),
+      'aspect': this._calculateAspect(
+        videoParentDimensions.height,
+        videoParentDimensions.width)
+    };
 
     this._videoElement.removeAttr('style');
 
-    var videoProperties = {};
-  
-    if (videoDimensions.height <= videoParentDimensions.height && 
-       videoDimensions.width >= videoParentDimensions.width) {
-
+    if (this._isAspect(videoDimensions, videoParentDimensions)) {
       var height = videoParentDimensions.height;
       var width = Math.floor(videoParentDimensions.height *
                              videoDimensions.aspect);
 
+      videoStyles = this._createStyleObject(
+        videoDimensions, height, width, true);
+
+    } else {
+
+      videoStyles = this._createStyleObject(
+        videoDimensions, null, null, false);
+    }
+
+    this._resizeVideoAsset(videoStyles);
+  };
+  
+
+  /**
+   * _createStyleObject
+   * Creates a style object for the video element.
+   *
+   * @param {Object} obj video dimensions object
+   * @param {number} opt_height window height
+   * @param {number} opt_width window width
+   * @param {boolean} opt_isAspect window aspect is > video aspect
+   * @private
+   */
+  VideoElement.prototype._createStyleObject = 
+      function(obj, opt_height, opt_width, opt_isAspect) {
+
+    var videoStyles = {
+      'margin-top': - (obj.height / 2) + 'px',
+      'top': 50 + '%',
+    };
+
+    if (opt_isAspect) {
       videoStyles = {
         'width': width + 'px',
         'height': height + 'px',
@@ -149,18 +180,42 @@
         'top': 50 + '%',
         'left': 50 + '%'
       };
-    } else {
-
-      videoStyles = {
-        'margin-top': - (videoDimensions.height / 2) + 'px',
-        'top': 50 + '%',
-      };
-
     }
-
-    this._resizeVideoAsset(videoStyles);
+      
+    return videoStyles;
   };
-  
+
+
+  /**
+   * _isAspect
+   * Helper method to return if the video is taller
+   * than the window, or if the video is wider
+   * than the window.
+   *
+   * @param {Object} videoObj
+   * @param {Object} videoParentObj
+   *
+   * @return {boolean}
+   */
+  VideoElement.prototype._isAspect = function(videoObj, videoParentObj) {
+    return (videoObj.height <= videoParentObj.height && 
+       videoObj.width >= videoParentObj.width);
+  };
+
+
+  /**
+   * _calculateAspect
+   * Returns an apsect ratio.
+   *
+   * @param {number} height height of element
+   * @param {number} width width of element
+   *
+   * @return {number}
+   */
+  VideoElement.prototype._calculateAspect = function(height, width) {
+    return (width / height);
+  };
+
 
   /**
    * _resizeVideoAsset
