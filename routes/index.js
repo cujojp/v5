@@ -23,7 +23,7 @@ router.get('/work/:name', function(req, res) {
 
     _.each(req.db.work, function(workItem) {
       if (params == workItem.slug.id) {
-        workItem.headerClasses = 'fixed';
+        workItem.headerClasses = 'fixed themed';
 
         res.render('work-item', {
           db: req.db,
