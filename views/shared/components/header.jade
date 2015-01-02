@@ -1,6 +1,8 @@
 include ../../../views/shared/global/jade-helpers.jade
 
-header.mast-head.slide-app(class=!!data.headerFixed?'fixed':'')
+-console.log(data.headerClasses);
+
+header.mast-head.slide-app(class=data.headerClasses || '')
   .mast-head-inner
     .container.mast-head-container
       .row

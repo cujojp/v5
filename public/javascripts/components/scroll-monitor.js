@@ -11,7 +11,6 @@
 
     var component = {
     init: function(element, context) {
-
       for (var i = 0; i < element.length; i++) {
         var el = element.jquery ?
           element.get(i) :
