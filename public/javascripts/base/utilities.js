@@ -266,7 +266,8 @@
 
     // Section Wrap elements
     THEMED: 'themed',
-    THEME_CUJOJP: 'cujojp'
+    THEME_CUJOJP: 'cujojp',
+    SCROLL_TARGET: 'scroll-target'
   };
 
   /**

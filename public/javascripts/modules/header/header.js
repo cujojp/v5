@@ -152,7 +152,7 @@
      * @type {jQuery|element}
      * @private
      */
-    this._themedElements = null;
+    this._scrollWatchElements = null;
 
     /**
      * The last Y position after the header was
@@ -171,6 +171,15 @@
      * @private
      */
     this._lastScrollObject = {};
+
+    /**
+     * The final in viewport scroll event object which is returned by the
+     * scroll-monitor service.
+     *
+     * @type {object}
+     * @private
+     */
+    this._lastViewportScrollObject = {};
 
 
     this._init();
@@ -241,12 +250,11 @@
    * @private
    */
   Header.prototype._initializeFixedBindings = function() {
-    this._themedElements = this.findByClass(
-      app._Utilities.ClassName.THEMED,
-      this._appWrap)
-      .filter('.'+app._Utilities.ClassName.THEME_CUJOJP);
+    this._scrollWatchElements = this.findByClass(
+      app._Utilities.ClassName.SCROLL_TARGET,
+      this._appWrap);
     
-    this._scrollMonitor.init(this._themedElements, this);
+    this._scrollMonitor.init(this._scrollWatchElements, this);
 
     this._appWrap.on(
       app._Utilities.Events.VIEWPORT_ENTER,
@@ -450,14 +458,13 @@
     if (!opt_scrollEvent) {
       return;
     }
-
-    console.log(opt_scrollEvent.watchItem != this._lastScrollObject.watchItem);
-
-    this._element.toggleClass(
-      'themed',
-      opt_scrollEvent.isInViewport);
-
     this._lastScrollObject = opt_scrollEvent;
+
+    this._lastViewportScrollObject = opt_scrollEvent.isInViewport ?
+        opt_scrollEvent :
+        {};
+
+    this._element.toggleClass('themed');
   };
 
 

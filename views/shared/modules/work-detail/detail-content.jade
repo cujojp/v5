@@ -18,9 +18,15 @@ mixin carouselWrap(contentBlock)
 
 
 section.detail-article-content
+  - themedBlocks = locals.findWhere(dataObj.blocks, {'type':'themed'});
+  - ctaBlocks = locals.findWhere(dataObj.blocks, {'type':'cta-block'});
+
   for contentBlock, i in dataObj.blocks
     - contentBlockMedia = contentBlock.media
     - contentType = contentBlock.type
+    
+    // TODO: (kaleb) 
+    // group all themed content blocks into parent div.
     if contentType === 'content'
       .container
         .row.marginless
@@ -39,41 +45,42 @@ section.detail-article-content
               .aspect-5x4
                 .aspect-inner
                   +responsiveImg(mediatout)
-    if contentType === 'themed'
-      -paddingClass = (!!contentBlock.title) ? 'padded-top padded-lrg' : 'padded-lrg-top padded-xl'
 
-      .section-wrap.themed.cujojp
-        .container
-          .image-group
-            if contentBlock.title
-              .row.marginless
-                .header-section.text-center
-                  .eight.columns.offset-by-two
-                    h3.t2.t2-marginless-bot.t2-light= contentBlock.title
-            if contentBlock.body
-              .row.padded-top
-                .header-section.text-center
-                  .six.columns.offset-by-three
-                    p.p3.p3-light= contentBlock.body
-            if contentBlock.media
-              div(class="row " + paddingClass)
-                .header-section.text-center
-                  .ten.columns.offset-by-one
-                    .image-tout.shadow-tout
-                      +responsiveImg(contentBlock.media)
-
-    if contentType === 'cta-block'
+  if themedBlocks.length
+    .wrapper-guy
+      for themedBlock, i in themedBlocks
+        .section-wrap.themed.cujojp
+          .container
+            .image-group
+              if themedBlock.title
+                .row.marginless
+                  .header-section.text-center
+                    .eight.columns.offset-by-two
+                      h3.t2.t2-marginless-bot.t2-light= themedBlock.title
+              if themedBlock.body
+                .row.padded-top
+                  .header-section.text-center
+                    .six.columns.offset-by-three
+                      p.p3.p3-light= themedBlock.body
+              if themedBlock.media
+                div(class="row " + paddingClass)
+                  .header-section.text-center
+                    .ten.columns.offset-by-one
+                      .image-tout.shadow-tout
+                        +responsiveImg(themedBlock.media)
+  if ctaBlocks.length
+    for ctaBlock, i in ctaBlocks
       .container
-        if contentBlock.title
+        if ctaBlock.title
           .row.padded-top
             .header-section.text-center
               .eight.columns.offset-by-two
-                h3.t2.t2-marginless-bot= contentBlock.title
-        if contentBlock.body
+                h3.t2.t2-marginless-bot= ctaBlock.title
+        if ctaBlock.body
           .row
             .header-section.text-center
               .six.columns.offset-by-three
-                p.p3= contentBlock.body
+                p.p3= ctaBlock.body
         if dataObj.anchor
           .row.padded-xl
             .header-section.text-center
