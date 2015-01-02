@@ -240,7 +240,7 @@
    * @private
    */
   Overlay.prototype._handleOpenFinished = function() {
-    console.log('fade in');
+    //console.log('fade in');
   };
     
 

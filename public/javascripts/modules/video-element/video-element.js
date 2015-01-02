@@ -121,16 +121,16 @@
       'height': this._videoElement.height(),
       'width':  this._videoElement.width(),
       'aspect': this._calculateAspect(
-        videoDimensions.width,
-        videoDimensions.height)
+        this._videoElement.width(),
+        this._videoElement.height())
     };
 
     var videoParentDimensions = {
       'height': this._element.height(),
       'width': this._element.width(),
       'aspect': this._calculateAspect(
-        videoParentDimensions.height,
-        videoParentDimensions.width)
+        this._element.height(),
+        this._element.width())
     };
 
     this._videoElement.removeAttr('style');
