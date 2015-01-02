@@ -22,10 +22,10 @@ gulp.task('scripts-complexity', function() {
   .pipe( plumber( { errorHandler: handleErrors } ) )
   .pipe(complexity({
     breakOnErrors: false,
-    maintainability: 120,
+    maintainability: 110,
     errorsOnly: false,
     cyclomatic: 5,
-    halstead: 25               
+    halstead: 25
   }));
 });
 
