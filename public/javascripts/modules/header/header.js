@@ -464,7 +464,9 @@
         opt_scrollEvent :
         {};
 
-    this._element.toggleClass('themed');
+    this._element.toggleClass(
+      'themed',
+      opt_scrollEvent.isInViewport);
   };
 
 

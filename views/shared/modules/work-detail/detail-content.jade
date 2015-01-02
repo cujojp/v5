@@ -24,9 +24,7 @@ section.detail-article-content
   for contentBlock, i in dataObj.blocks
     - contentBlockMedia = contentBlock.media
     - contentType = contentBlock.type
-    
-    // TODO: (kaleb) 
-    // group all themed content blocks into parent div.
+
     if contentType === 'content'
       .container
         .row.marginless
@@ -47,7 +45,7 @@ section.detail-article-content
                   +responsiveImg(mediatout)
 
   if themedBlocks.length
-    .wrapper-guy
+    .scroll-target
       for themedBlock, i in themedBlocks
         .section-wrap.themed.cujojp
           .container
