@@ -8,7 +8,6 @@
     height: $header_height;
     background: rgba($white, .5);
     border-bottom: 1px solid $gray70;
-    transition: all .15s ease-in-out;
   }
 
   .icon-animate {
@@ -33,7 +32,6 @@
   }
 
   &.fixed {
-   transform: translateZ(0);
    position: fixed;
   }
 
