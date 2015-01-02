@@ -220,24 +220,8 @@
     // if were fixed we have to attach bindings for
     // scrolling and find our elements for the
     // viewport monitors.
-    //
-    // NOTE: header with a media element in the background
-    // should NEVER be fixed. This breaks our style guidelines.
     if (this._isFixed) {
-      this._themedElements = this.findByClass(
-        app._Utilities.ClassName.THEMED,
-        this._appWrap)
-        .filter('.'+app._Utilities.ClassName.THEME_CUJOJP);
-      
-      this._scrollMonitor.init(this._themedElements, this);
-
-      this._appWrap.on(
-        app._Utilities.Events.VIEWPORT_ENTER,
-        $.proxy(this._handleViewportChange, this));
-
-      this._appWrap.on(
-        app._Utilities.Events.VIEWPORT_EXIT,
-        $.proxy(this._handleViewportChange, this));
+      this._initializeFixedBindings();
     }
 
     this._appWrap.on(
@@ -249,6 +233,29 @@
         $.proxy(this._handleMenuClick, this));
   };
 
+
+  /**
+   * _initializeFixedBindings
+   * Event handlers for when the header is in a fixed position.
+   *
+   * @private
+   */
+  Header.prototype._initializeFixedBindings = function() {
+    this._themedElements = this.findByClass(
+      app._Utilities.ClassName.THEMED,
+      this._appWrap)
+      .filter('.'+app._Utilities.ClassName.THEME_CUJOJP);
+    
+    this._scrollMonitor.init(this._themedElements, this);
+
+    this._appWrap.on(
+      app._Utilities.Events.VIEWPORT_ENTER,
+      $.proxy(this._handleViewportChange, this));
+
+    this._appWrap.on(
+      app._Utilities.Events.VIEWPORT_EXIT,
+      $.proxy(this._handleViewportChange, this));
+  };
 
   /**
    * _handleMenuClick
@@ -300,16 +307,7 @@
   Header.prototype._startNavOpenSequence = function() {
     this._lastPositionY = window.pageYOffset;
 
-    var windowHeight = this._window.height();
-    var slideStyles = {
-      'height': windowHeight
-    };
     var yPosition = (this._lastPositionY) * -1;
-    var wrapStyles = {
-      '-webkit-transform': 'translateY('+ yPosition + 'px )',
-      '-ms-transform': 'translateY('+ yPosition + 'px )',
-      'transform': 'translateY('+ yPosition + 'px )'
-    };
 
     this._body.removeClass(
         app._Modules.Header.Enums.ClassName.NAV_CLOSED);
@@ -319,15 +317,58 @@
         app._Modules.Header.Enums.ClassName.NAV_OPENING,
       ].join(' '));
 
-    this._body.css(slideStyles);
-    this._appWrap.css(slideStyles);
-    this._appContainer.css(slideStyles);
-    this._appBlock.css(wrapStyles);
+    this._createSlideElementStyles();
+    this._createWrapStyles(yPosition);
 
     app._Utilities.onTransitionEnd(
       this._body,
       this._handleOpenFinished,
       this);
+  };
+
+
+  /**
+   * _createSlideElementStyles
+   * Will create styles for the sliding elements on the application.
+   *
+   * TODO: (kaleb) create a application-slider service which will
+   * do all this work for us, instead of using the header class.
+   * The header should only deal with header items. :)
+   *
+   * @private
+   */
+  Header.prototype._createSlideElementStyles = function() {
+    var windowHeight = this._window.height();
+    var slideStyles = {
+      'height': windowHeight
+    };
+
+    this._body.css(slideStyles);
+    this._appWrap.css(slideStyles);
+    this._appContainer.css(slideStyles);
+  };
+
+
+  /**
+   * _createWrapStyles
+   * Will create animation styles for the wrap elements.
+   *
+   * TODO: (kaleb) same as _createSlideElementStyles, we
+   * should have a service which does this outside of the
+   * header.
+   *
+   * @param {Number} yPos the current window y position.
+   *
+   * @private
+   */
+  Header.prototype._createWrapStyles = function(yPos) {
+    var wrapStyles = {
+      '-webkit-transform': 'translateY('+ yPos + 'px )',
+      '-ms-transform': 'translateY('+ yPos + 'px )',
+      'transform': 'translateY('+ yPos + 'px )'
+    };
+
+    this._appBlock.css(wrapStyles);
   };
 
 
