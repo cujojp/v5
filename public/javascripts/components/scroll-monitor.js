@@ -75,6 +75,7 @@
      */
     this._inView = false;
 
+
     this._handleErrors();
     this._init();
   };
@@ -110,7 +111,7 @@
 
     this._scrollWatcher = scrollMonitor.create(
       this._element,
-      {top: -this._appContext.window.height()});
+      {top: (-this._appContext.window.height()+50)});
 
     this._appWrap = this.findByClass(
       app._Utilities.ClassName.APP_WRAP,
@@ -143,6 +144,7 @@
    * @private
    */
   ScrollMonitor.prototype._handleViewportExit = function() {
+    
     if (!this._inView) { 
       return;
     }

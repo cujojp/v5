@@ -163,6 +163,15 @@
      */
     this._lastPositionY = 0;
 
+    /**
+     * The final scroll callback which is returned by the
+     * scroll-monitor service.
+     *
+     * @type {object}
+     * @private
+     */
+    this._lastScrollObject = {};
+
 
     this._init();
   };
@@ -401,10 +410,13 @@
       return;
     }
 
+    console.log(opt_scrollEvent.watchItem != this._lastScrollObject.watchItem);
+
     this._element.toggleClass(
       'themed',
       opt_scrollEvent.isInViewport);
 
+    this._lastScrollObject = opt_scrollEvent;
   };
 
 
