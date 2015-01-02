@@ -36,6 +36,7 @@
     "static-favicon": "~1.0.2"
   },
   "devDependencies": {
+    "gulp-complexity": "^0.3.0",
     "gulp-include": "^1.1.0",
     "gulp-livereload": "^1.3.1",
     "jshint-stylish": "^0.1.5"

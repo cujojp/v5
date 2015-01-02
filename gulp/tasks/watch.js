@@ -8,6 +8,6 @@ gulp.task('watch', function() {
   gulp.watch([
     'public/javascripts/**/*.js',
     '!public/javascripts/**/all.js',
-    '!public/javascripts/**/all.min.js'], ['scripts']);
+    '!public/javascripts/**/all.min.js'], ['scripts-complexity', 'scripts']);
   gulp.watch('public/sass/**/*.scss', ['styles']);
 });  
