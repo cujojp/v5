@@ -18,8 +18,9 @@
 
         new ScrollMonitor(el, context);
       }
-    }
-  };   
+    },
+
+  };
 
   /**
    * ScrollMonitor base constructor
@@ -175,6 +176,18 @@
       this._scrollWatcher);
 
     this._inView = true;
+  };
+
+
+  /**
+   * update
+   * Will update the scroll monitors properties and fire callbacks.
+   *
+   */
+  ScrollMonitor.prototype.update = function() {
+
+    this._scrollWatcher.update();
+
   };
 
   app._Components.ScrollMonitor = component;

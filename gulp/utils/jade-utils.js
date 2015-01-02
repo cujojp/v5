@@ -54,4 +54,7 @@ module.exports = {
   isArray: function(obj) {
     return _.isArray(obj);
   },
+  findWhere: function(obj, prop) {
+    return _.where(obj, prop);
+  }
 };
