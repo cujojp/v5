@@ -302,6 +302,7 @@
     // Viewport handlers
     VIEWPORT_ENTER: 'element-entered',
     VIEWPORT_EXIT: 'element-exited',
+    VIEWPORT_CHANGE: 'visibilityChange',
 
     // Misc
     RESIZE: 'resize',

@@ -16,7 +16,7 @@
           element.get(i) :
           element;
 
-        new ScrollMonitor(el, context);
+        this.Monitor = new ScrollMonitor(el, context);
       }
     },
 
@@ -66,7 +66,6 @@
      */
     this._appWrap = null;
 
-
     /**
      * Boolean to determine if the element is in view or not
      * and to not fire thousands of events per scroll. :)
@@ -75,6 +74,22 @@
      * @private
      */
     this._inView = false;
+
+    /**
+     * Base update functionalty attaches the ScrollMonitor 
+     * plugins public class to Service.
+     *
+     * @type {Function}
+     */
+    this.update = null;
+
+    /**
+     * Base recalculateLocations functionalty attaches 
+     * the ScrollMonitor plugins public class to Service.
+     *
+     * @type {Function}
+     */
+    this.recalculateLocations = null;
 
 
     this._handleErrors();
@@ -114,6 +129,10 @@
       this._element,
       {top: (-this._appContext.window.height()+50)});
 
+    this.update = scrollMonitor.update;
+
+    this.recalculateLocations = scrollMonitor.update; 
+
     this._appWrap = this.findByClass(
       app._Utilities.ClassName.APP_WRAP,
       this._app);  
@@ -128,11 +147,10 @@
    * @private
    */
   ScrollMonitor.prototype._initializeBindings = function(el) {
-    this._scrollWatcher.enterViewport(
-      $.proxy(this._handleViewportEnter, this));
-
     this._scrollWatcher.exitViewport(
       $.proxy(this._handleViewportExit, this));
+    this._scrollWatcher.enterViewport(
+      $.proxy(this._handleViewportEnter, this));
   };
 
 
@@ -145,16 +163,9 @@
    * @private
    */
   ScrollMonitor.prototype._handleViewportExit = function() {
-    
-    if (!this._inView) { 
-      return;
-    }
-
     this._appWrap.trigger(
       app._Utilities.Events.VIEWPORT_EXIT,
       this._scrollWatcher);
-
-    this._inView = false;
   };
 
 
@@ -167,15 +178,17 @@
    * @private
    */
   ScrollMonitor.prototype._handleViewportEnter = function() {
-    if (this._inView) {
-      return;
-    }
-    
-    this._appWrap.trigger(
-      app._Utilities.Events.VIEWPORT_ENTER,
-      this._scrollWatcher);
+    var self = this;
 
-    this._inView = true;
+    // HACK (kaleb)
+    // Solving issue of needing enter events to fire after 
+    // exit events. This is for when users use key-events
+    // to scroll through the page. 
+    setTimeout(function() {
+      self._appWrap.trigger(
+        app._Utilities.Events.VIEWPORT_ENTER,
+        self._scrollWatcher);
+    }, 0);
   };
 
 
