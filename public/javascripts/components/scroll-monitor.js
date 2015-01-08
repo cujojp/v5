@@ -181,9 +181,9 @@
     var self = this;
 
     // HACK (kaleb)
-    // Solving issue of needing enter events to fire after 
+    // Solving issue of needing enter events to fire after
     // exit events. This is for when users use key-events
-    // to scroll through the page. 
+    // to scroll through the page.
     setTimeout(function() {
       self._appWrap.trigger(
         app._Utilities.Events.VIEWPORT_ENTER,

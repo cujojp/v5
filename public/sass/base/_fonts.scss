@@ -41,6 +41,10 @@
   color: $pink;  
 }
 
+.p1, .p2, .p3, .p4, p {
+  @include fontRegular;
+}
+
 .p1, .lt1, .p1-bold { // also affects .p1.lt
   @include px-em--font-size--line-height(22,54);
 }
@@ -95,7 +99,7 @@
 .p2-light,
 .p3-light,
 .p4-light {
-  color: $gray90;
+  color: $white;
 }   
 
 .t1-marginless-top,
