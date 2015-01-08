@@ -1,9 +1,10 @@
 extends layout
 
 block content
-  -work = data.work || []
+  -dataObj = data
+  -work = dataObj.work || []
 
-  div('style'= "height:2500px").section-wrap.themed.cujojp.scroll-target
+  +partial('shared/modules/home/home-hero.jade', dataObj.home)
   for item in work
     div('style'= "height:2500px").section-wrap
       +partial('shared/modules/home/work-item-hero.jade', item)

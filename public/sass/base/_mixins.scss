@@ -123,7 +123,7 @@
 }
 
 @mixin fontRegular(){ // Avenir Next W02 Light
-  @include font($base_font_family);
+  @include font($sans_serif_regular);
 }
 
 @mixin fontItalic(){ // AvenirNextLTW01-Italic

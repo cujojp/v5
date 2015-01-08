@@ -65,3 +65,18 @@
     }
   }
 }
+
+.btn-stroke {
+  background: none;
+  border: 2px solid $white;
+  transition: all .25s ease-in;
+
+  &.cujojp {
+    border: 2px solid $pink;
+  }
+
+  &:hover {
+    background: none;
+    border-color: $gray70;
+  }
+}

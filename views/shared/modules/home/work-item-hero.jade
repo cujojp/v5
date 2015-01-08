@@ -1,3 +1,6 @@
+include ../../../../views/shared/global/jade-helpers.jade
+- dataObj = data;
+
 .work-hero-wrap
   h1= data.client
   a.item-button(href=data.slug.relative)= data.slug.title
