@@ -164,22 +164,16 @@
     this._lastPositionY = 0;
 
     /**
-     * The final scroll callback which is returned by the
-     * scroll-monitor service.
+     * Debounced method to trigger a viewpoer calculation.
+     * This is to trigger a recalc after a massive scroll
+     * evet happens, i.e. page-up || page-down.
      *
-     * @type {object}
      * @private
      */
-    this._lastScrollObject = {};
+    this._debouncedViewportCalculation = $.debounce(
+        500,
+        $.proxy(this._updateViewportCalculation, this));
 
-    /**
-     * The final in viewport scroll event object which is returned by the
-     * scroll-monitor service.
-     *
-     * @type {object}
-     * @private
-     */
-    this._lastViewportScrollObject = {};
 
 
     this._init();
@@ -257,11 +251,15 @@
     this._scrollMonitor.init(this._scrollWatchElements, this);
 
     this._appWrap.on(
-      app._Utilities.Events.VIEWPORT_ENTER,
-      $.proxy(this._handleViewportChange, this));
+      app._Utilities.Events.VIEWPORT_CHANGE,
+      $.proxy(this._updateViewportCalculation, this));
 
     this._appWrap.on(
       app._Utilities.Events.VIEWPORT_EXIT,
+      $.proxy(this._handleViewportChange, this));
+
+    this._appWrap.on(
+      app._Utilities.Events.VIEWPORT_ENTER,
       $.proxy(this._handleViewportChange, this));
   };
 
@@ -455,18 +453,26 @@
    * @private
    */
   Header.prototype._handleViewportChange = function(event, opt_scrollEvent) {
-    if (!opt_scrollEvent) {
+    if (!opt_scrollEvent || window.pageYOffset <= 0) {
       return;
     }
-    this._lastScrollObject = opt_scrollEvent;
-
-    this._lastViewportScrollObject = opt_scrollEvent.isInViewport ?
-        opt_scrollEvent :
-        {};
 
     this._element.toggleClass(
       'themed',
       opt_scrollEvent.isInViewport);
+
+    this._debouncedViewportCalculation(opt_scrollEvent);
+  };
+
+
+  /**
+   * _updateViewportCalculation
+   *
+   * @param {object} evt
+   * @private
+   */
+  Header.prototype._updateViewportCalculation = function(evt) {
+    scrollMonitor.recalculateLocations();
   };
 
 

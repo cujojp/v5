@@ -47,6 +47,7 @@ section.detail-article-content
   if themedBlocks.length
     .scroll-target
       for themedBlock, i in themedBlocks
+        -paddingClass = (!!themedBlock.title) ? 'padded-top padded-lrg' : 'padded-lrg-top padded-xl'
         .section-wrap.themed.cujojp
           .container
             .image-group
