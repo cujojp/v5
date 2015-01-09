@@ -1,5 +1,5 @@
 var gulp = require('gulp');
-var sass = require('gulp-ruby-sass');
+var sass = require('gulp-sass');
 var filelog = require('gulp-filelog');
 var autoprefix = require('gulp-autoprefixer');
 var recess = require('gulp-recess');
