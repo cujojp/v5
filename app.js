@@ -1,3 +1,6 @@
+var config = require('./gulp/utils/config');
+var jadeUtils = require('./gulp/utils/jade-utils');
+var routes = require('./routes/index');
 var express = require('express');
 var path = require('path');
 var favicon = require('static-favicon');
