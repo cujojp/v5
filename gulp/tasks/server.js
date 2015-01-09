@@ -35,6 +35,9 @@ gulp.task('startexpress', function() {
   app.use(cookieParser());
 
   app.use(express.static(path.join(config.express._asstesDirectory)));
+  app.use(
+    '/public', 
+    express.static(path.join(__dirname, 'public')));
 
   // define our routes and methods to call.
   app.use('/', routes);
