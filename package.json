@@ -28,7 +28,7 @@
     "gulp-recess": "^1.1.1",
     "gulp-rename": "^1.2.0",
     "gulp-rimraf": "^0.1.1",
-    "gulp-ruby-sass": "^0.7.1",
+    "gulp-sass": "^1.2.4",
     "gulp-svg-sprites": "^1.1.0",
     "gulp-uglify": "^0.2.1",
     "include": "^0.1.2",
