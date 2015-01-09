@@ -30,4 +30,3 @@ build/Release
 node_modules/*
 
 # Overall large files that should be ignored
-video/
