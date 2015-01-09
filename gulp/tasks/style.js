@@ -10,7 +10,6 @@ var notify = require('gulp-notify');
 gulp.task('styles', function () {
   gulp.src('./public/sass/**/*.scss')
     .pipe(sass())
-    .pipe(filelog())
     .pipe(autoprefix())
     .pipe( plumber( { errorHandler: handleErrors } ) )
     .pipe(gulp.dest('./public/stylesheets'));
