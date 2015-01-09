@@ -24,12 +24,6 @@ build/Release
 .sass-cache
 .DS_Store
 
-# Compiled files
-public/stylesheets/main.css
-public/javascripts/all.js
-public/javascripts/all.min.js
-public/svg/icons.svg
-
 # Dependency directory
 # Commenting this out is preferred by some people, see
 # https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git-
