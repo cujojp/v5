@@ -1,3 +1,3 @@
 var gulp = require('gulp');
 
-gulp.task('build', ['startexpress', 'svg', 'scripts', 'styles']);
+gulp.task('build', ['svg', 'scripts', 'styles']);
