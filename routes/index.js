@@ -1,6 +1,5 @@
 var express = require('express');
 var _ = require('lodash');
-var ObjectID = require('mongodb').ObjectID;
 var router = express.Router();
 var Firebase = require('../gulp/utils/firebase-node');
 var FirebaseTokenGenerator = require("../gulp/utils/firebase-token-generator");
