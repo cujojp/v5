@@ -2,20 +2,14 @@ extends layout
 
 block content
   -dataObj = data
-  -work = dataObj.work || []
 
   +partial('shared/modules/home/home-hero.jade', dataObj.home)
 
   .section-wrap
     if dataObj.home.blocks.work
       .container
-        .row.padded-lrg-top
+        .row.padded-xl.padded-xl-top
           .six.columns.offset-by-three.text-center
-            h3.t4.t4-bold.t4-pink= dataObj.home.blocks.work.title
-
-    for item in work
-      .container
-        +partial('shared/modules/home/work-item-hero.jade', item)
-
-  div('style'= "height:2500px").section-wrap.themed
-  div('style'= "height:2500px").section-wrap.themed.cujojp.scroll-target
+            h3.t4.t4-bold.t4-pink.t4-marginless= dataObj.home.blocks.work.title
+    .container
+      +partial('shared/modules/home/work-item-hero.jade', dataObj.work)

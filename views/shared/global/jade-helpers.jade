@@ -24,8 +24,8 @@ mixin responsiveImg(imgObj, extraClasses)
   - mobile2x = imgObj.img_mobile_2x ? imgObj.img_mobile_2x + ' ' + breakpointObj.mobile + ' 2x,': '' 
 
   - imgSrc = desktopImg + ' ' + desktopImg2x + ' ' + tablet + ' ' + tablet2x + ' ' + mobile + ' ' + mobile2x
-  img(
-    class=classes, 
+  img.img-swap(
+    class=extraClasses, 
     alt=imgObj.caption, 
     data-srcset=imgSrc)
   noscript
