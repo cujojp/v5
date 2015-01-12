@@ -5,8 +5,17 @@ block content
   -work = dataObj.work || []
 
   +partial('shared/modules/home/home-hero.jade', dataObj.home)
-  for item in work
-    div('style'= "height:2500px").section-wrap
-      +partial('shared/modules/home/work-item-hero.jade', item)
+
+  .section-wrap
+    if dataObj.home.blocks.work
+      .container
+        .row.padded-lrg-top
+          .six.columns.offset-by-three.text-center
+            h3.t4.t4-bold.t4-pink= dataObj.home.blocks.work.title
+
+    for item in work
+      .container
+        +partial('shared/modules/home/work-item-hero.jade', item)
+
   div('style'= "height:2500px").section-wrap.themed
   div('style'= "height:2500px").section-wrap.themed.cujojp.scroll-target
