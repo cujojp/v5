@@ -796,20 +796,27 @@ or wrap each row of columns in a <div class="row"> */
   color: #e24778; }
 
 .t3 {
-  font-size: 1.125em;
-  line-height: 1.33333;
+  font-size: 2em;
+  line-height: 0.9375;
   letter-spacing: 0px;
   margin-bottom: 40px;
   color: #e24778; }
 
 .t4 {
-  font-size: 2em;
-  line-height: 0.9375;
+  font-size: 1.5em;
+  line-height: 1;
   letter-spacing: 0px;
   margin-bottom: 30px;
   color: #e24778; }
 
 .t5 {
+  font-size: 1.125em;
+  line-height: 1.11111;
+  letter-spacing: 0px;
+  margin-bottom: 40px;
+  color: #e24778; }
+
+.t6 {
   font-size: 0.75em;
   line-height: 1.66667;
   letter-spacing: 0px;
@@ -846,23 +853,23 @@ or wrap each row of columns in a <div class="row"> */
   font-weight: normal;
   font-style: normal; }
 
-.t6, .t7, .t1-bold, .t4-bold, .t5-bold, h6 {
+.t6, .t7, .t1-bold, .t3-bold, .t4-bold, .t5-bold, .t6-bold, h6 {
   font-family: 'AvenirLTW01-35LightObli', Arial, sans-serif;
   font-weight: normal;
   font-style: normal; }
 
-.t6-bold, .t7-bold {
+.t7-bold {
   font-family: 'Avenir Next W02 Light', Arial, sans-serif;
   font-weight: normal;
   font-style: normal; }
 
-.t1-grey, .t2-grey, .t3-grey, .t4-grey, .t5-grey {
+.t1-grey, .t2-grey, .t3-grey, .t4-grey, .t5-grey, .t6-grey {
   color: #acacac; }
 
-.t1-grey-dark, .t2-grey-dark, .t3-grey-dark, .t4-grey-dark, .t5-grey-dark {
+.t1-grey-dark, .t2-grey-dark, .t3-grey-dark, .t4-grey-dark, .t5-grey-dark, .t6-grey-dark {
   color: #4d4d4d; }
 
-.t1-light, .t2-light, .t3-light, .t4-light {
+.t1-light, .t2-light, .t3-light, .t4-light, .t5-light, .t6-light {
   color: white; }
 
 .p1-light, .p2-light, .p3-light, .p4-light {
@@ -874,7 +881,7 @@ or wrap each row of columns in a <div class="row"> */
 .p1-marginless-top, .p2-marginless-top, .p3-marginless-top, .p4-marginless-top, .p5-marginless-top {
   margin-top: 0; }
 
-.t1-marginless, .t2-marginless, .t3-marginless, .t4-marginless, .t5-marginless {
+.t1-marginless, .t2-marginless, .t3-marginless, .t4-marginless, .t5-marginless, .t6-marginless {
   margin-top: 0;
   margin-bottom: 0; }
 
@@ -882,7 +889,7 @@ or wrap each row of columns in a <div class="row"> */
   margin-top: 0;
   margin-bottom: 0; }
 
-.t1-marginless-bot, .t2-marginless-bot, .t3-marginless-bot, .t4-marginless-bot {
+.t1-marginless-bot, .t2-marginless-bot, .t3-marginless-bot, .t4-marginless-bot, .t5-marginless-bot, .t6-marginless-bot {
   margin-bottom: 0; }
 
 .p1-marginless-bot, .p2-marginless-bot, .p3-marginless-bot, .p4-marginless-bot, .p5-marginless-bot {
