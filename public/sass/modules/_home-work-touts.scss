@@ -1,0 +1,67 @@
+.work-tout-wrap {
+  overflow: hidden;
+
+  .tout-anchor {
+    overflow: hidden;
+
+    .tout-inner-wrap {
+      position: relative;
+      height: 100%;
+    }
+
+    .bw-tout {
+
+      &:hover {
+        .img-wrap {
+          opacity: 0;
+        }
+
+        .video-wrap {
+          opacity: 1;
+        }
+      }
+    }
+
+    video,
+    img {
+      max-width: 100%;
+    }
+    
+    .media-element {
+      transition: all .25s ease-in;
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .img-wrap {
+      filter: grayscale(1);
+      opacity: 1;
+    }
+
+    .video-wrap {
+      opacity: 0;
+      height: 100%;
+
+      .video-background {
+        position: absolute;
+        top: 0;
+        bottom :0;
+        width: 100%;
+        height: 100%;
+        opacity: .85;
+        background: {
+          color: $pink;
+          image: url('/svg/patterns/gradient-default.svg');
+        }
+      }
+    }
+
+    .video-wrap,
+    .video-player {
+      position: relative;
+      height: 100%;
+    }
+  }
+}

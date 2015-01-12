@@ -1,6 +1,27 @@
 include ../../../../views/shared/global/jade-helpers.jade
-- dataObj = data;
+-work = data || []
 
-.work-hero-wrap
-  h1= data.client
-  a.item-button(href=data.slug.relative)= data.slug.title
+mixin workItemTout(item) 
+  -caseStudyText= item.info.client.title + " Case Study"
+
+  .four.columns.work-tout-wrap(class=classes)
+    .tout-anchor.aspect-7x5
+      a.aspect-inner.bw-tout(href=item.slug.relative)
+        .tout-inner-wrap
+          .img-wrap.media-element
+            +responsiveImg(item.home_content.media.img, 'grayscale')
+          .video-wrap.media-element
+            +partial('shared/components/video-element.jade',item.home_content.media)
+            .video-background
+            .button-tout-wrap.text-center.aspect-inner
+              .table-center-wrap.full
+                .table-center
+                  span.btn.btn-stroke= caseStudyText
+                    span.icon-wrap
+                      +svgIcon('arrow-right', 'white size-16')
+    span.t6.t6-grey= item.client
+    //-a.item-button(href=item.slug.relative)=item.slug.title
+
+.row
+  for item, i in work
+    +workItemTout(item)

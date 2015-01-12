@@ -1529,5 +1529,45 @@ label {
   .home-hero .t1 {
     white-space: no-wrap; }
 
+.work-tout-wrap {
+  overflow: hidden; }
+  .work-tout-wrap .tout-anchor {
+    overflow: hidden; }
+    .work-tout-wrap .tout-anchor .tout-inner-wrap {
+      position: relative;
+      height: 100%; }
+    .work-tout-wrap .tout-anchor .bw-tout:hover .img-wrap {
+      opacity: 0; }
+    .work-tout-wrap .tout-anchor .bw-tout:hover .video-wrap {
+      opacity: 1; }
+    .work-tout-wrap .tout-anchor video, .work-tout-wrap .tout-anchor img {
+      max-width: 100%; }
+    .work-tout-wrap .tout-anchor .media-element {
+      -webkit-transition: all 0.25s ease-in;
+              transition: all 0.25s ease-in;
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      left: 0; }
+    .work-tout-wrap .tout-anchor .img-wrap {
+      -webkit-filter: grayscale(1);
+              filter: grayscale(1);
+      opacity: 1; }
+    .work-tout-wrap .tout-anchor .video-wrap {
+      opacity: 0;
+      height: 100%; }
+      .work-tout-wrap .tout-anchor .video-wrap .video-background {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.85;
+        background-color: #e24778;
+        background-image: url('/svg/patterns/gradient-default.svg'); }
+    .work-tout-wrap .tout-anchor .video-wrap, .work-tout-wrap .tout-anchor .video-player {
+      position: relative;
+      height: 100%; }
+
 .container {
   margin: 0 auto; }
