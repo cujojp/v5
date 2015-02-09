@@ -3,7 +3,8 @@ extends layout
 block content
   -dataObj = data
 
-  +partial('shared/modules/home/home-hero.jade', dataObj.home)
+  .section-wrap.themed.cujojp.scroll-target
+    +partial('shared/modules/home/home-hero.jade', dataObj.home)
 
   .section-wrap
     if dataObj.home.blocks.work
@@ -11,5 +12,15 @@ block content
         .row.padded-xl.padded-xl-top
           .six.columns.offset-by-three.text-center
             h3.t4.t4-bold.t4-pink.t4-marginless= dataObj.home.blocks.work.title
+
+  .section-wrap
     .container
       +partial('shared/modules/home/work-item-hero.jade', dataObj.work)
+
+  .section-wrap
+    .container
+      +partial('shared/modules/home/about-summary.jade', dataObj.about)
+
+  .section-wrap.themed.cujojp
+    .container
+      +partial('shared/modules/home/social.jade', dataObj.contact)

@@ -1,0 +1,21 @@
+include ../../../../views/shared/global/jade-helpers.jade
+- dataObj = data.social;
+
+mixin socialIcon(item)
+  a(href=item.href).icon-anchor
+    span.icon-wrap
+      +svgIcon(item.icon, 'white size-28')
+    p.p4.p4-light.p4-marginless=item.title
+
+.row.padded-lrg-top.marginless
+  .six.columns.offset-by-three.text-center
+    h3.t2.t2-bold.t2-light.t2-marginless= dataObj.title
+.row.marginless.padded-top
+  .six.columns.offset-by-three.text-center
+    p.p3.p3-light!= dataObj.subtitle
+.row.padded-lrg-top.padded
+  .six.columns.offset-by-three.text-center
+    ul.icon-list.inline-list
+      for item, i in dataObj.icons
+        li.icon-item
+          +socialIcon(item)

@@ -340,7 +340,8 @@ table {
 
   .container .column, .container .columns {
     margin-left: 960px;
-    margin-right: 960px; }
+    margin-right: 960px;
+    border: 1px solid red; }
 
   .column.alpha, .columns.alpha {
     margin-left: 0;
@@ -740,6 +741,10 @@ or wrap each row of columns in a <div class="row"> */
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-image: url('/images/icon-add@1x.png'); }
+
+.inline-list li {
+  display: inline-block;
+  list-style: none; }
 
 .fade {
   opacity: 0;
@@ -1528,6 +1533,24 @@ label {
   padding-bottom: 4.6875em; }
   .home-hero .t1 {
     white-space: no-wrap; }
+
+.icon-list {
+  margin: 0; }
+  .icon-list li {
+    margin: 0 1.25em; }
+  .icon-list .icon-wrap {
+    display: block;
+    margin: 0 0 0.3125em; }
+  .icon-list .icon-anchor .p4-light {
+    -webkit-transition: all 0.15s linear;
+            transition: all 0.15s linear; }
+  .icon-list .icon-anchor svg {
+    -webkit-transition: all 0.15s linear;
+            transition: all 0.15s linear; }
+  .icon-list .icon-anchor:hover .p4-light {
+    color: #cccccc; }
+  .icon-list .icon-anchor:hover svg {
+    fill: #cccccc; }
 
 .work-tout-wrap {
   overflow: hidden; }
