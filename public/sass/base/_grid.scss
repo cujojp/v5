@@ -86,7 +86,7 @@
 
   .container                                  { width: $tablet_grid_width; }
   .container .column,
-  .container .columns                         { margin-left: $tablet_grid_width; margin-right: $tablet_grid_width;  }
+  .container .columns                         { margin-left: $tablet_grid_width; margin-right: $tablet_grid_width; border: 1px solid red; }
   .column.alpha, .columns.alpha               { margin-left: 0; margin-right: $tablet_grid_width; }
   .column.omega, .columns.omega               { margin-right: 0; margin-left: $tablet_grid_width; }
   .alpha.omega                                { margin-left: 0; margin-right: 0; }

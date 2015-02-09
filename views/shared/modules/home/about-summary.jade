@@ -1,0 +1,12 @@
+include ../../../../views/shared/global/jade-helpers.jade
+- dataObj = data;
+
+.row.padded-lrg-top.marginless
+  .seven.columns
+    h3.t2.t2-bold.t2-pink.t2-marginless= data.summary.title
+
+.row.padded-lrg.padded-top
+  .five.columns.offset-by-one
+    p.p3 !{(data.summary.content).replace(/\n/g, '<br/>')}
+    p.p3
+      a(href="/about")="Read More\u2026"

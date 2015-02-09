@@ -1,18 +1,17 @@
 include ../../../../views/shared/global/jade-helpers.jade
 - dataObj = data.header;
 
-.section-wrap.themed.cujojp.scroll-target
-  .home-hero
-    .container
-      .row
-        .eight.columns.offset-by-two.text-center
-          h1.t1.t1-light.t1-marginless!= dataObj.headline
-      .row.padded-top
-        .six.columns.offset-by-three.text-center
-          p.p3.p3-light!= dataObj.subhead
-      .row.padded-top
-        .six.columns.offset-by-three.text-center
-          a(href=dataObj.cta.href).btn.btn-stroke= dataObj.cta.title
-            span.icon-wrap
-              +svgIcon('arrow-right', 'white size-16')
-            span.cover
+.home-hero
+  .container
+    .row
+      .eight.columns.offset-by-two.text-center
+        h1.t1.t1-light.t1-marginless!= dataObj.headline
+    .row.padded-top
+      .six.columns.offset-by-three.text-center
+        p.p3.p3-light!= dataObj.subhead
+    .row.padded-top
+      .six.columns.offset-by-three.text-center
+        a(href=dataObj.cta.href).btn.btn-stroke= dataObj.cta.title
+          span.icon-wrap
+            +svgIcon('arrow-right', 'white size-16')
+          span.cover

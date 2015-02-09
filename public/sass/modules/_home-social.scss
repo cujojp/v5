@@ -1,0 +1,31 @@
+.icon-list {
+  margin: 0;
+
+  li {
+    margin: 0 px-em(20);
+  }
+
+  .icon-wrap {
+    display: block;
+    margin: 0 0 px-em(5);
+  }
+  
+  .icon-anchor {
+    .p4-light {
+      transition: all .15s linear;
+    }
+   
+    svg {
+      transition: all .15s linear;
+    }
+
+    &:hover {
+      .p4-light {
+        color: $gray80;
+      }
+      svg {
+        fill: $gray80;
+      }
+    }
+  }
+}
