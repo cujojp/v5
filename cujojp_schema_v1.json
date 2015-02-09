@@ -53,6 +53,18 @@
       "subtitle": "Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus.",
       "icons": [
         {
+          "name": "github",
+          "title": "github",
+          "icon": "icon-github",
+          "href": "http://www.github.com/cujojp"
+        },
+        {
+          "name": "facebook",
+          "title": "facebook",
+          "icon": "icon-facebook",
+          "href": "http://www.facebook.com/cujojp"
+        },
+        {
           "name": "instagram",
           "title": "instagram",
           "icon": "icon-instagram",
@@ -74,12 +86,6 @@
           "name": "github",
           "title": "github",
           "icon": "icon-github",
-          "href": "http://www.github.com/cujojp"
-        },
-        {
-          "name": "main",
-          "title": "info@cujo.jp",
-          "icon": "icon-mail",
           "href": "http://www.github.com/cujojp"
         }
       ]
