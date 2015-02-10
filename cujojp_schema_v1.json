@@ -1,20 +1,4 @@
 {
-  "home": {
-    "header": {
-      "headline": "Kaleb White is a front-end engineer living in San Francisco.",
-      "subhead": "Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.",
-      "cta": {
-        "href": "http://www.google.com",
-        "title": "Check out the portfolio"
-      }
-    },
-    "blocks": {
-      "work": {
-        "title": "Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum."
-      },
-      "contact": {}
-    }
-  },
   "about": {
     "blocks": [
       {
@@ -26,10 +10,6 @@
         "title": "Some Copy For A Hero"
       }
     ],
-    "summary": {
-      "title": "Quick summary about me.",
-      "content": "Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum.\n\nAenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum.\n\nNam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,."
-    },
     "media": {
       "img": "null",
       "img_2x": "null",
@@ -45,51 +25,13 @@
         "ogg": "video.ogg",
         "webm": "video.webm"
       }
+    },
+    "summary": {
+      "content": "Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum.\n\nAenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum.\n\nNam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,.",
+      "title": "Quick summary about me."
     }
   },
   "contact": {
-    "social": {
-      "title": "Lets Get Social",
-      "subtitle": "Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus.",
-      "icons": [
-        {
-          "name": "github",
-          "title": "github",
-          "icon": "icon-github",
-          "href": "http://www.github.com/cujojp"
-        },
-        {
-          "name": "facebook",
-          "title": "facebook",
-          "icon": "icon-facebook",
-          "href": "http://www.facebook.com/cujojp"
-        },
-        {
-          "name": "instagram",
-          "title": "instagram",
-          "icon": "icon-instagram",
-          "href": "http://www.instagram.com/cujojp"
-        },
-        {
-          "name": "twitter",
-          "title": "twitter",
-          "icon": "icon-twitter",
-          "href": "http://www.twitter.com/cujojp"
-        },
-        {
-          "name": "linkedin",
-          "title": "linkedin",
-          "icon": "icon-linkedin",
-          "href": "http://www. linkedin.com/cujojp"
-        },
-        {
-          "name": "github",
-          "title": "github",
-          "icon": "icon-github",
-          "href": "http://www.github.com/cujojp"
-        }
-      ]
-    },
     "blocks": [
       {
         "body": "Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.\nIn enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.\nAenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum.\nAenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum.",
@@ -115,12 +57,68 @@
         "ogg": "video.ogg",
         "webm": "video.webm"
       }
+    },
+    "social": {
+      "icons": [
+        {
+          "href": "http://www.github.com/cujojp",
+          "icon": "icon-github",
+          "name": "github",
+          "title": "github"
+        },
+        {
+          "href": "http://www.facebook.com/cujojp",
+          "icon": "icon-facebook",
+          "name": "facebook",
+          "title": "facebook"
+        },
+        {
+          "href": "http://www.instagram.com/cujojp",
+          "icon": "icon-instagram",
+          "name": "instagram",
+          "title": "instagram"
+        },
+        {
+          "href": "http://www.twitter.com/cujojp",
+          "icon": "icon-twitter",
+          "name": "twitter",
+          "title": "twitter"
+        },
+        {
+          "href": "http://www. linkedin.com/cujojp",
+          "icon": "icon-linkedin",
+          "name": "linkedin",
+          "title": "linkedin"
+        },
+        {
+          "href": "#EMAIL",
+          "icon": "icon-mail",
+          "name": "mail",
+          "title": "info@cujo.jp"
+        }
+      ],
+      "subtitle": "Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus.",
+      "title": "Lets Get Social"
+    }
+  },
+  "home": {
+    "blocks": {
+      "work": {
+        "title": "Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum."
+      }
+    },
+    "header": {
+      "cta": {
+        "href": "http://www.google.com",
+        "title": "Check out the portfolio"
+      },
+      "headline": "Kaleb White is a <br/>front&ndash;end engineer living in San Francisco.",
+      "subhead": "Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu."
     }
   },
   "title": "cujojp | portfolio of Kaleb White",
   "work": [
     {
-      "client": "Work Item Test",
       "anchor": {
         "href": "http://www.google.com",
         "title": "View bluhomes.com"
@@ -251,13 +249,9 @@
         "name": "Some Name",
         "subtitle": "Preisdent UC Berkley Davis"
       },
+      "client": "Work Item Test",
       "home_content": {
         "media": {
-          "video": {
-            "mp4": "/video/work/item-test/test-video.mp4",
-            "ogg": "/video/work/item-test/test-video.ogg",
-            "webm": "/video/work/item-test/test-video.webm"
-          },
           "img": {
             "alt": "An awesome image tout",
             "img": "http://placehold.it/490x392/4285F4/ffffff",
@@ -269,6 +263,11 @@
             "img_tablet": "http://placehold.it/300x240/4285F4/ffffff",
             "img_tablet_2x": "http://placehold.it/600x480/4285F4/ffffff",
             "img_tablet_3x": "null"
+          },
+          "video": {
+            "mp4": "/video/work/item-test/test-video.mp4",
+            "ogg": "/video/work/item-test/test-video.ogg",
+            "webm": "/video/work/item-test/test-video.webm"
           }
         }
       },
@@ -315,7 +314,6 @@
       }
     },
     {
-      "client": "Work Item Test",
       "anchor": {
         "href": "http://www.google.com",
         "title": "View bluhomes.com"
@@ -446,13 +444,9 @@
         "name": "Some Name",
         "subtitle": "Preisdent UC Berkley Davis"
       },
+      "client": "Work Item Test",
       "home_content": {
         "media": {
-          "video": {
-            "mp4": "/video/work/item-test/test-video.mp4",
-            "ogg": "/video/work/item-test/test-video.ogg",
-            "webm": "/video/work/item-test/test-video.webm"
-          },
           "img": {
             "alt": "An awesome image tout",
             "img": "http://placehold.it/490x392/4285F4/ffffff",
@@ -464,6 +458,11 @@
             "img_tablet": "http://placehold.it/300x240/4285F4/ffffff",
             "img_tablet_2x": "http://placehold.it/600x480/4285F4/ffffff",
             "img_tablet_3x": "null"
+          },
+          "video": {
+            "mp4": "/video/work/item-test/test-video.mp4",
+            "ogg": "/video/work/item-test/test-video.ogg",
+            "webm": "/video/work/item-test/test-video.webm"
           }
         }
       },
@@ -510,7 +509,6 @@
       }
     },
     {
-      "client": "Work Item Test",
       "anchor": {
         "href": "http://www.google.com",
         "title": "View bluhomes.com"
@@ -641,13 +639,9 @@
         "name": "Some Name",
         "subtitle": "Preisdent UC Berkley Davis"
       },
+      "client": "Work Item Test",
       "home_content": {
         "media": {
-          "video": {
-            "mp4": "/video/work/item-test/test-video.mp4",
-            "ogg": "/video/work/item-test/test-video.ogg",
-            "webm": "/video/work/item-test/test-video.webm"
-          },
           "img": {
             "alt": "An awesome image tout",
             "img": "http://placehold.it/490x392/4285F4/ffffff",
@@ -659,6 +653,11 @@
             "img_tablet": "http://placehold.it/300x240/4285F4/ffffff",
             "img_tablet_2x": "http://placehold.it/600x480/4285F4/ffffff",
             "img_tablet_3x": "null"
+          },
+          "video": {
+            "mp4": "/video/work/item-test/test-video.mp4",
+            "ogg": "/video/work/item-test/test-video.ogg",
+            "webm": "/video/work/item-test/test-video.webm"
           }
         }
       },
