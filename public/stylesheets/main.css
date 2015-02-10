@@ -1371,11 +1371,45 @@ label {
 .mast-head-container {
   padding: 30px 0 0; }
 
+.app-header {
+  position: absolute;
+  height: 100%;
+  width: 350px;
+  top: 0;
+  right: -351px;
+  background: white;
+  z-index: 1100;
+  border-left: 1px solid #cccccc; }
+  .app-header .inner-slide-nav {
+    padding: 3.125em 1.5625em 0.625em; }
+  .app-header .inner-logo-wrap {
+    padding: 0 0 1.875em;
+    border-bottom: 1px solid #e2e2e2; }
+  .app-header .logo {
+    width: 6.25em;
+    height: 2.5em;
+    fill: #e24778; }
+  .app-header .nav-list {
+    list-style: none;
+    border-bottom: 1px solid #e2e2e2;
+    padding: 0 0 1.875em;
+    overflow: hidden; }
+    .app-header .nav-list li {
+      position: relative;
+      display: block;
+      left: 0;
+      padding: 1.875em 0;
+      -webkit-transition: all 0.15s linear;
+              transition: all 0.15s linear; }
+      .app-header .nav-list li:hover {
+        left: 0.3125em; }
+
 .overlay {
   z-index: 1040;
   background-color: rgba(0, 0, 0, 0.5);
   -webkit-transition: opacity 0.25s linear 0s, left 0.15s ease-out 0s;
           transition: opacity 0.25s linear 0s, left 0.15s ease-out 0s;
+  cursor: url('/images/icon-close.png'), auto;
   position: absolute;
   top: 0;
   right: 0;
@@ -1406,7 +1440,8 @@ label {
   background: -webkit-radial-gradient(top, #e14476, #da3066, #d42059); }
 
 .app-container-wrap {
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
 
 .slide-app {
   -webkit-transition: -webkit-transform 0.15s ease-in-out;
@@ -1541,13 +1576,13 @@ label {
   .icon-list .icon-wrap {
     display: block;
     margin: 0 0 0.3125em; }
-  .icon-list .icon-anchor .p4-light {
+  .icon-list .icon-anchor .t6-light {
     -webkit-transition: all 0.15s linear;
             transition: all 0.15s linear; }
   .icon-list .icon-anchor svg {
     -webkit-transition: all 0.15s linear;
             transition: all 0.15s linear; }
-  .icon-list .icon-anchor:hover .p4-light {
+  .icon-list .icon-anchor:hover .t6-light {
     color: #cccccc; }
   .icon-list .icon-anchor:hover svg {
     fill: #cccccc; }

@@ -2,5 +2,6 @@
   z-index: 1040;
   background-color: rgba(0,0,0,0.5);
   transition: opacity 0.25s linear 0s, left 0.15s ease-out 0s;
+  cursor: url('/images/icon-close.png'), auto;
   @include fill-parent();
 }

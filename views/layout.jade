@@ -15,7 +15,9 @@ html
       .app-container.slide-app
         .content-block
           block content
-    .app-header
+      .app-header.slide-app
+        +partial('shared/components/side-nav.jade', dataObj)
+      
 
     script(src='https://maps.googleapis.com/maps/api/js?sensor=false')
     script(src='/javascripts/all.js')
