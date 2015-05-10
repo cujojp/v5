@@ -309,6 +309,7 @@
       "slug": {
         "absolute": "http://www.someurl.com",
         "id": "work-item-test",
+        "name": "bluhomes.com",
         "relative": "/work/work-item-test",
         "title": "More Information"
       }
@@ -505,6 +506,7 @@
         "absolute": "http://www.someurl.com",
         "id": "work-item-test",
         "relative": "/work/work-item-test",
+        "name": "bluhomes.com",
         "title": "More Information"
       }
     },
@@ -700,6 +702,7 @@
         "absolute": "http://www.someurl.com",
         "id": "work-item-test",
         "relative": "/work/work-item-test",
+        "name": "bluhomes.com",
         "title": "More Information"
       }
     }
