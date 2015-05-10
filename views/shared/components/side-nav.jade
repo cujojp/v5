@@ -1,21 +1,23 @@
 include ../../../views/shared/global/jade-helpers.jade
 
 .inner-slide-nav.nav-ani-in
-  .inner-logo-wrap.text-center.nav-item-ani-in
+  .inner-logo-wrap.text-center.nav-item-ani-in.item-0
     a(href="/")
       +svgIcon('cujojp', 'logo icon-animate')
 
-  span.nav-divider.themed.nav-item-ani-in
+  span.nav-divider.themed.nav-item-ani-in.item-1
   ul.nav-list
-    li.nav-item.text-center.nav-item-ani-in
+    li.nav-item.text-center.nav-item-ani-in.item-2
       a(href="/").nav-anchor.t2.t2-bold= "Home"
-    li.nav-item.text-center.nav-item-ani-in
+    li.nav-item.text-center.nav-item-ani-in.item-3
       a(href="/").nav-anchor.t2.t2-bold= "Portfolio"
       if (data.work)
         ul.nav-sub-list
+          -int = 4;
           for item in data.work
-            li.sub-nav-item.text-center.nav-item-ani-in
+            -int++
+            li(class='sub-nav-item text-center nav-item-ani-in item-'+int)
               a(href=item.slug.relative).nav-anchor.special= item.slug.name
-    li.nav-item.text-center.nav-item-ani-in
+    li.nav-item.text-center.nav-item-ani-in.item-4
       a(href="/").nav-anchor.t2.t2-bold= "About"
         
