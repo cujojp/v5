@@ -190,7 +190,16 @@ a.secondary:focus {
   text-decoration: none;
 }
 
+a.special {
+  @include fontItalic;
+  color: $blue;
+}
 
+a.special:hover,
+a.special:active,
+a.special:focus {
+
+}
 
 // Unordered and Ordered lists
 // -------------------------
