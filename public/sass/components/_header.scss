@@ -94,6 +94,69 @@
   }
 }
 
+.footer-bottom {
+  padding: px-em(80) 0 0;
+
+  .icon-anchor {
+    overflow: hidden;
+    padding: px-em(10) px-em(5);
+    position: relative;
+  }
+
+  .social-list {
+    text-align: center;
+  }
+
+  .icon {
+    fill: $pink;
+  }
+
+  .icon-anchor:hover {
+    .tooltip {
+      animation-name: fade-up;
+    }
+  }
+
+  .tooltip-wrap {
+    position: absolute;
+    top: px-em(-40);
+    left: 50%;
+    margin-left: px-em(-40);
+    width: px-em(80);
+  }
+
+  .tooltip {
+    position: relative;
+    background: $gray90;
+    border-radius: 2px;
+    padding: px-em(4);
+    animation-duration: 150ms;
+    animation-delay: 50ms;
+    animation-timing-function: ease-out;
+    animation-fill-mode: both;
+    animation-name: fade-out;
+    opacity: 0;
+
+    .t6 {
+      line-height: 1;
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: -4px;
+      left: 50%;
+      margin-left: -2px;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 4px 3.5px 0 3.5px;
+      border-color: $gray90 transparent transparent transparent;
+    }
+  }
+}
+
 .nav-list {
   list-style: none;
   padding: 0 0 px-em(30);
@@ -151,7 +214,7 @@
 
 @for $i from 0 through 20 {
   .nav-item-ani-in.item-#{$i} {
-    animation-delay:  550ms + (($i - 1) * 55ms);
+    animation-delay:  250ms + (($i - 1) * 55ms);
   }
 }
 
@@ -161,10 +224,31 @@
   }
 }
 
+.nav-closed {
+  .nav-item-ani-in {
+    animation-name: fade-out;
+  }
+
+  @for $i from 0 through 20 {
+    .nav-item-ani-in.item-#{$i} {
+      animation-delay:  0;
+    }
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
 @keyframes fade-down {
   from {
     opacity: 0;
-    transform: translate(0, -6px);
+    transform: translate(0, -8px);
   }
   to {
     opacity: 1;
@@ -172,3 +256,13 @@
   }
 }
 
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translate(0, 8px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
