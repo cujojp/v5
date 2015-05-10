@@ -64,41 +64,57 @@
           "href": "http://www.github.com/cujojp",
           "icon": "icon-github",
           "name": "github",
-          "title": "github"
+          "title": "github",
+          "featured": "true",
+          "username": "cujojp"
         },
         {
           "href": "http://www.facebook.com/cujojp",
           "icon": "icon-facebook",
           "name": "facebook",
-          "title": "facebook"
+          "title": "facebook",
+          "featured": "true",
+          "username": "cujojp"
         },
         {
           "href": "http://www.instagram.com/cujojp",
           "icon": "icon-instagram",
           "name": "instagram",
-          "title": "instagram"
+          "title": "instagram",
+          "featured": "true",
+          "username": "cujojp"
         },
         {
           "href": "http://www.twitter.com/cujojp",
           "icon": "icon-twitter",
           "name": "twitter",
-          "title": "twitter"
+          "title": "twitter",
+          "featured": "true",
+          "username": "cujojp"
         },
         {
-          "href": "http://www. linkedin.com/cujojp",
+          "href": "http://www. linkedin.com/kalebwhite",
           "icon": "icon-linkedin",
           "name": "linkedin",
-          "title": "linkedin"
+          "featured": true,
+          "title": "linkedin",
+          "username": "kalebwhite"
         },
         {
           "href": "#EMAIL",
           "icon": "icon-mail",
           "name": "mail",
+          "featured": "false",
           "title": "info@cujo.jp"
         }
       ],
       "subtitle": "Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus.",
       "title": "Lets Get Social"
+    },
+    "meta": {
+      "name": "Kaleb White",
+      "email": "info@cujo.jp",
+      "phone": "+1 612-760-1403"
     }
   },
   "home": {
