@@ -1,10 +1,19 @@
 include ../../../views/shared/global/jade-helpers.jade
+-int = 4;
+
+mixin socialIcon(item)
+  a(href=item.href).icon-anchor
+    span.icon-wrap
+      +svgIcon(item.icon, 'white size-28')
+      .tooltip-wrap
+        .tooltip.text-center
+          p.t6.t6-marginless=item.title
+          p.t6.t6-blue.t6-marginless=item.username
 
 .inner-slide-nav.nav-ani-in
   .inner-logo-wrap.text-center.nav-item-ani-in.item-0
     a(href="/")
       +svgIcon('cujojp', 'logo icon-animate')
-
   span.nav-divider.themed.nav-item-ani-in.item-1
   ul.nav-list
     li.nav-item.text-center.nav-item-ani-in.item-2
@@ -13,11 +22,28 @@ include ../../../views/shared/global/jade-helpers.jade
       a(href="/").nav-anchor.t2.t2-bold= "Portfolio"
       if (data.work)
         ul.nav-sub-list
-          -int = 4;
           for item in data.work
             -int++
             li(class='sub-nav-item text-center nav-item-ani-in item-'+int)
               a(href=item.slug.relative).nav-anchor.special= item.slug.name
-    li.nav-item.text-center.nav-item-ani-in.item-4
+    li(class='nav-item text-center nav-item-ani-in item-'+(int+1))
       a(href="/").nav-anchor.t2.t2-bold= "About"
+  div.footer-bottom
+    div(class='social-bar nav-item-ani-in item-'+(int+2))
+      ul.social-list.inline-list
+        - icons = data.contact.social.icons
+        for icon in icons
+          if (icon.featured === 'true')
+            li.icon-item
+              +socialIcon(icon)
+    div(class='text-center contact-meta nav-item-ani-in item-'+(int+3))
+      -meta = data.contact.meta
+      if (meta)
+        p.t5.t5-blue.t5-marginless= meta.name
+        p.t5.t5-blue.t5-marginless= meta.phone
+        p.t5.t5-blue.t5-marginless= meta.email
+
+
+
+
         
