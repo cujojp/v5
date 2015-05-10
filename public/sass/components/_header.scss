@@ -52,23 +52,39 @@
   padding: 30px 0 0;
 }  
 
+.nav-divider {
+  display: block;
+  height: px-em(2);
+  width: 100%;
+  background: {
+    color: $gray80;
+  }
+
+  &.themed {
+    background: {
+      color: $pink;
+      image: url('/svg/patterns/gradient-default.svg');
+      size: cover;
+    }
+  }
+}
+
 .app-header {
   position: absolute;
   height: 100%;
   width: 350px;
   top: 0;
   right: -351px;
-  background: $white;
+  background: $gray100;
   z-index: $zindexUniversalNav;
   border-left: 1px solid $gray80;
 
   .inner-slide-nav {
-    padding: px-em(50) px-em(25) px-em(10);
+    padding: px-em(30) px-em(25) px-em(10);
   }
 
   .inner-logo-wrap {
-    padding: 0 0 px-em(30);
-    border-bottom: 1px solid $gray90;
+    padding: 0 0 px-em(25);
   }
 
   .logo {
@@ -76,23 +92,55 @@
     height: px-em(40);
     fill: $pink;
   }
+}
 
-  .nav-list {
-    list-style: none;
-    border-bottom: 1px solid $gray90;
-    padding: 0 0 px-em(30);
-    overflow: hidden;
+.nav-list {
+  list-style: none;
+  padding: 0 0 px-em(30);
+  overflow: hidden;
 
-    li {
-      position: relative;
-      display: block;
+  .nav-item {
+    position: relative;
+    display: block;
+    left: 0;
+    padding: px-em(20) 0;
+  }
+}
+
+.nav-sub-list {
+  transition: none;
+  padding: px-em(20) 0 0;
+
+  .nav-anchor {
+    display: inline-block;
+    position: relative;
+    color: $blue; 
+    padding: 0 0 px-em(3);
+    margin: 0 0 px-em(10);
+
+    &:before {
+      content:'';
+      position: absolute;
+      bottom: 0;
       left: 0;
-      padding: px-em(30) 0;
-      transition: all .15s linear;
+      transition: all .25s ease-out;
+      opacity: 0;
+      display: block;
+      width: 0;
+      height: 1px;
+      background: $pink;
+    }
 
-      &:hover {
-        left: px-em(5);
+    &:hover {
+      &:before {
+        width: px-em(25);
+        opacity: 1;
       }
     }
   }
+}
+
+.nav-item-ani-in {
+  opacity: 0;
+  transition: opacity .5s ease-in-out;
 }
