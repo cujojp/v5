@@ -143,4 +143,32 @@
 .nav-item-ani-in {
   opacity: 0;
   transition: opacity .5s ease-in-out;
+  animation-duration: 250ms;
+  animation-delay: 550ms;
+  animation-timing-function: ease-out;
+  animation-fill-mode: both;
 }
+
+@for $i from 0 through 20 {
+  .nav-item-ani-in.item-#{$i} {
+    animation-delay:  550ms + (($i - 1) * 55ms);
+  }
+}
+
+.nav-open {
+  .nav-item-ani-in {
+    animation-name: fade-down;
+  }
+}
+
+@keyframes fade-down {
+  from {
+    opacity: 0;
+    transform: translate(0, -6px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
