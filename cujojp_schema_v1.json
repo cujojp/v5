@@ -125,7 +125,7 @@
     },
     "header": {
       "cta": {
-        "href": "http://www.google.com",
+        "href": "/portfolio",
         "title": "Check out the portfolio"
       },
       "headline": "Kaleb White is a <br/>front&ndash;end engineer living in San Francisco.",
@@ -268,17 +268,31 @@
       "client": "Work Item Test",
       "home_content": {
         "media": {
-          "img": {
-            "alt": "An awesome image tout",
-            "img": "http://placehold.it/490x392/4285F4/ffffff",
-            "img_2x": "http://placehold.it/980x782/4285F4/ffffff",
-            "img_3x": "null",
-            "img_mobile": "http://placehold.it/200x200/4285F4/ffffff",
-            "img_mobile_2x": "http://placehold.it/490x392/4285F4/ffffff",
-            "img_mobile_3x": "null",
-            "img_tablet": "http://placehold.it/300x240/4285F4/ffffff",
-            "img_tablet_2x": "http://placehold.it/600x480/4285F4/ffffff",
-            "img_tablet_3x": "null"
+          "image": {
+            "small": {
+              "alt": "An awesome image tout",
+              "img": "http://placehold.it/490x392/4285F4/ffffff",
+              "img_2x": "http://placehold.it/980x782/4285F4/ffffff",
+              "img_3x": "null",
+              "img_mobile": "http://placehold.it/200x200/4285F4/ffffff",
+              "img_mobile_2x": "http://placehold.it/490x392/4285F4/ffffff",
+              "img_mobile_3x": "null",
+              "img_tablet": "http://placehold.it/300x240/4285F4/ffffff",
+              "img_tablet_2x": "http://placehold.it/600x480/4285F4/ffffff",
+              "img_tablet_3x": "null"
+            },
+            "large": {
+              "alt": "An awesome image tout",
+              "img": "http://placehold.it/490x392/4285F4/ffffff",
+              "img_2x": "http://placehold.it/980x782/4285F4/ffffff",
+              "img_3x": "null",
+              "img_mobile": "http://placehold.it/200x200/4285F4/ffffff",
+              "img_mobile_2x": "http://placehold.it/490x392/4285F4/ffffff",
+              "img_mobile_3x": "null",
+              "img_tablet": "http://placehold.it/300x240/4285F4/ffffff",
+              "img_tablet_2x": "http://placehold.it/600x480/4285F4/ffffff",
+              "img_tablet_3x": "null"
+            }
           },
           "video": {
             "mp4": "/video/work/item-test/test-video.mp4",
@@ -464,17 +478,31 @@
       "client": "Work Item Test",
       "home_content": {
         "media": {
-          "img": {
-            "alt": "An awesome image tout",
-            "img": "http://placehold.it/490x392/4285F4/ffffff",
-            "img_2x": "http://placehold.it/980x782/4285F4/ffffff",
-            "img_3x": "null",
-            "img_mobile": "http://placehold.it/200x200/4285F4/ffffff",
-            "img_mobile_2x": "http://placehold.it/490x392/4285F4/ffffff",
-            "img_mobile_3x": "null",
-            "img_tablet": "http://placehold.it/300x240/4285F4/ffffff",
-            "img_tablet_2x": "http://placehold.it/600x480/4285F4/ffffff",
-            "img_tablet_3x": "null"
+          "image": {
+            "small": {
+              "alt": "An awesome image tout",
+              "img": "http://placehold.it/490x392/4285F4/ffffff",
+              "img_2x": "http://placehold.it/980x782/4285F4/ffffff",
+              "img_3x": "null",
+              "img_mobile": "http://placehold.it/200x200/4285F4/ffffff",
+              "img_mobile_2x": "http://placehold.it/490x392/4285F4/ffffff",
+              "img_mobile_3x": "null",
+              "img_tablet": "http://placehold.it/300x240/4285F4/ffffff",
+              "img_tablet_2x": "http://placehold.it/600x480/4285F4/ffffff",
+              "img_tablet_3x": "null"
+            },
+            "large": {
+              "alt": "An awesome image tout",
+              "img": "http://placehold.it/490x392/4285F4/ffffff",
+              "img_2x": "http://placehold.it/980x782/4285F4/ffffff",
+              "img_3x": "null",
+              "img_mobile": "http://placehold.it/200x200/4285F4/ffffff",
+              "img_mobile_2x": "http://placehold.it/490x392/4285F4/ffffff",
+              "img_mobile_3x": "null",
+              "img_tablet": "http://placehold.it/300x240/4285F4/ffffff",
+              "img_tablet_2x": "http://placehold.it/600x480/4285F4/ffffff",
+              "img_tablet_3x": "null"
+            }
           },
           "video": {
             "mp4": "/video/work/item-test/test-video.mp4",
@@ -660,17 +688,31 @@
       "client": "Work Item Test",
       "home_content": {
         "media": {
-          "img": {
-            "alt": "An awesome image tout",
-            "img": "http://placehold.it/490x392/4285F4/ffffff",
-            "img_2x": "http://placehold.it/980x782/4285F4/ffffff",
-            "img_3x": "null",
-            "img_mobile": "http://placehold.it/200x200/4285F4/ffffff",
-            "img_mobile_2x": "http://placehold.it/490x392/4285F4/ffffff",
-            "img_mobile_3x": "null",
-            "img_tablet": "http://placehold.it/300x240/4285F4/ffffff",
-            "img_tablet_2x": "http://placehold.it/600x480/4285F4/ffffff",
-            "img_tablet_3x": "null"
+          "image": {
+            "small": {
+              "alt": "An awesome image tout",
+              "img": "http://placehold.it/490x392/4285F4/ffffff",
+              "img_2x": "http://placehold.it/980x782/4285F4/ffffff",
+              "img_3x": "null",
+              "img_mobile": "http://placehold.it/200x200/4285F4/ffffff",
+              "img_mobile_2x": "http://placehold.it/490x392/4285F4/ffffff",
+              "img_mobile_3x": "null",
+              "img_tablet": "http://placehold.it/300x240/4285F4/ffffff",
+              "img_tablet_2x": "http://placehold.it/600x480/4285F4/ffffff",
+              "img_tablet_3x": "null"
+            },
+            "large": {
+              "alt": "An awesome image tout",
+              "img": "http://placehold.it/490x392/4285F4/ffffff",
+              "img_2x": "http://placehold.it/980x782/4285F4/ffffff",
+              "img_3x": "null",
+              "img_mobile": "http://placehold.it/200x200/4285F4/ffffff",
+              "img_mobile_2x": "http://placehold.it/490x392/4285F4/ffffff",
+              "img_mobile_3x": "null",
+              "img_tablet": "http://placehold.it/300x240/4285F4/ffffff",
+              "img_tablet_2x": "http://placehold.it/600x480/4285F4/ffffff",
+              "img_tablet_3x": "null"
+            }
           },
           "video": {
             "mp4": "/video/work/item-test/test-video.mp4",
