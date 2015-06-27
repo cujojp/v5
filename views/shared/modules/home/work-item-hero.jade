@@ -9,7 +9,7 @@ mixin workItemTout(item)
       a.aspect-inner.bw-tout(href=item.slug.relative)
         .tout-inner-wrap
           .img-wrap.media-element
-            +responsiveImg(item.home_content.media.img, 'grayscale')
+            +responsiveImg(item.home_content.media.image.small, 'grayscale')
           .video-wrap.media-element
             +partial('shared/components/video-element.jade',item.home_content.media)
             .video-background
