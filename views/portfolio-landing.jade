@@ -1,0 +1,9 @@
+include ../views/shared/global/jade-helpers.jade
+
+extends layout
+
+block content
+  -dataObj = data
+
+  .section-wrap.themed.cujojp.scroll-target
+    +partial('shared/modules/home/home-hero.jade', dataObj.portfolio)
