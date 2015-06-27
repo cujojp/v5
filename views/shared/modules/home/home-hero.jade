@@ -6,12 +6,14 @@ include ../../../../views/shared/global/jade-helpers.jade
     .row
       .eight.columns.offset-by-two.text-center
         h1.t1.t1-light.t1-marginless!= dataObj.headline
-    .row.padded-top
-      .six.columns.offset-by-three.text-center
-        p.p3.p3-light!= dataObj.subhead
-    .row.padded-top
-      .six.columns.offset-by-three.text-center
-        a(href=dataObj.cta.href).btn.btn-stroke= dataObj.cta.title
-          span.icon-wrap
-            +svgIcon('arrow-right', 'white size-16')
-          span.cover
+    if (dataObj.subhead)
+      .row.padded-top
+        .six.columns.offset-by-three.text-center
+          p.p3.p3-light!= dataObj.subhead
+    if (dataObj.cta)
+      .row.padded-top
+        .six.columns.offset-by-three.text-center
+          a(href=dataObj.cta.href).btn.btn-stroke= dataObj.cta.title
+            span.icon-wrap
+              +svgIcon('arrow-right', 'white size-16')
+            span.cover
