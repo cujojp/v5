@@ -15,6 +15,15 @@ router.get('/', function(req, res) {
   });
 });
 
+router.get('/portfolio', function(req, res) {
+  firebase.once('value', function(snap) {
+    req.db = snap.val();
+    var params = req.params.name;
+
+    res.render('error.jade', {title: '404: File Not Found'});
+  });
+});
+
 router.get('/work/:name', function(req, res) {
   firebase.once('value', function(snap) {
     req.db = snap.val();
