@@ -20,7 +20,7 @@ router.get('/portfolio', function(req, res) {
     req.db = snap.val();
     var params = req.params.name;
 
-    res.render('error.jade', {title: '404: File Not Found'});
+    res.render('portfolio-landing.jade', { data: req.db });
   });
 });
 
