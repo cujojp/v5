@@ -14,35 +14,35 @@
 }
 
 .t2 {
-  @include px-em--font-size--line-height(52,52);
+  @include px-em--font-size--line-height(55,52);
   letter-spacing: 0px;
   margin-bottom: 40px;
   color: $pink;   
 }
 
 .t3 {
-  @include px-em--font-size--line-height(32,30);
+  @include px-em--font-size--line-height(34,30);
   letter-spacing: 0px;
   margin-bottom: 40px;
   color: $pink;  
 }
 
 .t4 {
-  @include px-em--font-size--line-height(24,24);
+  @include px-em--font-size--line-height(23,24);
   letter-spacing: 0px;
   margin-bottom: 30px;
   color: $pink;  
 }
 
 .t5 {
-  @include px-em--font-size--line-height(18,20);
+  @include px-em--font-size--line-height(14,20);
   letter-spacing: 0px;
   margin-bottom: 40px;
   color: $pink;  
 }
 
 .t6 {
-  @include px-em--font-size--line-height(12,20);
+  @include px-em--font-size--line-height(10,20);
   letter-spacing: 0px;
   margin-bottom: 40px;
   color: $pink;  
@@ -59,7 +59,7 @@
   @include px-em--font-size--line-height(18,24);
 }
 .p3, .lt3, .lt3-alt, .p3-bold { // also affects .p3.lt
-  @include px-em--font-size--line-height(16,20);
+  @include px-em--font-size--line-height(15,20);
 }
 .p4, .lt4, input.p4, .p4-bold, input.p4-bold { // also affects .p4.lt
   @include px-em--font-size--line-height(12,18);
@@ -247,4 +247,88 @@ ol.inline {
 
 label {
   @include fontItalic;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  .t1 {
+    @include px-em--font-size--line-height(48,72);
+  }
+
+  .t2 {
+    @include px-em--font-size--line-height(32,52);
+  }
+
+  .t3 {
+    @include px-em--font-size--line-height(21,30);
+  }
+
+  .t4 {
+    @include px-em--font-size--line-height(14,24);
+  }
+
+  .t5 {
+    @include px-em--font-size--line-height(10,20);
+  }
+
+  .t6 {
+    @include px-em--font-size--line-height(8,20);
+  }
+
+  .p1, .lt1, .p1-bold { // also affects .p1.lt
+    @include px-em--font-size--line-height(20,54);
+  }
+  .p2, .lt2, .p2-bold, p, input.p2, input.p2-bold { // also affects .p2.lt
+    @include px-em--font-size--line-height(14,24);
+  }
+  .p3, .lt3, .lt3-alt, .p3-bold { // also affects .p3.lt
+    @include px-em--font-size--line-height(12,20);
+  }
+  .p4, .lt4, input.p4, .p4-bold, input.p4-bold { // also affects .p4.lt
+    @include px-em--font-size--line-height(10,18);
+  }
+  .p5, .lt5 .p5-bold { // also affects .p5.lt
+    @include px-em--font-size--line-height(8,13);
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .t1 {
+    @include px-em--font-size--line-height(32,32);
+  }
+
+  .t2 {
+    @include px-em--font-size--line-height(26,26);
+  }
+
+  .t3 {
+    @include px-em--font-size--line-height(21,21);
+  }
+
+  .t4 {
+    @include px-em--font-size--line-height(17,17);
+  }
+
+  .t5 {
+    @include px-em--font-size--line-height(14,14);
+  }
+
+  .t6 {
+    @include px-em--font-size--line-height(12,20);
+  }
+
+  .p1, .lt1, .p1-bold { // also affects .p1.lt
+    @include px-em--font-size--line-height(20,54);
+  }
+  .p2, .lt2, .p2-bold, p, input.p2, input.p2-bold { // also affects .p2.lt
+    @include px-em--font-size--line-height(14,24);
+  }
+  .p3, .lt3, .lt3-alt, .p3-bold { // also affects .p3.lt
+    @include px-em--font-size--line-height(12,20);
+  }
+  .p4, .lt4, input.p4, .p4-bold, input.p4-bold { // also affects .p4.lt
+    @include px-em--font-size--line-height(10,18);
+  }
+  .p5, .lt5 .p5-bold { // also affects .p5.lt
+    @include px-em--font-size--line-height(8,13);
+  }
 }

@@ -30,6 +30,7 @@ $base_line_height: 1.65 !default;
 // -------------------------------------------------- //
 $header_height: 95px !default;
 $nav_width: 355px !default;
+$nav_width_mobile: 280px !default;
 
 
 // Grid
@@ -96,6 +97,7 @@ $modal_opacity: 0.7;
 $modal_background_color: rgba(0,0,0,$modal_opacity);
 
 $aspect_grids: (
+  '30x11':                (30,11),
   '16x9':                 (16,9),
   '9x16':                 (9, 16),
   '3x2':                  (3, 2),

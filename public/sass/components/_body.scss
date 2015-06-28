@@ -51,3 +51,21 @@
   transition: transform .15s ease-in-out;
   transform: translateX(0);
 }
+
+
+/* #Tablet (Portrait)
+================================================== */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+}
+
+/* #Mobile (Landscape)
+================================================== */
+@media only screen and (max-width: 767px) {
+  .app {
+    &.nav-open {
+      .slide-app {
+        transform: translateX(-$nav_width_mobile);
+      }
+    }
+  }
+} 

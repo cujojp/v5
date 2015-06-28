@@ -9,5 +9,10 @@ block content
     +partial('shared/modules/home/home-hero.jade', dataObj.portfolio)
 
   .section-wrap
-    +partial('shared/modules/home/home-hero.jade', dataObj.portfolio)
-      
+    .container
+      +partial('shared/modules/portfolio/work-item-landing.jade', dataObj.work)
+
+  .section-wrap.themed.cujojp
+    .container
+      +partial('shared/modules/home/social.jade', dataObj.contact)
+    

@@ -24,7 +24,7 @@
 
     video,
     img {
-      max-width: 100%;
+      width: 100%;
     }
     
     .media-element {
@@ -36,6 +36,7 @@
     }
 
     .img-wrap {
+      width: 100%;
       filter: grayscale(1);
       opacity: 1;
     }
@@ -54,6 +55,8 @@
         background: {
           color: $pink;
           image: url('/svg/patterns/gradient-default.svg');
+          position: center;
+          size: cover;
         }
       }
     }
