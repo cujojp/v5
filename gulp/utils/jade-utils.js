@@ -51,6 +51,15 @@ module.exports = {
   getObjectLength: function(obj) {
     return _.size(obj);
   },
+  pullAt: function(arr, val) {
+    return _.pullAt(arr, val);
+  },
+  drop: function(arr, int) {
+    return _.drop(arr, int);
+  },
+  chunk: function(arr, int) {
+    return _.chunk(arr, int);
+  },
   isArray: function(obj) {
     return _.isArray(obj);
   },
