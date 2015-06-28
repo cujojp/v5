@@ -1,0 +1,22 @@
+include ../../../../views/shared/global/jade-helpers.jade
+-work = data || []
+-primaryWork = locals._locals.pullAt(work, [0,1])
+-secondaryWork = locals._locals.chunk(work, 2)
+
+for item, i in primaryWork
+  if (i == 0)
+    .row.padded-xl-top.marginless
+      +partial('shared/modules/portfolio/work-item-large.jade', item)
+  else
+    .row.padded-slim.marginless
+      +partial('shared/modules/portfolio/work-item-large.jade', item)
+
+for workChunk, i in secondaryWork
+  if (i === (workChunk.length - 1))
+    .row.padded-slim.padded-xl
+      for item in workChunk
+        +partial('shared/modules/portfolio/work-item-small.jade', item)
+  else
+    .row.padded-slim.marginless
+      for item in workChunk
+        +partial('shared/modules/portfolio/work-item-small.jade', item)

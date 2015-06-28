@@ -1,0 +1,22 @@
+include ../../../../views/shared/global/jade-helpers.jade
+-work = data || []
+-caseStudyText= "More Information"
+
+.six.columns.work-tout-wrap
+  .tout-anchor.aspect-7x5
+    .aspect-inner
+      a.aspect-inner.bw-tout(href=work.slug.relative)
+        .tout-inner-wrap
+          .img-wrap.media-element
+            +responsiveImg(work.home_content.media.image.small, 'grayscale')
+          .video-wrap.media-element
+            +responsiveImg(work.home_content.media.image.small, 'grayscale')
+            .video-background
+            .button-tout-wrap.text-center.aspect-inner
+              .table-center-wrap.full
+                .table-center
+                  h1.t2.t2-light=work.client
+                  span.btn.btn-stroke= caseStudyText
+                    span.icon-wrap
+                      +svgIcon('arrow-right', 'white size-16')
+
