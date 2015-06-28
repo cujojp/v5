@@ -15,7 +15,8 @@ block content
 
   .section-wrap
     .container
-      +partial('shared/modules/home/work-item-hero.jade', dataObj.work)
+      -work = locals._locals.pullAt(dataObj.work, [0,1, 2])
+      +partial('shared/modules/home/work-item-hero.jade', work)
 
   .section-wrap
     .container

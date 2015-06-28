@@ -18,6 +18,7 @@ router.get('/', function(req, res) {
 router.get('/portfolio', function(req, res) {
   firebase.once('value', function(snap) {
     req.db = snap.val();
+    req.db.headerClasses = 'fixed themed';
     var params = req.params.name;
 
     res.render('portfolio-landing.jade', { data: req.db });
