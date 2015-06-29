@@ -52,13 +52,19 @@ module.exports = {
     return _.size(obj);
   },
   pullAt: function(arr, val) {
-    return _.pullAt(arr, val);
+    obj = _.clone(arr, true);
+    return _.pullAt(obj, val);
+  },
+  clone: function(obj) {
+    return _.clone(obj);
   },
   drop: function(arr, int) {
-    return _.drop(arr, int);
+    obj = _.clone(arr, true);
+    return _.drop(obj, int);
   },
   chunk: function(arr, int) {
-    return _.chunk(arr, int);
+    obj = _.clone(arr, true);
+    return _.chunk(obj, int);
   },
   isArray: function(obj) {
     return _.isArray(obj);
