@@ -6440,7 +6440,6 @@ window.Modernizr = (function( window, document, undefined ) {
         videoDimensions, height, width, true);
 
     } else {
-
       videoStyles = this._createStyleObject(
         videoDimensions, null, null, false);
     }
@@ -6469,10 +6468,10 @@ window.Modernizr = (function( window, document, undefined ) {
 
     if (opt_isAspect) {
       videoStyles = {
-        'width': width + 'px',
-        'height': height + 'px',
-        'margin-top': - (height / 2) + 'px',
-        'margin-left' : - (width / 2) + 'px',
+        'width': opt_width + 'px',
+        'height': opt_height + 'px',
+        'margin-top': - (opt_height / 2) + 'px',
+        'margin-left' : - (opt_width / 2) + 'px',
         'top': 50 + '%',
         'left': 50 + '%'
       };
