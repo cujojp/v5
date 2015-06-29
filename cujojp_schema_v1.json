@@ -721,9 +721,9 @@
             }
           },
           "video": {
-            "mp4": "/video/work/item-test/test-video.mp4",
-            "ogg": "/video/work/item-test/test-video.ogg",
-            "webm": "/video/work/item-test/test-video.webm"
+            "mp4": "http://www.cujo.jp/video/buffalowildwings/home/buffalo-wild-wings-home.mp4",
+            "ogg": "http://www.cujo.jp/video/buffalowildwings/home/buffalo-wild-wings-home.ogg",
+            "webm": "http://www.cujo.jp/video/buffalowildwings/home/buffalo-wild-wings-home.webm"
           }
         }
       },
@@ -754,9 +754,9 @@
           "img_tablet_2x": "null",
           "img_tablet_3x": "null",
           "video": {
-            "mp4": "/video/work/item-test/test-video.mp4",
-            "ogg": "/video/work/item-test/test-video.ogg",
-            "webm": "/video/work/item-test/test-video.webm"
+            "mp4": "http://www.cujo.jp/video/buffalowildwings/main/buffalo-wild-wings-intro.mp4",
+            "ogg": "http://www.cujo.jp/video/buffalowildwings/main/buffalo-wild-wings-intro.ogv",
+            "webm": "http://www.cujo.jp/video/buffalowildwings/main/buffalo-wild-wings-intro.webm"
           }
         },
         "summary": "Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum.",
@@ -764,9 +764,9 @@
       },
       "slug": {
         "absolute": "http://www.someurl.com",
-        "id": "work-item-test",
-        "relative": "/work/work-item-test",
-        "name": "bluhomes.com",
+        "id": "buffalo-wild-wings",
+        "relative": "/work/buffalo-wild-wings",
+        "name": "buffalowildwings.com",
         "title": "More Information"
       }
     },

@@ -1,7 +1,7 @@
 include ../../../../views/shared/global/jade-helpers.jade
 -work = data || []
 -primaryWork = locals._locals.pullAt(work, [0,1])
--secondaryWork = locals._locals.chunk(work, 2)
+-secondaryWork = locals._locals.chunk(locals._locals.drop(work, 2), 2)
 
 for item, i in primaryWork
   if (i == 0)

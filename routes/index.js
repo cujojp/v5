@@ -29,19 +29,19 @@ router.get('/work/:name', function(req, res) {
   firebase.once('value', function(snap) {
     req.db = snap.val();
     var params = req.params.name;
-
-    _.each(req.db.work, function(workItem) {
-      if (params == workItem.slug.id) {
-        workItem.headerClasses = 'fixed themed';
-
-        res.render('work-item', {
-          db: req.db,
-          data: workItem
-        });
-      } else {
-        res.render('error.jade', {title: '404: File Not Found'});
-      }
+    var item = _.filter(req.db.work, function(item) { 
+      return item.slug.id === params;
     });
+
+    if (item) {
+      item[0].headerClasses = 'fixed themed';
+      res.render('work-item', {
+        db: req.db,
+        data: item[0]
+      });
+    } else {
+      res.render('error.jade', {title: '404: File Not Found'});
+    }
 
     //res.render('index', { data: req.db });
   });
