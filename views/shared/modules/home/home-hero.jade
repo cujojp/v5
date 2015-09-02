@@ -13,7 +13,7 @@ include ../../../../views/shared/global/jade-helpers.jade
     if (dataObj.cta)
       .row.padded-top
         .six.columns.offset-by-three.text-center
-          a(href=dataObj.cta.href).btn.btn-stroke= dataObj.cta.title
+          a(href=dataObj.cta.href).btn.btn-stroke.btn-icon= dataObj.cta.title
             span.icon-wrap
               +svgIcon('arrow-right', 'white size-16')
             span.cover

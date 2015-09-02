@@ -81,6 +81,24 @@
   }
 }
 
+.btn-icon {
+  .icon {
+    position: relative;
+    right: 0;
+    transition: right 200ms ease-in, fill 200ms ease-in;
+  }
+
+  &:hover {
+    .icon {
+      right: px-em(-10);
+
+      &.white {
+        fill: $gray70;
+      }
+    }
+  }
+}
+
 /* #Mobile (Landscape)
 ================================================== */
 @media only screen and (max-width: 767px) {

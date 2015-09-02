@@ -1119,6 +1119,16 @@ label {
     background: none;
     border-color: #acacac; }
 
+.btn-icon .icon {
+  position: relative;
+  right: 0;
+  -webkit-transition: right 200ms ease-in, fill 200ms ease-in;
+          transition: right 200ms ease-in, fill 200ms ease-in; }
+.btn-icon:hover .icon {
+  right: -0.625em; }
+  .btn-icon:hover .icon.white {
+    fill: #acacac; }
+
 /* #Mobile (Landscape)
 ================================================== */
 @media only screen and (max-width: 767px) {
