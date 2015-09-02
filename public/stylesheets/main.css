@@ -1894,9 +1894,6 @@ label {
       background: #6da3c4; }
       .nav-wrap .nav.left .icon, .nav-wrap .nav.left .label {
         float: left; }
-      .nav-wrap .nav.left .label {
-        margin-top: 0.9375em;
-        margin-left: 0.625em; }
     .nav-wrap .nav.right {
       background: #e24778; }
       .nav-wrap .nav.right .icon, .nav-wrap .nav.right .label {
@@ -1916,10 +1913,43 @@ label {
       bottom: 0;
       left: 0; }
       .nav-wrap .nav .work-nav-btn .label-wrap {
-        display: block; }
+        height: 100%;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center; }
       .nav-wrap .nav .work-nav-btn .icon {
-        display: inline-block;
-        margin: 2.4375em 0 0; }
+        display: inline-block; }
+
+/* #Tablet (Portrait)
+================================================== */
+/* #Mobile (Landscape)
+================================================== */
+@media only screen and (max-width: 767px) {
+  .nav-wrap .nav {
+    margin-left: 0 !important;
+    margin-right: 0 !important; }
+  .nav-wrap .nav.left {
+    width: 50%; }
+  .nav-wrap .nav.right {
+    width: 50%;
+    float: right; }
+  .detail-navigation {
+    padding: 3.125em 0; }
+  .container .meta-list li {
+    margin-bottom: 20px; }
+    .container .meta-list li:after {
+      display: none; }
+    .container .meta-list li.omega {
+      margin-bottom: 0; }
+  .container .meta-list li.four.columns, .container .meta-list li.three.columns {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%; } }
 
 .home-hero {
   padding-top: 12.5em;

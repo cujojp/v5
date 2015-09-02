@@ -76,10 +76,6 @@
       }
 
       .label {
-        margin: {
-          top: px-em(15);
-          left: px-em(10);
-        }
       }
     }
 
@@ -110,7 +106,9 @@
       @include fill-parent();
 
       .label-wrap {
-        display: block;
+        height: 100%;
+        display: flex;
+        align-items: center;
       }
 
       .label {
@@ -118,8 +116,62 @@
 
       .icon {
         display: inline-block;
-        margin: px-em(39) 0 0;
       }
     }
   }
 }
+
+/* #Tablet (Portrait)
+================================================== */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+}
+
+/* #Mobile (Landscape)
+================================================== */
+@media only screen and (max-width: 767px) {
+  .nav-wrap .nav {
+    margin: {
+      left: 0 !important;
+      right: 0 !important;
+    }
+  }
+
+  .nav-wrap .nav.left {
+    width: 50%;
+  }
+
+  .nav-wrap .nav.right {
+    width: 50%;
+    float: right;
+  }
+
+  .detail-navigation {
+    padding: px-em(50) 0;
+  }
+  
+  .container {
+    .meta-list {
+    }
+
+    .meta-list li {
+      margin-bottom: 20px;
+
+      &:after {
+        display: none;
+      }
+
+      &.omega {
+        margin-bottom: 0;
+      }
+    }
+    
+    // columns reset
+    .meta-list li.four.columns, 
+    .meta-list li.three.columns {
+      margin-left: 0;
+      margin-right: 0;
+      width: 100%;
+    }
+  }
+}
+
