@@ -76,6 +76,10 @@
       }
 
       .label {
+        margin: {
+          top: px-em(15);
+          left: px-em(10);
+        }
       }
     }
 
@@ -109,6 +113,7 @@
         height: 100%;
         display: flex;
         align-items: center;
+        display: block;
       }
 
       .label {
@@ -116,6 +121,7 @@
 
       .icon {
         display: inline-block;
+        margin: px-em(39) 0 0;
       }
     }
   }

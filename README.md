@@ -84,6 +84,7 @@ $ git push dokku master
 sh cat ~/.ssh/id_rsa.pub | ssh root@atarashi.cujo.jp "sudo sshcommand acl-add dokku atarashi” 
 
 User: root@atarashi.cujo.jp
+<<<<<<< HEAD
 # v5
 - - - - - 
 
@@ -170,54 +171,6 @@ $ git push dokku master
 sh cat ~/.ssh/id_rsa.pub | ssh root@atarashi.cujo.jp "sudo sshcommand acl-add dokku atarashi” 
 
 User: root@atarashi.cujo.jp
-Password: #teehee
-
-### Sync your git account with your Dokku VPS for easy deployments 
-
-```
-sh git remote add dokku root@atarashi.cujo.jp:v5
-```
-
-### Deploy to Dokku
-
-```
-sh git push dokku master
-```
-
-*Oh no I get the following error!*
-```
-fatal: 'atarashi' does not appear to be a git repository
-fatal: Could not read from remote repository.
-```
-
-ssh into the server. 
-
-	1.	Login to server as root. cd ~ (Go to home dir of root)
-	2.	cd v5
-	3.	git init --bare (It should give you message that it initialized a git repo)
-
-
-
-## SSH Into the VPS
-
-TODO: Setup Dokku
-
-
-## Running the Application
-- - - - - -
-
-**1. Start Gulp**
-
-Recently added to the stack has been [gulp.js](http://nodejs.org/). This will watch for file changes and compile using something similar to sprockets and compile and also minify the js file into an all.js directory. If in development, run gulp.js when making changes to any javascript files, so it can recompile the changes. 
-
-Run the following command from the project root.
-
-`sh gulp` 
-
-Gulp will run a `startExpress` method which will start express. You can access the server at localhost:5000
-
-
-
 Password: #teehee
 
 ### Sync your git account with your Dokku VPS for easy deployments 
